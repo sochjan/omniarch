@@ -20,8 +20,8 @@ export default function ProjectGrid({ projects }: { projects: Project[] }) {
   return (
     <div>
       <div className="mb-10 border-b border-[#e5e5e5] pb-5">
-        <div className="flex items-center justify-between mb-3">
-          <div className="flex items-center gap-5 overflow-x-auto scrollbar-none flex-1 min-w-0">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-y-2 mb-3">
+          <div className="flex items-center gap-5 overflow-x-auto scrollbar-none">
             {FILTERS.map(({ key, label }) => (
               <button
                 key={key}
@@ -36,7 +36,7 @@ export default function ProjectGrid({ projects }: { projects: Project[] }) {
               </button>
             ))}
           </div>
-          <span className="shrink-0 text-xs text-[#737373] ml-4">{filtered.length} projektů</span>
+          <span className="text-xs text-[#737373] shrink-0">{filtered.length} projektů</span>
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">

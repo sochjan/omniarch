@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { projects, getProject, getDisplayYear } from '@/lib/projects'
+import PhotoGallery from '@/components/PhotoGallery'
 import type { Metadata } from 'next'
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
@@ -107,25 +108,7 @@ export default async function ProjectPage({
 
         {/* Images — second in DOM = below info on mobile, left 2 cols on desktop */}
         <div className="lg:col-span-2 order-2 lg:order-1">
-          <div className="aspect-[4/3] relative overflow-hidden mb-3">
-            <img
-              src={imgSrc}
-              alt={project.title}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </div>
-
-          <div className="grid grid-cols-2 gap-3">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="aspect-[4/3] relative overflow-hidden">
-                <img
-                  src={imgSrc}
-                  alt={`${project.title} – fotografie ${i}`}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
+          <PhotoGallery images={[imgSrc, imgSrc, imgSrc, imgSrc, imgSrc]} title={project.title} />
         </div>
       </div>
     </div>

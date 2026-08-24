@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
+import { designProjects } from '@/lib/design'
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
@@ -6,22 +8,6 @@ export const metadata: Metadata = {
   title: 'Design – OMNIARCH',
   description: 'Průmyslový design, městský mobiliář a nábytkové projekty studia OMNIARCH.',
 }
-
-const designProjects = [
-  'Garážové stání',
-  'Židle s područkami',
-  'Jídelní stůl',
-  'Manželská postel',
-  'Reklamní sloup s WC',
-  'Dřevěná lávka Vřesina',
-  'Lavičky z plechu',
-  'Přístřešky na kontejnery',
-  'Senior Fit Park',
-  'Novinový stánek',
-  'Modulové veřejné WC',
-  'Zastřešení nástupiště',
-  'Stojany na kola',
-]
 
 export default function DesignPage() {
   return (
@@ -38,18 +24,26 @@ export default function DesignPage() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
-        {designProjects.map((name) => (
-          <div key={name} className="group">
+        {designProjects.map((item) => (
+          <Link key={item.slug} href={`/design/${item.slug}`} className="group block">
             <div className="aspect-[4/3] relative overflow-hidden mb-3">
               <img
                 src={`${BASE}/placeholder.png`}
-                alt={name}
+                alt={item.title}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
+              <div className="absolute inset-0 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-[10px] tracking-[0.2em] uppercase text-white drop-shadow">
+                  Zobrazit projekt →
+                </span>
+              </div>
+              <div className="absolute inset-0 bg-[#111111] opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
             </div>
-            <h2 className="text-sm font-normal text-[#111111]">{name}</h2>
+            <h2 className="text-sm font-normal text-[#111111] group-hover:opacity-70 transition-opacity duration-200">
+              {item.title}
+            </h2>
             <p className="text-xs text-[#737373] mt-0.5">Design</p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
