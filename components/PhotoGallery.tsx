@@ -1,9 +1,10 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 
 export default function PhotoGallery({ images, title }: { images: string[]; title: string }) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
+  const touchStartX = useRef<number | null>(null)
 
   const close = useCallback(() => setLightboxIndex(null), [])
   const prev = useCallback(() => setLightboxIndex((i) => (i === null ? null : (i - 1 + images.length) % images.length)), [images.length])
@@ -49,6 +50,13 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
         <div
           className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
           onClick={close}
+          onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX }}
+          onTouchEnd={(e) => {
+            if (touchStartX.current === null) return
+            const diff = touchStartX.current - e.changedTouches[0].clientX
+            if (Math.abs(diff) > 50) diff > 0 ? next() : prev()
+            touchStartX.current = null
+          }}
         >
           <img
             src={images[lightboxIndex]}
@@ -59,14 +67,14 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
 
           <button
             onClick={(e) => { e.stopPropagation(); prev() }}
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white text-3xl px-3 py-4 transition-colors"
+            className="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white text-3xl px-3 py-4 transition-colors"
             aria-label="Předchozí"
           >
             ←
           </button>
           <button
             onClick={(e) => { e.stopPropagation(); next() }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white text-3xl px-3 py-4 transition-colors"
+            className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white text-3xl px-3 py-4 transition-colors"
             aria-label="Další"
           >
             →
