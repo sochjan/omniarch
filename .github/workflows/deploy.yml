@@ -22,7 +22,7 @@ jobs:
 
       - run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: /omniarch-web
+          NEXT_PUBLIC_BASE_PATH: /omniarch
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
