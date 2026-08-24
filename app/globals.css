@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+  --color-stone-50: #fafaf8;
+  --color-stone-950: #111111;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #fafaf8;
+  color: #111111;
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+::selection {
+  background-color: #111111;
+  color: #fafaf8;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
