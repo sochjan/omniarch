@@ -5,6 +5,8 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 export default function PhotoGallery({ images, title }: { images: string[]; title: string }) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
   const touchStartX = useRef<number | null>(null)
+  const mouseStartX = useRef<number | null>(null)
+  const wasDragging = useRef(false)
 
   const close = useCallback(() => setLightboxIndex(null), [])
   const prev = useCallback(() => setLightboxIndex((i) => (i === null ? null : (i - 1 + images.length) % images.length)), [images.length])
@@ -48,8 +50,8 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
 
       {lightboxIndex !== null && (
         <div
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
-          onClick={close}
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center cursor-grab active:cursor-grabbing select-none"
+          onClick={() => { if (!wasDragging.current) close(); wasDragging.current = false }}
           onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX }}
           onTouchEnd={(e) => {
             if (touchStartX.current === null) return
@@ -57,36 +59,46 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
             if (Math.abs(diff) > 50) diff > 0 ? next() : prev()
             touchStartX.current = null
           }}
+          onMouseDown={(e) => { mouseStartX.current = e.clientX; wasDragging.current = false }}
+          onMouseMove={(e) => {
+            if (mouseStartX.current !== null && Math.abs(e.clientX - mouseStartX.current) > 10)
+              wasDragging.current = true
+          }}
+          onMouseUp={(e) => {
+            if (mouseStartX.current === null) return
+            const diff = mouseStartX.current - e.clientX
+            if (Math.abs(diff) > 50) diff > 0 ? next() : prev()
+            mouseStartX.current = null
+          }}
         >
           <img
             src={images[lightboxIndex]}
             alt={`${title} – fotografie ${lightboxIndex + 1}`}
-            className="max-h-screen max-w-screen-lg w-full object-contain px-16"
-            onClick={(e) => e.stopPropagation()}
+            className="max-h-screen max-w-screen-lg w-full object-contain md:px-16 pointer-events-none"
           />
 
           <button
             onClick={(e) => { e.stopPropagation(); prev() }}
-            className="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white text-3xl px-3 py-4 transition-colors"
+            className="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white text-3xl px-3 py-4 transition-colors cursor-pointer"
             aria-label="Předchozí"
           >
             ←
           </button>
           <button
             onClick={(e) => { e.stopPropagation(); next() }}
-            className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white text-3xl px-3 py-4 transition-colors"
+            className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white text-3xl px-3 py-4 transition-colors cursor-pointer"
             aria-label="Další"
           >
             →
           </button>
           <button
-            onClick={close}
-            className="absolute top-4 right-4 text-white/70 hover:text-white text-xl px-3 py-2 transition-colors"
+            onClick={(e) => { e.stopPropagation(); close() }}
+            className="absolute top-4 right-4 text-white/70 hover:text-white text-xl px-3 py-2 transition-colors cursor-pointer"
             aria-label="Zavřít"
           >
             ✕
           </button>
-          <span className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/50 text-xs tracking-widest">
+          <span className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/50 text-xs tracking-widest pointer-events-none">
             {lightboxIndex + 1} / {images.length}
           </span>
         </div>
