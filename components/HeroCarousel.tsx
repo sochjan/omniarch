@@ -57,6 +57,22 @@ export default function HeroCarousel() {
         </Link>
       ))}
 
+      {/* Arrows — desktop only */}
+      <button
+        onClick={(e) => { e.preventDefault(); setCurrent((i) => (i - 1 + SLIDES.length) % SLIDES.length) }}
+        className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-10 w-8 h-8 items-center justify-center bg-white/50 hover:bg-white/80 text-[#111111] rounded-full transition-all"
+        aria-label="Předchozí"
+      >
+        ‹
+      </button>
+      <button
+        onClick={(e) => { e.preventDefault(); setCurrent((i) => (i + 1) % SLIDES.length) }}
+        className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-10 w-8 h-8 items-center justify-center bg-white/50 hover:bg-white/80 text-[#111111] rounded-full transition-all"
+        aria-label="Další"
+      >
+        ›
+      </button>
+
       {/* Dots */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
         {SLIDES.map((_, i) => (

@@ -32,18 +32,37 @@ export default function ProjectCarousel({ images, title }: { images: string[]; t
       ))}
 
       {images.length > 1 && (
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-          {images.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                i === current ? 'bg-white scale-125' : 'bg-white/40'
-              }`}
-              aria-label={`Fotografie ${i + 1}`}
-            />
-          ))}
-        </div>
+        <>
+          {/* Arrows — desktop only */}
+          <button
+            onClick={prev}
+            className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-10 w-8 h-8 items-center justify-center bg-white/50 hover:bg-white/80 text-[#111111] rounded-full transition-all"
+            aria-label="Předchozí"
+          >
+            ‹
+          </button>
+          <button
+            onClick={next}
+            className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-10 w-8 h-8 items-center justify-center bg-white/50 hover:bg-white/80 text-[#111111] rounded-full transition-all"
+            aria-label="Další"
+          >
+            ›
+          </button>
+
+          {/* Dots */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+            {images.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+                  i === current ? 'bg-white scale-125' : 'bg-white/40'
+                }`}
+                aria-label={`Fotografie ${i + 1}`}
+              />
+            ))}
+          </div>
+        </>
       )}
     </div>
   )
