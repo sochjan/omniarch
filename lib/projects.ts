@@ -3,6 +3,7 @@ export type ProjectCategory = 'residential' | 'commercial' | 'public'
 export type Project = {
   slug: string
   title: string
+  tagline?: string
   description: string
   category: ProjectCategory
   image?: string
@@ -45,83 +46,95 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-v-hradku-nad-nisou',
     title: 'Rodinný dům v Hrádku nad Nisou',
-    description: 'Projekt rodinného domu v Hrádku nad Nisou navržený architektem Pavlem Novákem v roce 2019. Moderní rodinná vila s důrazem na jednoduchost formy a energetickou efektivitu.',
+    tagline: 'Moderní vila s důrazem na jednoduchost formy a energetickou efektivitu.',
+    description: 'Moderní rodinná vila s důrazem na jednoduchost formy a energetickou efektivitu.',
     category: 'residential',
     metadata: { location: 'Hrádek nad Nisou', year: '2019', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
   },
   {
     slug: 'rodinny-dum-ve-vestci-u-stare-boleslavi',
     title: 'Rodinný dům ve Vestci u Staré Boleslavi',
-    description: 'Rodinný dům ve Vestci u Staré Boleslavi dokončený v roce 2018. Projekt OMNIARCH usilující o moderní a svěží vzhled s důrazem na úspory energií.',
+    tagline: 'Svěží architektonický výraz s důrazem na úspory energií.',
+    description: 'Moderní rodinný dům s důrazem na úspory energií a svěží architektonický výraz.',
     category: 'residential',
     metadata: { location: 'Vestec u Staré Boleslavi', year: '2018', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
   },
   {
     slug: 'rekonstrukce-rd-v-holenicich',
     title: 'Rekonstrukce RD Holenice',
-    description: 'Rekonstrukce rodinného domu v Holenicích u Turnova. Projekt z roku 2016, realizace 2018. Interiér navrhl Kateřina Brožková. Komplexní přeměna staršího objektu na moderní rodinné bydlení.',
+    tagline: 'Komplexní přeměna staršího objektu na moderní rodinné bydlení s novým interiérem.',
+    description: 'Komplexní přeměna staršího objektu na moderní rodinné bydlení s novým interiérem.',
     category: 'residential',
     metadata: { location: 'Holenice, Turnov', year_design: '2016', year_completion: '2018', type: 'Rekonstrukce rodinného domu', architect: 'Ing. arch. Pavel Novák', interior_design: 'Kateřina Brožková', organization: 'OMNIARCH' },
   },
   {
     slug: 'rodinny-dum-horni-hanychov',
     title: 'Rodinný dům Horní Hanychov',
-    description: 'Rodinná villa v Horním Hanychově v Liberci, navržená v roce 2021. Klidná rezidenční lokalita s výhledy do okolní krajiny.',
+    tagline: 'Rodinná vila v klidné lokalitě s výhledy do okolní krajiny.',
+    description: 'Rodinná vila v klidné lokalitě s výhledy do okolní krajiny.',
     category: 'residential',
     metadata: { location: 'Horní Hanychov, Liberec', year: '2021', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
   },
   {
     slug: 'rodinny-dum-zibridice',
     title: 'Rodinný dům v Žibřidicích',
-    description: 'Projekt rodinného domu v Žibřidicích dokončený v roce 2020. Čistá architektura s moderními prvky zasazená do venkovského prostředí.',
+    tagline: 'Čistá architektura s moderními prvky zasazená do venkovského prostředí.',
+    description: 'Čistá architektura s moderními prvky zasazená do venkovského prostředí.',
     category: 'residential',
     metadata: { location: 'Žibřidice', year: '2020', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
   },
   {
     slug: 'sidlo-firmy-vesec',
     title: 'Sídlo firmy ve Vesci, Liberec',
-    description: 'Projekt sídla firmy ve Vesci u Liberce. Návrh 2016, realizace 2018. Administrativně-provozní objekt kombinující funkčnost s reprezentativním výrazem.',
+    tagline: 'Administrativně-provozní objekt kombinující funkčnost s reprezentativním výrazem.',
+    description: 'Administrativně-provozní objekt kombinující funkčnost s reprezentativním výrazem.',
     category: 'commercial',
     metadata: { location: 'Vesec, Liberec', year_design: '2016', year_completion: '2018', type: 'Sídlo firmy', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
   },
   {
     slug: 'rodinny-dum-ohrazenice',
     title: 'Rodinný dům Ohrazenice',
-    description: 'Rodinný dům v Ohrazenicích u Turnova. Architektonická studie 2008, realizace 2010. Kompaktní hmota s plochým střeším a velkými prosklenými plochami.',
+    tagline: 'Kompaktní hmota s plochou střechou a velkými prosklenými plochami.',
+    description: 'Kompaktní hmota s plochou střechou a velkými prosklenými plochami.',
     category: 'residential',
     metadata: { location: 'Ohrazenice, Turnov', year_design: '2008', year_completion: '2010', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
   },
   {
     slug: 'rodinny-dum-podoli',
     title: 'Rodinný dům v Podolí, Uherské Hradiště',
-    description: 'Rodinný dům v Podolí u Uherského Hradiště. Návrh 2006, realizace 2008. Jeden z prvních projektů studia se silným architektonickým výrazem.',
+    tagline: 'Jeden z prvních projektů studia se silným architektonickým výrazem.',
+    description: 'Jeden z prvních projektů studia se silným architektonickým výrazem.',
     category: 'residential',
     metadata: { location: 'Podolí, Uherské Hradiště', year_design: '2006', year_completion: '2008', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
   },
   {
     slug: 'rodinny-dum-skalany',
     title: 'Rodinný dům Skalany',
-    description: 'Rodinný dům v Skalanech v oblasti Českého ráje. Návrh 2014, realizace 2018. Statika: Ing. arch. Miloš Hůla. Interiér: Jiří Zeman. Fotografie: Zdeněk Groessl.',
+    tagline: 'Rodinný dům v oblasti Českého ráje s autorským interiérem a fotografií.',
+    description: 'Rodinný dům v oblasti Českého ráje s autorským interiérem a fotografií.',
     category: 'residential',
     metadata: { location: 'Skalany, Český ráj', year_design: '2014', year_completion: '2018', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', structural_engineer: 'Ing. arch. Miloš Hůla', interior_design: 'Jiří Zeman', photography: 'Zdeněk Groessl', organization: 'OMNIARCH' },
   },
   {
     slug: 'rodinny-dum-nova-ves',
     title: 'Rodinný dům Nová Ves',
-    description: 'Rodinný dům v Nové Vsi u Jablonce nad Nisou. Návrh 2007, realizace 2009. Moderní bydlení v klidné přírodní lokalitě.',
+    tagline: 'Moderní bydlení v klidné přírodní lokalitě u Jablonce nad Nisou.',
+    description: 'Moderní bydlení v klidné přírodní lokalitě u Jablonce nad Nisou.',
     category: 'residential',
     metadata: { location: 'Nová Ves, Jablonec nad Nisou', year_design: '2007', year_completion: '2009', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
   },
   {
     slug: 'obytna-zona-ceradice',
     title: 'Obytná zóna Čeradice',
-    description: 'Projekt obytné zóny rodinných domů v Čeradicích z roku 2017. Urbanistická studie zahrnující zástavbu parcel a řešení veřejných prostranství.',
+    tagline: 'Urbanistická studie zahrnující zástavbu parcel a řešení veřejných prostranství.',
+    description: 'Urbanistická studie zahrnující zástavbu parcel a řešení veřejných prostranství.',
     category: 'residential',
     metadata: { location: 'Čeradice', year: '2017', type: 'Obytná zóna', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
   },
   {
     slug: 'rodinny-dum-stare-pavlovice',
     title: 'Rodinný dům Staré Pavlovice',
+    tagline: 'Nejnovější realizace studia s důrazem na udržitelné materiály.',
     description: 'Projekt rodinného domu ve Starých Pavlovicích v libereckém regionu z roku 2023. Nejnovější realizace studia s důrazem na udržitelné materiály.',
     category: 'residential',
     metadata: { location: 'Staré Pavlovice, Liberec', year: '2023', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -129,6 +142,7 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-modrisice',
     title: 'Rodinný dům v Modřišicích, Turnov',
+    tagline: 'Subtilní architektura zasazená do mírně svažitého terénu Českého ráje.',
     description: 'Projekt rodinného domu v Modřišicích u Turnova z roku 2011. Subtilní architektura zasazená do mírně svažitého terénu Českého ráje.',
     category: 'residential',
     metadata: { location: 'Modřišice, Turnov', year: '2011', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -136,6 +150,7 @@ export const projects: Project[] = [
   {
     slug: 'vinny-sklipek-palava',
     title: 'Vinný sklípek na Pálavě',
+    tagline: 'Citlivá intervence v krajinářsky chráněném území s respektem k místní tradici.',
     description: 'Architektonický projekt vinného sklípku v oblasti Pálava z roku 2020. Citlivá intervence v krajinářsky chráněném území s respektem k místní tradici.',
     category: 'commercial',
     metadata: { location: 'Pálava', year: '2020', type: 'Vinný sklípek', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -143,6 +158,7 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-ve-fojtce',
     title: 'Rodinný dům Fojtka',
+    tagline: 'Čistá geometrie a kvalitní materiály v klidném příměstském prostředí.',
     description: 'Rodinný dům ve Fojtce u Mníšku u Liberce, dokončený v roce 2017. Čistá geometrie a kvalitní materiály v klidném příměstském prostředí.',
     category: 'residential',
     metadata: { location: 'Fojtka, Mníšek u Liberce', year: '2017', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -150,6 +166,7 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-machnin',
     title: 'Rodinný dům v Liberci – Machníně',
+    tagline: 'Horizontální kompozice hmoty s přirozenou návazností na terén.',
     description: 'Projekt rodinného domu v Machníně u Liberce z roku 2021. Horizontální kompozice hmoty s návazností na terén.',
     category: 'residential',
     metadata: { location: 'Machnín, Liberec', year: '2021', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -157,6 +174,7 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-radlo-2',
     title: 'Rodinný dům v Rádle (varianta 2)',
+    tagline: 'Alternativní hmotová varianta pro stejnou lokalitu u Jablonce nad Nisou.',
     description: 'Druhý projekt rodinného domu v Rádle u Jablonce nad Nisou z roku 2021. Alternativní hmotová varianta pro stejnou lokalitu.',
     category: 'residential',
     metadata: { location: 'Rádlo', year: '2021', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -164,6 +182,7 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-ve-fojtce-kopie',
     title: 'Rodinný dům v Hlásné Třebáni',
+    tagline: 'Adaptace oblíbeného dispozičního řešení na specifické podmínky pražského zázemí.',
     description: 'Projekt rodinného domu v Hlásné Třebáni navržený v roce 2017. Adaptace oblíbeného dispozičního řešení na specifické podmínky pražského zázemí.',
     category: 'residential',
     metadata: { location: 'Hlásná Třebáň', year: '2017', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -171,6 +190,7 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-v-dlouhem-mostu',
     title: 'Rodinný dům v Dlouhém Mostu',
+    tagline: 'Kompaktní dům s přirozeným propojením interiéru a zahrady.',
     description: 'Projekt rodinného domu v Dlouhém Mostu z roku 2021. Kompaktní dům s přirozeným propojením interiéru a zahrady.',
     category: 'residential',
     metadata: { location: 'Dlouhý Most', year: '2021', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -178,6 +198,7 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-jistebsko',
     title: 'Rodinný dům v Jistebsku',
+    tagline: 'Jednoduché hmotové řešení s plochou střechou a výraznými přesahy.',
     description: 'Projekt rodinného domu v Jistebsku dokončený v roce 2020. Jednoduché hmotové řešení s plochou střechou a přesahy.',
     category: 'residential',
     metadata: { location: 'Jistebsko', year: '2020', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -185,6 +206,7 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-v-masove-u-turnova',
     title: 'Rodinný dům v Mašově u Turnova',
+    tagline: 'Moderní architektura v malebné krajině Českého ráje.',
     description: 'Projekt rodinného domu v Mašově u Turnova z roku 2022. Moderní architektura v krajině Českého ráje.',
     category: 'residential',
     metadata: { location: 'Mašov u Turnova', year: '2022', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -192,6 +214,7 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-jizerska',
     title: 'Rodinný dům Jizerská, Liberec',
+    tagline: 'Urbánní vila s čistým výrazem v zástavbě rodinných domů.',
     description: 'Rodinný dům na ulici Jizerská v Liberci, dokončený v roce 2022. Urbánní vila s čistým výrazem v zástavbě rodinných domů.',
     category: 'residential',
     metadata: { location: 'Jizerská, Liberec', year: '2022', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -199,6 +222,7 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-radcice',
     title: 'Rodinný dům v Liberci – Radčicích',
+    tagline: 'Příčný dům s hlubokou terasou a výhledem do přírody.',
     description: 'Projekt rodinného domu v Radčicích u Liberce z roku 2019. Příčný dům s hlubokou terasou a výhledem do přírody.',
     category: 'residential',
     metadata: { location: 'Radčice, Liberec', year: '2019', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -206,6 +230,7 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-v-liberci-radcicich-verze-2',
     title: 'Rodinný dům v Liberci – Radčicích (varianta 2)',
+    tagline: 'Alternativní dispozice na stejném pozemku s odlišným prostorovým řešením.',
     description: 'Druhá návrhová varianta rodinného domu v Radčicích u Liberce z roku 2020. Alternativní dispozice na stejném pozemku.',
     category: 'residential',
     metadata: { location: 'Radčice, Liberec', year: '2020', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -213,6 +238,7 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-rychnov',
     title: 'Rodinný dům Rychnov u Jablonce nad Nisou',
+    tagline: 'Nejnovější projekt studia s důrazem na pasivní energetické standardy.',
     description: 'Projekt rodinného domu v Rychnově u Jablonce nad Nisou z roku 2023. Nejnovější projekt studia s důrazem na pasivní energetické standardy.',
     category: 'residential',
     metadata: { location: 'Rychnov u Jablonce nad Nisou', year: '2023', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -220,6 +246,7 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-rudna',
     title: 'Rodinný dům v Rudné u Prahy',
+    tagline: 'Projekt s materiálovými variantami fasády připravenými pro výběr investora.',
     description: 'Projekt rodinného domu v Rudné u Prahy z roku 2013. Projekt zahrnuje materiálové varianty fasády pro výběr investora.',
     category: 'residential',
     metadata: { location: 'Rudná u Prahy', year: '2013', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -227,6 +254,7 @@ export const projects: Project[] = [
   {
     slug: 'chata-suhrovice',
     title: 'Chata v Suhrovicích, Český ráj',
+    tagline: 'Rekreační objekt respektující místní charakter krajiny a zástavby.',
     description: 'Projekt horské chaty v Suhrovicích v oblasti Českého ráje z roku 2013. Rekreační objekt respektující místní charakter krajiny a zástavby.',
     category: 'residential',
     metadata: { location: 'Suhrovice, Český ráj', year: '2013', type: 'Chata', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -234,6 +262,7 @@ export const projects: Project[] = [
   {
     slug: 'studio-harcov',
     title: 'Dům pro dva v Harcově, Liberec',
+    tagline: 'Kompaktní bydlení pro dvě osoby s velkoryse pojatým obývacím prostorem.',
     description: 'Projekt „Domu pro dva" v Harcově v Liberci z roku 2016. Kompaktní rodinné bydlení optimalizované pro dvě osoby s velkoryse pojatým obývacím prostorem.',
     category: 'residential',
     metadata: { location: 'Harcov, Liberec', year: '2016', type: 'Dům pro dva', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -241,6 +270,7 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-simonovice',
     title: 'Rodinný dům Šimonovice, Liberec',
+    tagline: 'Čistý moderní dům v klidném příměstském prostředí Liberce.',
     description: 'Rodinný dům v Šimonovicích u Liberce. Návrh 2012, realizace 2013. Projekt pod vedením Ing. Ivana Kallmünzera.',
     category: 'residential',
     metadata: { location: 'Šimonovice, Liberec', year_design: '2012', year_completion: '2013', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', project_manager: 'Ing. Ivan Kallmünzer', organization: 'OMNIARCH' },
@@ -248,6 +278,7 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-harcov',
     title: 'Rodinný dům Harcov, Liberec',
+    tagline: 'Rodinný dům v oblíbené vilové čtvrti Liberce.',
     description: 'Rodinný dům v Harcově v Liberci, dokončený v roce 2009. Stavebně-technické řešení: Ing. Jakub Moc a Ing. Veronika Madecká.',
     category: 'residential',
     metadata: { location: 'Harcov, Liberec', year: '2009', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', building_solutions: 'Ing. Jakub Moc, Ing. Veronika Madecká', organization: 'OMNIARCH' },
@@ -255,6 +286,7 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-hejnice',
     title: 'Rodinný dům v Hejnicích',
+    tagline: 'Projekt rodinného bydlení v podhůří Jizerských hor.',
     description: 'Projekt rodinného domu v Hejnicích z roku 2017. Stavebně-technické řešení: František Ovečka.',
     category: 'residential',
     metadata: { location: 'Hejnice', year: '2017', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', construction_solution: 'František Ovečka', organization: 'OMNIARCH' },
@@ -262,6 +294,7 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-rudolfov',
     title: 'Rodinný dům v Rudolfově, Liberec',
+    tagline: 'Dům ve svahu s výraznými terasami a panoramatickým výhledem.',
     description: 'Projekt rodinného domu v Rudolfově u Liberce z roku 2013. Dům ve svahu s výraznými terasami a panoramatickým výhledem.',
     category: 'residential',
     metadata: { location: 'Rudolfov, Liberec', year: '2013', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -269,6 +302,7 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-radlo',
     title: 'Rodinný dům v Rádle',
+    tagline: 'Otevřený dům s přirozeným propojením přízemí se zahradou.',
     description: 'Rodinný dům v Rádle u Jablonce nad Nisou. Návrh 2011, realizace 2014. Otevřený dům s přirozeným propojením parter domu se zahradou.',
     category: 'residential',
     metadata: { location: 'Rádlo, Jablonec nad Nisou', year_design: '2011', year_completion: '2014', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -276,6 +310,7 @@ export const projects: Project[] = [
   {
     slug: 'obytny-soubor-nova-vska',
     title: 'Obytný soubor v Nové Vésce',
+    tagline: 'Obytný soubor s citlivým vztahem k okolní krajině severní Moravy.',
     description: 'Projekt obytného souboru v Nové Vésce u Bruntálu z roku 2010. Architekti: Ing. Veronika Madecká, Ing. Jakub Moc.',
     category: 'residential',
     metadata: { location: 'Nová Véska, Bruntál', year: '2010', type: 'Obytný soubor', architects: 'Ing. Veronika Madecká, Ing. Jakub Moc', organization: 'OMNIARCH' },
@@ -283,6 +318,7 @@ export const projects: Project[] = [
   {
     slug: 'cerpaci-stanice-machnin',
     title: 'Čerpací stanice Machnín, Liberec',
+    tagline: 'Komerční stavba s důrazem na funkčnost a orientaci v prostoru.',
     description: 'Projekt čerpací stanice pohonných hmot v Machníně u Liberce z roku 2007. Komerční stavba s důrazem na funkčnost a orientaci v prostoru.',
     category: 'commercial',
     metadata: { location: 'Machnín, Liberec', year: '2007', type: 'Čerpací stanice', architect: 'Ing. arch. Pavel Novák', organization: 'SIADESIGN Liberec s.r.o.' },
@@ -290,6 +326,7 @@ export const projects: Project[] = [
   {
     slug: 'terminal-csad-liberec',
     title: 'Terminál ČSAD Liberec',
+    tagline: 'Dopravní uzel se zastřešeným nástupištěm a zázemím pro cestující.',
     description: 'Projekt autobusového terminálu ČSAD v Liberci z roku 2008. Dopravní uzel se zastřešeným nástupištěm a zázemím pro cestující.',
     category: 'public',
     metadata: { location: 'Liberec', year: '2008', type: 'Dopravní terminál', architect: 'Ing. arch. Pavel Novák', organization: 'SIADESIGN Liberec s.r.o.' },
@@ -297,6 +334,7 @@ export const projects: Project[] = [
   {
     slug: 'hospodarska-budova-zoo-liberec',
     title: 'Hospodářská budova ZOO Liberec',
+    tagline: 'Provozní zázemí liberecké zoo s čistým moderním architektonickým výrazem.',
     description: 'Projekt hospodářské budovy Zoologické zahrady Liberec. Návrh 2010, realizace 2014. Architekti: Ing. arch. Pavel Novák a Ing. arch. Radim Kousal.',
     category: 'public',
     metadata: { location: 'ZOO Liberec', year_design: '2010', year_completion: '2014', type: 'Hospodářská budova', architects: 'Ing. arch. Pavel Novák, Ing. arch. Radim Kousal', organization: 'SIADESIGN Liberec s.r.o.' },
@@ -304,6 +342,7 @@ export const projects: Project[] = [
   {
     slug: 'vstupni-objekt-zoo-liberec',
     title: 'Vstupní objekt ZOO Liberec',
+    tagline: 'Nová brána liberecké zoo s jasnou orientací pro návštěvníky.',
     description: 'Vstupní objekt Zoologické zahrady Liberec. Návrh 2010, realizace 2014. Architekti: Ing. arch. Pavel Novák a Ing. arch. Radim Kousal. Nová brána liberecké zoo.',
     category: 'public',
     metadata: { location: 'ZOO Liberec', year_design: '2010', year_completion: '2014', type: 'Vstupní objekt', architects: 'Ing. arch. Pavel Novák, Ing. arch. Radim Kousal', organization: 'SIADESIGN Liberec s.r.o.' },
@@ -311,6 +350,7 @@ export const projects: Project[] = [
   {
     slug: 'bytov-domy-nova-ruda',
     title: 'Bytové domy Nová Ruda, Liberec',
+    tagline: 'Bytové bydlení v Liberci s důrazem na kvalitu a dostupnost.',
     description: 'Projekt bytových domů v Nové Rudě v Liberci. Návrh 2006, realizace 2011. Architekti: Ing. arch. Pavel Novák a Ing. arch. Richard Černý. Statika: Ing. Jakub Moc.',
     category: 'residential',
     metadata: { location: 'Nová Ruda, Liberec', year_design: '2006', year_completion: '2011', type: 'Bytové domy', architects: 'Ing. arch. Pavel Novák, Ing. arch. Richard Černý', structural_design: 'Ing. Jakub Moc', organization: 'SIADESIGN Liberec s.r.o.' },
@@ -318,6 +358,7 @@ export const projects: Project[] = [
   {
     slug: 'polyfunkcni-dum-liberec',
     title: 'Polyfunkční dům Liberec',
+    tagline: 'Víceúčelová budova propojující bydlení a komerci v centru Liberce.',
     description: 'Projekt polyfunkčního domu na Sokolovském náměstí v Liberci z roku 2010. Architekti: Ing. arch. Pavel Novák, Ing. arch. Radim Kousal, Ing. arch. Jan Lajksner.',
     category: 'commercial',
     metadata: { location: 'Sokolovský nám., Liberec', year: '2010', type: 'Polyfunkční dům', architects: 'Ing. arch. Pavel Novák, Ing. arch. Radim Kousal, Ing. arch. Jan Lajksner', organization: 'SIADESIGN Liberec s.r.o.' },
@@ -325,6 +366,7 @@ export const projects: Project[] = [
   {
     slug: 'obchodni-centrum-plaza',
     title: 'Obchodní centrum Plaza, Liberec',
+    tagline: 'Vítězný soutěžní návrh obchodního centra pro centrum Liberce.',
     description: 'Vítězný návrh (1. místo v soutěži) obchodního centra Plaza v Liberci z roku 2006. Architekti: Ing. arch. Radim Kousal, Ing. arch. Richard Černý, Ing. arch. Jiří Březina, Ing. arch. Pavel Novák.',
     category: 'commercial',
     metadata: { location: 'Liberec', year: '2006', type: 'Obchodní centrum', competition_result: '1. místo v soutěži', architects: 'Ing. arch. Radim Kousal, Ing. arch. Richard Černý, Ing. arch. Jiří Březina, Ing. arch. Pavel Novák', organization: 'SIADESIGN s.r.o.' },
@@ -332,6 +374,7 @@ export const projects: Project[] = [
   {
     slug: 'pristavba-tovarny-peguform',
     title: 'Přístavba továrny Peguform, Liberec',
+    tagline: 'Rozšíření výrobní kapacity s architektonicky uceleným řešením.',
     description: 'Projekt přístavby výrobní haly továrny Peguform v Liberci z roku 2006. Architekti: Ing. arch. Pavel Novák a Josef Škůrek.',
     category: 'commercial',
     metadata: { location: 'Liberec', year: '2006', type: 'Přístavba továrny', architects: 'Ing. arch. Pavel Novák, Josef Škůrek', organization: 'SIADESIGN Liberec s.r.o.' },
@@ -339,6 +382,7 @@ export const projects: Project[] = [
   {
     slug: 'zubni-klinika-zlin',
     title: 'Zubní klinika Zlín',
+    tagline: 'Zdravotnické zařízení s klidným a přívětivým interiérem.',
     description: 'Projekt zubní kliniky ve Zlíně z roku 2008. Zdravotnické zařízení s klidným a přívětivým interiérem.',
     category: 'commercial',
     metadata: { location: 'Zlín', year: '2008', type: 'Zubní klinika', architect: 'Ing. arch. Pavel Novák', organization: 'SIADESIGN Liberec s.r.o.' },
@@ -346,6 +390,7 @@ export const projects: Project[] = [
   {
     slug: 'dum-s-rehabilitacnim-centrem-turnov',
     title: 'Dům s rehabilitačním centrem v Turnově',
+    tagline: 'Kombinace bydlení a zdravotnických služeb v jednom objektu.',
     description: 'Projekt bytového domu s rehabilitačním centrem v Turnově z roku 2015. Kombinace bydlení a zdravotnických služeb v jednom objektu.',
     category: 'commercial',
     metadata: { location: 'Turnov', year: '2015', type: 'Dům s rehabilitačním centrem', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -353,6 +398,7 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-lukasov',
     title: 'Rodinný dům Lukášov, Liberec',
+    tagline: 'Jeden z prvních projektů studia — výchozí bod architektonického jazyka OMNIARCH.',
     description: 'Rodinný dům v Lukášově u Liberce — jeden z prvních projektů studia. Návrh 2004, realizace 2006.',
     category: 'residential',
     metadata: { location: 'Lukášov, Liberec', year_design: '2004', year_completion: '2006', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -360,6 +406,7 @@ export const projects: Project[] = [
   {
     slug: 'chalupa-rudolfov',
     title: 'Chalupa v Rudolfově, Liberec',
+    tagline: 'Citlivá obnova venkovského stavení s moderními prvky.',
     description: 'Rekonstrukce chalupy v Rudolfově u Liberce. Návrh 2012, realizace 2015. Citlivá obnova venkovského stavení s moderními prvky.',
     category: 'residential',
     metadata: { location: 'Rudolfov, Liberec', year_design: '2012', year_completion: '2015', type: 'Chalupa', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
@@ -367,6 +414,7 @@ export const projects: Project[] = [
   {
     slug: 'rodinny-dum-chrastava',
     title: 'Rodinný dům v Chrastavě',
+    tagline: 'Rodinný dům s čistým geometrickým výrazem a kvalitním zpracováním detailů.',
     description: 'Projekt rodinného domu v Chrastavě. Návrh 2008, realizace 2010. Architekti: Ing. arch. Pavel Novák a Marek Prchlík.',
     category: 'residential',
     metadata: { location: 'Chrastava', year_design: '2008', year_completion: '2010', type: 'Rodinný dům', architects: 'Ing. arch. Pavel Novák, Marek Prchlík', organization: 'OMNIARCH' },
@@ -374,6 +422,7 @@ export const projects: Project[] = [
   {
     slug: 'typovy-dum-mnichovo-hradiste',
     title: 'Typový dům Mnichovo Hradiště',
+    tagline: 'Typové řešení rodinného domu přizpůsobené lokálním podmínkám.',
     description: 'Projekt typového rodinného domu pro Mnichovo Hradiště z roku 2010. Architekti: Ing. arch. Pavel Novák a Ing. arch. Richard Černý.',
     category: 'residential',
     metadata: { location: 'Mnichovo Hradiště', year: '2010', type: 'Typový rodinný dům', architects: 'Ing. arch. Pavel Novák, Ing. arch. Richard Černý', organization: 'SIADESIGN Liberec s.r.o.' },
@@ -381,6 +430,7 @@ export const projects: Project[] = [
   {
     slug: 'viladomy-harcov',
     title: 'Viladomy v Harcově, Liberec',
+    tagline: 'Komplex nadstandardního bydlení v klidné vilové čtvrti Liberce.',
     description: 'Projekt viladomů v Harcově v Liberci z roku 2007. Komplex nadstandardního bydlení v klidné vilové čtvrti.',
     category: 'residential',
     metadata: { location: 'Harcov, Liberec', year: '2007', type: 'Viladomy', architect: 'Ing. arch. Pavel Novák', organization: 'SIADESIGN Liberec s.r.o.' },
@@ -388,6 +438,7 @@ export const projects: Project[] = [
   {
     slug: 'velvyslanectvi-sr',
     title: 'Velvyslanectví Slovenské republiky, Praha',
+    tagline: 'Soutěžní návrh reprezentativní budovy pro Slovenskou republiku v Praze.',
     description: 'Soutěžní návrh budovy Velvyslanectví Slovenské republiky v Praze z roku 2004. Architekti: Ing. arch. Pavel Novák, Ing. arch. Radim Kousal, Ing. arch. Richard Černý, Ing. arch. Diana Hocková, Ing. arch. Václav Králíček.',
     category: 'public',
     metadata: { location: 'Praha', year: '2004', type: 'Velvyslanectví', architects: 'Ing. arch. Pavel Novák, Ing. arch. Radim Kousal, Ing. arch. Richard Černý, Ing. arch. Diana Hocková, Ing. arch. Václav Králíček', organization: 'SIADESIGN s.r.o.' },

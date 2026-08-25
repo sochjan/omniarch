@@ -42,7 +42,9 @@ export default function DesignPage() {
             <h2 className="text-sm font-normal text-[#111111] group-hover:opacity-70 transition-opacity duration-200">
               {item.title}
             </h2>
-            <p className="text-xs text-[#737373] mt-0.5">Design</p>
+            {item.tagline && (
+              <p className="text-xs text-[#737373] mt-1 leading-relaxed">{item.tagline}</p>
+            )}
           </Link>
         ))}
       </div>

@@ -26,8 +26,13 @@ export default function ProjectCard({ project }: { project: Project }) {
       <h2 className="text-sm font-normal text-[#111111] leading-snug group-hover:opacity-70 transition-opacity duration-200">
         {project.title}
       </h2>
+      {project.tagline && (
+        <p className="text-xs text-[#737373] mt-1 leading-relaxed">
+          {project.tagline}
+        </p>
+      )}
       {(project.metadata.location || year) && (
-        <p className="text-xs text-[#737373] mt-1">
+        <p className="text-xs text-[#aaaaaa] mt-1">
           {[project.metadata.location, year].filter(Boolean).join(' · ')}
         </p>
       )}

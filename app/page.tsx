@@ -1,22 +1,22 @@
 import { projects } from '@/lib/projects'
 import ProjectGrid from '@/components/ProjectGrid'
+import HeroSection from '@/components/HeroSection'
+import HeroCarousel from '@/components/HeroCarousel'
 
 export default function HomePage() {
   return (
     <div>
-      <section className="max-w-7xl mx-auto px-6 md:px-12 pt-20 pb-16">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl md:text-5xl font-extralight tracking-tight text-[#111111] leading-tight mb-4">
-            Architektura pro každodenní život
-          </h1>
-          <p className="text-[#737373] text-base font-light leading-relaxed">
-            Volné seskupení architektů a stavebních projektantů z Liberce. Klademe důraz na moderní
-            a svěží vzhled, jednoduchost stavby a úspory energií.
-          </p>
+      <HeroSection />
+
+      <div className="pt-20 pb-10">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 mb-8">
+          <h2 className="text-3xl md:text-4xl font-extralight tracking-tight text-[#111111]">Vybrané projekty</h2>
         </div>
-      </section>
+        <HeroCarousel />
+      </div>
 
       <section className="max-w-7xl mx-auto px-6 md:px-12 pb-24">
+        <h2 className="text-3xl md:text-4xl font-extralight tracking-tight text-[#111111] mb-10">Projekty</h2>
         <ProjectGrid projects={projects} />
       </section>
     </div>
