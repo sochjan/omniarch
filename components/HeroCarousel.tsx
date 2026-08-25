@@ -16,6 +16,7 @@ const SLIDES = [
 export default function HeroCarousel() {
   const [current, setCurrent] = useState(0)
   const paused = useRef(false)
+  const touchStartX = useRef<number | null>(null)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,6 +30,15 @@ export default function HeroCarousel() {
       className="relative w-full h-[75vh] overflow-hidden"
       onMouseEnter={() => { paused.current = true }}
       onMouseLeave={() => { paused.current = false }}
+      onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX }}
+      onTouchEnd={(e) => {
+        if (touchStartX.current === null) return
+        const diff = touchStartX.current - e.changedTouches[0].clientX
+        if (Math.abs(diff) > 50) diff > 0
+          ? setCurrent((i) => (i + 1) % SLIDES.length)
+          : setCurrent((i) => (i - 1 + SLIDES.length) % SLIDES.length)
+        touchStartX.current = null
+      }}
     >
       {SLIDES.map((slide, i) => (
         <Link
