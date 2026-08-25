@@ -25,7 +25,7 @@ export default function DesignPage() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
         {designProjects.map((item) => (
-          <Link key={item.slug} href={`/design/${item.slug}`} className="group block">
+          <Link key={item.slug} href={`/${item.slug}`} className="group block">
             <div className="aspect-[4/3] relative overflow-hidden mb-3">
               <img
                 src={`${BASE}/placeholder.png`}

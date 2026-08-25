@@ -71,26 +71,33 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
             mouseStartX.current = null
           }}
         >
-          <img
-            src={images[lightboxIndex]}
-            alt={`${title} – fotografie ${lightboxIndex + 1}`}
-            className="max-h-screen max-w-screen-lg w-full object-contain md:px-16 pointer-events-none"
-          />
+          <div className="flex flex-col items-center w-full max-w-screen-lg">
+            <img
+              src={images[lightboxIndex]}
+              alt={`${title} – fotografie ${lightboxIndex + 1}`}
+              className="w-full max-h-[80vh] object-contain pointer-events-none"
+            />
+            <div className="flex items-center gap-6 mt-4">
+              <button
+                onClick={(e) => { e.stopPropagation(); prev() }}
+                className="hidden md:block text-white/70 hover:text-white text-2xl px-3 py-2 transition-colors cursor-pointer"
+                aria-label="Předchozí"
+              >
+                ←
+              </button>
+              <span className="text-white/50 text-xs tracking-widest">
+                {lightboxIndex + 1} / {images.length}
+              </span>
+              <button
+                onClick={(e) => { e.stopPropagation(); next() }}
+                className="hidden md:block text-white/70 hover:text-white text-2xl px-3 py-2 transition-colors cursor-pointer"
+                aria-label="Další"
+              >
+                →
+              </button>
+            </div>
+          </div>
 
-          <button
-            onClick={(e) => { e.stopPropagation(); prev() }}
-            className="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white text-3xl px-3 py-4 transition-colors cursor-pointer"
-            aria-label="Předchozí"
-          >
-            ←
-          </button>
-          <button
-            onClick={(e) => { e.stopPropagation(); next() }}
-            className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white text-3xl px-3 py-4 transition-colors cursor-pointer"
-            aria-label="Další"
-          >
-            →
-          </button>
           <button
             onClick={(e) => { e.stopPropagation(); close() }}
             className="absolute top-4 right-4 text-white/70 hover:text-white text-xl px-3 py-2 transition-colors cursor-pointer"
@@ -98,9 +105,6 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
           >
             ✕
           </button>
-          <span className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/50 text-xs tracking-widest pointer-events-none">
-            {lightboxIndex + 1} / {images.length}
-          </span>
         </div>
       )}
     </>
