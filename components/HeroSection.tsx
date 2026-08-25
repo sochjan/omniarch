@@ -48,7 +48,7 @@ export default function HeroSection() {
           </div>
 
           <div>
-            <p className="text-[10px] uppercase tracking-widest text-[#aaaaaa] mb-6">Procesy</p>
+            <p className="text-[10px] uppercase tracking-widest text-[#a89880] mb-6">Procesy</p>
             <div className="space-y-5 text-sm font-light leading-relaxed text-[#111111] max-w-md">
               <p>
                 Náš pracovní postup začíná důkladným rozhovorem. Chceme rozumět tomu, jak
@@ -67,7 +67,7 @@ export default function HeroSection() {
           </div>
 
           <div>
-            <p className="text-[10px] uppercase tracking-widest text-[#aaaaaa] mb-6">Tým</p>
+            <p className="text-[10px] uppercase tracking-widest text-[#a89880] mb-6">Tým</p>
             <div className="space-y-6 text-sm font-light leading-relaxed text-[#111111] max-w-md">
               <div>
                 <p className="font-normal mb-1">Ing. arch. Pavel Novák</p>
@@ -134,7 +134,7 @@ function MobileText() {
       </div>
 
       <div>
-        <p className="text-[10px] uppercase tracking-widest text-[#aaaaaa] mb-4">Procesy</p>
+        <p className="text-[10px] uppercase tracking-widest text-[#a89880] mb-4">Procesy</p>
         <div className="space-y-4 text-sm font-light leading-relaxed text-[#111111]">
           <p>
             Náš pracovní postup začíná důkladným rozhovorem. Na základě toho zpracujeme
@@ -148,7 +148,7 @@ function MobileText() {
       </div>
 
       <div>
-        <p className="text-[10px] uppercase tracking-widest text-[#aaaaaa] mb-4">Tým</p>
+        <p className="text-[10px] uppercase tracking-widest text-[#a89880] mb-4">Tým</p>
         <div className="space-y-4 text-sm font-light leading-relaxed text-[#111111]">
           <p className="font-normal">Ing. arch. Pavel Novák</p>
           <p className="text-[#737373] text-xs">Zakladatel, hlavní architekt</p>

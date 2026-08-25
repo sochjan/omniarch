@@ -22,7 +22,7 @@ export default function ContactPage() {
 
         <div className="space-y-10">
           <div className="border-t border-[#e5e5e5] pt-8">
-            <p className="text-xs text-[#aaaaaa] uppercase tracking-widest mb-3">Hlavní kontakt</p>
+            <p className="text-xs text-[#a89880] uppercase tracking-widest mb-3">Hlavní kontakt</p>
             <h2 className="text-base font-normal text-[#111111] mb-4">Ing. arch. Pavel Novák</h2>
             <div className="space-y-2">
               <a
@@ -47,7 +47,7 @@ export default function ContactPage() {
           </div>
 
           <div className="border-t border-[#e5e5e5] pt-8">
-            <p className="text-xs text-[#aaaaaa] uppercase tracking-widest mb-3">Co nabízíme</p>
+            <p className="text-xs text-[#a89880] uppercase tracking-widest mb-3">Co nabízíme</p>
             <ul className="space-y-2 text-sm text-[#737373] font-light">
               <li>Architektonická studie</li>
               <li>Dokumentace pro územní řízení</li>

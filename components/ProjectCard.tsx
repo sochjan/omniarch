@@ -32,7 +32,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         </p>
       )}
       {(project.metadata.location || year) && (
-        <p className="text-xs text-[#aaaaaa] mt-1">
+        <p className="text-xs text-[#a89880] mt-1">
           {[project.metadata.location, year].filter(Boolean).join(' · ')}
         </p>
       )}

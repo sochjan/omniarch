@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="cs" className={inter.variable}>
-      <body className="min-h-screen flex flex-col bg-[#fafaf8] text-[#111111]">
+      <body className="min-h-screen flex flex-col bg-[#e6d9c4] text-[#111111]">
         <Nav />
         <main className="flex-1">{children}</main>
         <footer className="border-t border-[#e5e5e5] py-10 px-6 md:px-12">

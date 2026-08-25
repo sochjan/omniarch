@@ -74,7 +74,7 @@ export default async function ProjectPage({
     )
     const textContent = (
       <div className="space-y-6">
-        <p className="text-[10px] text-[#aaaaaa] uppercase tracking-widest">Design</p>
+        <p className="text-[10px] text-[#a89880] uppercase tracking-widest">Design</p>
         <h1 className="text-3xl md:text-4xl font-extralight tracking-tight text-[#111111] leading-tight">
           {designProject.title}
         </h1>
@@ -143,7 +143,7 @@ export default async function ProjectPage({
   const textContent = (
     <div className="space-y-6">
       {project.metadata.type && (
-        <p className="text-[10px] text-[#aaaaaa] uppercase tracking-widest">
+        <p className="text-[10px] text-[#a89880] uppercase tracking-widest">
           {project.metadata.type}
         </p>
       )}
@@ -168,7 +168,7 @@ export default async function ProjectPage({
         <div className="pt-4 border-t border-[#e5e5e5] space-y-4">
           {metaEntries.map(([key, val]) => (
             <div key={key} className="flex flex-col gap-0.5">
-              <span className="text-[10px] text-[#aaaaaa] uppercase tracking-widest">
+              <span className="text-[10px] text-[#a89880] uppercase tracking-widest">
                 {METADATA_LABELS[key] ?? key}
               </span>
               <span className="text-xs text-[#111111] font-light">{val}</span>
@@ -176,7 +176,7 @@ export default async function ProjectPage({
           ))}
           {project.metadata.organization && (
             <div className="flex flex-col gap-0.5 pt-4 border-t border-[#e5e5e5]">
-              <span className="text-[10px] text-[#aaaaaa] uppercase tracking-widest">Studio</span>
+              <span className="text-[10px] text-[#a89880] uppercase tracking-widest">Studio</span>
               <span className="text-xs text-[#111111] font-light">
                 {project.metadata.organization}
               </span>
