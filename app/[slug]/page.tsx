@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { projects, getProject, getDisplayYear } from '@/lib/projects'
 import { designProjects, getDesignProject } from '@/lib/design'
 import PhotoGallery from '@/components/PhotoGallery'
+import ProjectCarousel from '@/components/ProjectCarousel'
 import type { Metadata } from 'next'
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
@@ -58,93 +59,165 @@ export default async function ProjectPage({
   const designProject = !archProject ? getDesignProject(slug) : undefined
   if (!archProject && !designProject) notFound()
 
-  const imgSrc = `${BASE}${archProject?.image ?? '/placeholder.png'}`
+  // Placeholder images — replace with real per-project images later
+  const images = Array(5).fill(`${BASE}${archProject?.image ?? '/placeholder.png'}`)
 
+  // ── Design project ────────────────────────────────────────────────────────
   if (designProject) {
-    return (
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
-        <Link
-          href="/design"
-          className="inline-flex items-center gap-2 text-xs text-[#737373] hover:text-[#111111] uppercase tracking-wide transition-colors mb-12"
-        >
-          ← Všechny design projekty
-        </Link>
+    const backLink = (
+      <Link
+        href="/design"
+        className="inline-flex items-center gap-2 text-xs text-[#737373] hover:text-[#111111] uppercase tracking-wide transition-colors"
+      >
+        ← Design projekty
+      </Link>
+    )
+    const textContent = (
+      <div className="space-y-6">
+        <p className="text-[10px] text-[#aaaaaa] uppercase tracking-widest">Design</p>
+        <h1 className="text-3xl md:text-4xl font-extralight tracking-tight text-[#111111] leading-tight">
+          {designProject.title}
+        </h1>
+        {designProject.tagline && (
+          <p className="text-base font-light text-[#111111] leading-relaxed">
+            {designProject.tagline}
+          </p>
+        )}
+        <p className="text-sm font-light text-[#737373] leading-relaxed">
+          {designProject.description}
+        </p>
+      </div>
+    )
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16">
-          <div className="lg:col-span-1 order-1 lg:order-2">
-            <p className="text-xs text-[#737373] uppercase tracking-widest mb-3">Design</p>
-            <h1 className="text-2xl md:text-3xl font-extralight text-[#111111] leading-tight mb-6">
-              {designProject.title}
-            </h1>
-            <p className="text-sm text-[#111111] font-light leading-relaxed">
-              {designProject.description}
-            </p>
+    return (
+      <div>
+        {/* Mobile */}
+        <div className="md:hidden">
+          <div className="aspect-[4/3] relative overflow-hidden">
+            <ProjectCarousel images={images} title={designProject.title} />
           </div>
-          <div className="lg:col-span-2 order-2 lg:order-1">
-            <PhotoGallery images={[imgSrc, imgSrc, imgSrc, imgSrc, imgSrc]} title={designProject.title} />
+          <div className="px-6 py-12 space-y-10">
+            {backLink}
+            {textContent}
           </div>
         </div>
+
+        {/* Desktop */}
+        <div className="hidden md:grid grid-cols-2 items-start">
+          <div className="px-12 xl:px-20 py-16">
+            {backLink}
+            <div className="mt-14">{textContent}</div>
+          </div>
+          <div className="sticky top-0 h-screen overflow-hidden">
+            <ProjectCarousel images={images} title={designProject.title} />
+          </div>
+        </div>
+
+        {/* Gallery */}
+        <section className="max-w-7xl mx-auto px-6 md:px-12 py-16 border-t border-[#e5e5e5]">
+          <h2 className="text-2xl md:text-3xl font-extralight tracking-tight text-[#111111] mb-10">
+            Galerie
+          </h2>
+          <PhotoGallery images={images} title={designProject.title} />
+        </section>
       </div>
     )
   }
 
+  // ── Architecture project ──────────────────────────────────────────────────
   const project = archProject!
   const year = getDisplayYear(project)
   const metaEntries = Object.entries(project.metadata).filter(
     ([key, val]) => val && key !== 'organization'
   )
 
-  return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
-      <Link
-        href="/"
-        className="inline-flex items-center gap-2 text-xs text-[#737373] hover:text-[#111111] uppercase tracking-wide transition-colors mb-12"
-      >
-        ← Všechny projekty
-      </Link>
+  const backLink = (
+    <Link
+      href="/"
+      className="inline-flex items-center gap-2 text-xs text-[#737373] hover:text-[#111111] uppercase tracking-wide transition-colors"
+    >
+      ← Všechny projekty
+    </Link>
+  )
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16">
-        <div className="lg:col-span-1 order-1 lg:order-2">
-          <p className="text-xs text-[#737373] uppercase tracking-widest mb-3">
-            {project.metadata.type}
-          </p>
-          <h1 className="text-2xl md:text-3xl font-extralight text-[#111111] leading-tight mb-2">
-            {project.title}
-          </h1>
-          {(project.metadata.location || year) && (
-            <p className="text-sm text-[#737373] mb-6">
-              {[project.metadata.location, year].filter(Boolean).join(' · ')}
-            </p>
+  const textContent = (
+    <div className="space-y-6">
+      {project.metadata.type && (
+        <p className="text-[10px] text-[#aaaaaa] uppercase tracking-widest">
+          {project.metadata.type}
+        </p>
+      )}
+      <h1 className="text-3xl md:text-4xl font-extralight tracking-tight text-[#111111] leading-tight">
+        {project.title}
+      </h1>
+      {(project.metadata.location || year) && (
+        <p className="text-sm text-[#737373]">
+          {[project.metadata.location, year].filter(Boolean).join(' · ')}
+        </p>
+      )}
+      {project.tagline && (
+        <p className="text-base font-light text-[#111111] leading-relaxed">
+          {project.tagline}
+        </p>
+      )}
+      <p className="text-sm font-light text-[#737373] leading-relaxed">
+        {project.description}
+      </p>
+
+      {metaEntries.length > 0 && (
+        <div className="pt-4 border-t border-[#e5e5e5] space-y-4">
+          {metaEntries.map(([key, val]) => (
+            <div key={key} className="flex flex-col gap-0.5">
+              <span className="text-[10px] text-[#aaaaaa] uppercase tracking-widest">
+                {METADATA_LABELS[key] ?? key}
+              </span>
+              <span className="text-xs text-[#111111] font-light">{val}</span>
+            </div>
+          ))}
+          {project.metadata.organization && (
+            <div className="flex flex-col gap-0.5 pt-4 border-t border-[#e5e5e5]">
+              <span className="text-[10px] text-[#aaaaaa] uppercase tracking-widest">Studio</span>
+              <span className="text-xs text-[#111111] font-light">
+                {project.metadata.organization}
+              </span>
+            </div>
           )}
-
-          <p className="text-sm text-[#111111] font-light leading-relaxed mb-8">
-            {project.description}
-          </p>
-
-          <div className="border-t border-[#e5e5e5] pt-6 space-y-4">
-            {metaEntries.map(([key, val]) => (
-              <div key={key} className="flex flex-col gap-0.5">
-                <span className="text-[10px] text-[#aaaaaa] uppercase tracking-widest">
-                  {METADATA_LABELS[key] ?? key}
-                </span>
-                <span className="text-xs text-[#111111] font-light">{val}</span>
-              </div>
-            ))}
-            {project.metadata.organization && (
-              <div className="flex flex-col gap-0.5 pt-4 border-t border-[#e5e5e5]">
-                <span className="text-[10px] text-[#aaaaaa] uppercase tracking-widest">Studio</span>
-                <span className="text-xs text-[#111111] font-light">
-                  {project.metadata.organization}
-                </span>
-              </div>
-            )}
-          </div>
         </div>
+      )}
+    </div>
+  )
 
-        <div className="lg:col-span-2 order-2 lg:order-1">
-          <PhotoGallery images={[imgSrc, imgSrc, imgSrc, imgSrc, imgSrc]} title={project.title} />
+  return (
+    <div>
+      {/* Mobile */}
+      <div className="md:hidden">
+        <div className="aspect-[4/3] relative overflow-hidden">
+          <ProjectCarousel images={images} title={project.title} />
+        </div>
+        <div className="px-6 py-12 space-y-10">
+          {backLink}
+          {textContent}
         </div>
       </div>
+
+      {/* Desktop */}
+      <div className="hidden md:grid grid-cols-2 items-start">
+        <div className="px-12 xl:px-20 py-16">
+          {backLink}
+          <div className="mt-14">{textContent}</div>
+        </div>
+        <div className="sticky top-0 h-screen overflow-hidden">
+          <ProjectCarousel images={images} title={project.title} />
+        </div>
+      </div>
+
+      {/* Gallery */}
+      <section className="max-w-7xl mx-auto px-6 md:px-12 py-16 border-t border-[#e5e5e5]">
+        <h2 className="text-2xl md:text-3xl font-extralight tracking-tight text-[#111111] mb-10">
+          Galerie
+        </h2>
+        <PhotoGallery images={images} title={project.title} />
+      </section>
     </div>
   )
 }
