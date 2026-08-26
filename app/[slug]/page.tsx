@@ -6,7 +6,7 @@ import PhotoGallery from '@/components/PhotoGallery'
 import ProjectCarousel from '@/components/ProjectCarousel'
 import type { Metadata } from 'next'
 
-const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '/omniarch'
 
 export async function generateStaticParams() {
   return [

@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 
-const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '/omniarch'
 
 const SLIDES = [
   { image: `${BASE}/placeholder.png`, slug: 'rodinny-dum-v-hradku-nad-nisou' },
@@ -17,6 +17,11 @@ export default function HeroCarousel() {
   const [current, setCurrent] = useState(0)
   const paused = useRef(false)
   const touchStartX = useRef<number | null>(null)
+  const mouseStartX = useRef<number | null>(null)
+  const wasDragging = useRef(false)
+
+  const prev = () => setCurrent((i) => (i - 1 + SLIDES.length) % SLIDES.length)
+  const next = () => setCurrent((i) => (i + 1) % SLIDES.length)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,17 +32,26 @@ export default function HeroCarousel() {
 
   return (
     <div
-      className="relative w-full h-[75vh] overflow-hidden"
+      className="relative w-full h-[75vh] overflow-hidden select-none cursor-grab active:cursor-grabbing"
       onMouseEnter={() => { paused.current = true }}
-      onMouseLeave={() => { paused.current = false }}
+      onMouseLeave={() => { paused.current = false; mouseStartX.current = null }}
       onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX }}
       onTouchEnd={(e) => {
         if (touchStartX.current === null) return
         const diff = touchStartX.current - e.changedTouches[0].clientX
-        if (Math.abs(diff) > 50) diff > 0
-          ? setCurrent((i) => (i + 1) % SLIDES.length)
-          : setCurrent((i) => (i - 1 + SLIDES.length) % SLIDES.length)
+        if (Math.abs(diff) > 50) diff > 0 ? next() : prev()
         touchStartX.current = null
+      }}
+      onMouseDown={(e) => { mouseStartX.current = e.clientX; wasDragging.current = false }}
+      onMouseMove={(e) => {
+        if (mouseStartX.current !== null && Math.abs(e.clientX - mouseStartX.current) > 10)
+          wasDragging.current = true
+      }}
+      onMouseUp={(e) => {
+        if (mouseStartX.current === null) return
+        const diff = mouseStartX.current - e.clientX
+        if (Math.abs(diff) > 50) diff > 0 ? next() : prev()
+        mouseStartX.current = null
       }}
     >
       {SLIDES.map((slide, i) => (
@@ -48,25 +62,32 @@ export default function HeroCarousel() {
             i === current ? 'opacity-100' : 'opacity-0'
           }`}
           tabIndex={i === current ? 0 : -1}
+          onClick={(e) => {
+            if (wasDragging.current) {
+              e.preventDefault()
+              wasDragging.current = false
+            }
+          }}
         >
           <img
             src={slide.image}
             alt={`Projekt ${i + 1}`}
             className="w-full h-full object-cover"
+            draggable={false}
           />
         </Link>
       ))}
 
       {/* Arrows — desktop only */}
       <button
-        onClick={(e) => { e.preventDefault(); setCurrent((i) => (i - 1 + SLIDES.length) % SLIDES.length) }}
+        onClick={(e) => { e.preventDefault(); prev() }}
         className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-10 w-8 h-8 items-center justify-center bg-white/50 hover:bg-white/80 text-[#111111] rounded-full transition-all"
         aria-label="Předchozí"
       >
         ‹
       </button>
       <button
-        onClick={(e) => { e.preventDefault(); setCurrent((i) => (i + 1) % SLIDES.length) }}
+        onClick={(e) => { e.preventDefault(); next() }}
         className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-10 w-8 h-8 items-center justify-center bg-white/50 hover:bg-white/80 text-[#111111] rounded-full transition-all"
         aria-label="Další"
       >

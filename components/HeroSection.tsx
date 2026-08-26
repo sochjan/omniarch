@@ -1,6 +1,6 @@
 'use client'
 
-const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '/omniarch'
 
 export default function HeroSection() {
   return (

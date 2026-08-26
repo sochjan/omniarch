@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Project } from '@/lib/projects'
 import { getDisplayYear } from '@/lib/projects'
 
-const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '/omniarch'
 
 export default function ProjectCard({ project }: { project: Project }) {
   const year = getDisplayYear(project)

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { designProjects } from '@/lib/design'
 
-const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '/omniarch'
 
 export const metadata: Metadata = {
   title: 'Design – OMNIARCH',

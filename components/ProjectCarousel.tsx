@@ -5,6 +5,7 @@ import { useState, useRef } from 'react'
 export default function ProjectCarousel({ images, title }: { images: string[]; title: string }) {
   const [current, setCurrent] = useState(0)
   const touchStartX = useRef<number | null>(null)
+  const mouseStartX = useRef<number | null>(null)
 
   const prev = () => setCurrent((i) => (i - 1 + images.length) % images.length)
   const next = () => setCurrent((i) => (i + 1) % images.length)
@@ -19,15 +20,24 @@ export default function ProjectCarousel({ images, title }: { images: string[]; t
         if (Math.abs(diff) > 50) diff > 0 ? next() : prev()
         touchStartX.current = null
       }}
+      onMouseDown={(e) => { mouseStartX.current = e.clientX }}
+      onMouseUp={(e) => {
+        if (mouseStartX.current === null) return
+        const diff = mouseStartX.current - e.clientX
+        if (Math.abs(diff) > 50) diff > 0 ? next() : prev()
+        mouseStartX.current = null
+      }}
+      onMouseLeave={() => { mouseStartX.current = null }}
     >
       {images.map((src, i) => (
         <img
           key={i}
           src={src}
           alt={`${title} – ${i + 1}`}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 select-none cursor-grab active:cursor-grabbing ${
             i === current ? 'opacity-100' : 'opacity-0'
           }`}
+          draggable={false}
         />
       ))}
 
