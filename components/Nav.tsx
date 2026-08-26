@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '/omniarch'
+
 const links = [
   { href: '/architektura', label: 'Architektura' },
   { href: '/design', label: 'Design' },
@@ -30,9 +32,9 @@ export default function Nav() {
         <nav className="max-w-7xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
           <Link
             href="/"
-            className="text-xs tracking-[0.25em] uppercase font-light text-[#111111] hover:opacity-70 transition-opacity"
+            className="flex items-center hover:opacity-70 transition-opacity"
           >
-            OMNIARCH
+            <img src={`${BASE}/logo.svg`} alt="OMNIARCH" className="h-5 w-auto" />
           </Link>
 
           {/* Desktop links */}
