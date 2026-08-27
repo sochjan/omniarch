@@ -34,7 +34,7 @@ export default function Nav() {
             href="/"
             className="flex items-center hover:opacity-70 transition-opacity"
           >
-            <img src={`${BASE}/logo.svg`} alt="OMNIARCH" className="h-5 w-auto" />
+            <img src={`${BASE}/logo.svg`} alt="OMNIARCH" className="w-36 h-auto" />
           </Link>
 
           {/* Desktop links */}
