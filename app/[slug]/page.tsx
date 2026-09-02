@@ -130,7 +130,7 @@ export default async function ProjectPage({
   )
   const carouselImages = [...images]
   if (project.image ?? project.images?.[0]) {
-    carouselImages[0] = `${BASE}/project-hero/${project.slug}.webp`
+    carouselImages[0] = `${BASE}/projects/${project.slug}/optimized/hero.webp`
   }
   const year = getDisplayYear(project)
   const metaEntries = Object.entries(project.metadata).filter(

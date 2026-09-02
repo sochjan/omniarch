@@ -32,7 +32,7 @@ export type Project = {
 function projectImages(folder: string, prefix: string, count: number) {
   return Array.from(
     { length: count },
-    (_, index) => `/project-images/${folder}/${prefix}_${String(index + 1).padStart(3, '0')}.webp`
+    (_, index) => `/projects/${folder}/optimized/${prefix}_${String(index + 1).padStart(3, '0')}.webp`
   )
 }
 

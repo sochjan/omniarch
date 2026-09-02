@@ -9,7 +9,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   const year = getDisplayYear(project)
   const hasProjectImage = Boolean(project.image ?? project.images?.[0])
   const src = hasProjectImage
-    ? `${BASE}/project-cards/${project.slug}.webp`
+    ? `${BASE}/projects/${project.slug}/card/card.webp`
     : `${BASE}/placeholder.png`
 
   return (
