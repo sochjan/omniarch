@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { projects } from '@/lib/projects'
+import { activeProjects } from '@/lib/projects'
 import ProjectGrid from '@/components/ProjectGrid'
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function ArchitecturePage() {
         </div>
       </section>
       <section className="max-w-7xl mx-auto px-6 md:px-12 pb-24">
-        <ProjectGrid projects={projects} />
+        <ProjectGrid projects={activeProjects} />
       </section>
     </div>
   )

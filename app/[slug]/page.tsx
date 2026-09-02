@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { projects, getProject, getDisplayYear } from '@/lib/projects'
+import { activeProjects, getProject, getDisplayYear } from '@/lib/projects'
 import { designProjects, getDesignProject } from '@/lib/design'
 import PhotoGallery from '@/components/PhotoGallery'
 import ProjectCarousel from '@/components/ProjectCarousel'
@@ -10,7 +10,7 @@ const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '/omniarch'
 
 export async function generateStaticParams() {
   return [
-    ...projects.map((p) => ({ slug: p.slug })),
+    ...activeProjects.map((p) => ({ slug: p.slug })),
     ...designProjects.map((p) => ({ slug: p.slug })),
   ]
 }
@@ -128,6 +128,10 @@ export default async function ProjectPage({
   const images = (project.images ?? [project.image ?? '/placeholder.png']).map(
     (image) => `${BASE}${image}`
   )
+  const carouselImages = [...images]
+  if (project.image ?? project.images?.[0]) {
+    carouselImages[0] = `${BASE}/project-hero/${project.slug}.webp`
+  }
   const year = getDisplayYear(project)
   const metaEntries = Object.entries(project.metadata).filter(
     ([key, val]) => val && key !== 'organization'
@@ -194,7 +198,7 @@ export default async function ProjectPage({
       {/* Mobile */}
       <div className="md:hidden">
         <div className="aspect-[4/3] relative overflow-hidden">
-          <ProjectCarousel images={images} title={project.title} />
+          <ProjectCarousel images={carouselImages} title={project.title} />
         </div>
         <div className="px-6 py-12 space-y-10">
           {backLink}
@@ -209,7 +213,7 @@ export default async function ProjectPage({
           <div className="mt-14">{textContent}</div>
         </div>
         <div className="sticky top-0 h-screen overflow-hidden">
-          <ProjectCarousel images={images} title={project.title} />
+          <ProjectCarousel images={carouselImages} title={project.title} />
         </div>
       </div>
 

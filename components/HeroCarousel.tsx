@@ -56,7 +56,10 @@ export default function HeroCarousel() {
       onTouchEnd={(e) => {
         if (touchStartX.current === null) return
         const diff = touchStartX.current - e.changedTouches[0].clientX
-        if (Math.abs(diff) > 50) diff > 0 ? next() : prev()
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) next()
+          else prev()
+        }
         touchStartX.current = null
       }}
       onMouseDown={(e) => { mouseStartX.current = e.clientX; wasDragging.current = false }}
@@ -67,7 +70,10 @@ export default function HeroCarousel() {
       onMouseUp={(e) => {
         if (mouseStartX.current === null) return
         const diff = mouseStartX.current - e.clientX
-        if (Math.abs(diff) > 50) diff > 0 ? next() : prev()
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) next()
+          else prev()
+        }
         mouseStartX.current = null
       }}
     >
@@ -92,6 +98,7 @@ export default function HeroCarousel() {
             alt={slide.alt}
             fill
             sizes="100vw"
+            loading={i === 0 ? 'eager' : 'lazy'}
             className="object-cover"
             draggable={false}
           />

@@ -2,6 +2,7 @@ export type ProjectCategory = 'residential' | 'commercial' | 'public'
 
 export type Project = {
   slug: string
+  active?: boolean
   title: string
   tagline?: string
   description: string
@@ -31,7 +32,7 @@ export type Project = {
 function projectImages(folder: string, prefix: string, count: number) {
   return Array.from(
     { length: count },
-    (_, index) => `/projects/${folder}/${prefix}_${String(index + 1).padStart(3, '0')}.jpg`
+    (_, index) => `/project-images/${folder}/${prefix}_${String(index + 1).padStart(3, '0')}.webp`
   )
 }
 
@@ -47,12 +48,13 @@ export function getDisplayYear(p: Project): string {
 }
 
 export function getProject(slug: string): Project | undefined {
-  return projects.find((p) => p.slug === slug)
+  return projects.find((p) => p.slug === slug && p.active !== false)
 }
 
 export const projects: Project[] = [
   {
     slug: 'rodinny-dum-v-hradku-nad-nisou',
+    active: true,
     title: 'Rodinný dům v Hrádku nad Nisou',
     tagline: 'Moderní vila s důrazem na jednoduchost formy a energetickou efektivitu.',
     description: 'Moderní rodinná vila s důrazem na jednoduchost formy a energetickou efektivitu.',
@@ -457,3 +459,5 @@ export const projects: Project[] = [
     metadata: { location: 'Praha', year: '2004', type: 'Velvyslanectví', architects: 'Ing. arch. Pavel Novák, Ing. arch. Radim Kousal, Ing. arch. Richard Černý, Ing. arch. Diana Hocková, Ing. arch. Václav Králíček', organization: 'SIADESIGN s.r.o.' },
   },
 ]
+
+export const activeProjects = projects.filter((project) => project.active !== false)

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
+import Image from 'next/image'
 
 export default function PhotoGallery({ images, title }: { images: string[]; title: string }) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
@@ -31,7 +32,14 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
         className="aspect-[4/3] relative overflow-hidden mb-3 cursor-zoom-in"
         onClick={() => setLightboxIndex(0)}
       >
-        <img src={main} alt={title} className="absolute inset-0 w-full h-full object-cover" />
+        <Image
+          src={main}
+          alt={title}
+          fill
+          sizes="(max-width: 1279px) 100vw, 1280px"
+          loading="lazy"
+          className="object-cover"
+        />
       </div>
 
       {rest.length > 0 && (
@@ -42,7 +50,14 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
               className="aspect-[4/3] relative overflow-hidden cursor-zoom-in"
               onClick={() => setLightboxIndex(i + 1)}
             >
-              <img src={src} alt={`${title} – fotografie ${i + 2}`} className="absolute inset-0 w-full h-full object-cover" />
+              <Image
+                src={src}
+                alt={`${title} – fotografie ${i + 2}`}
+                fill
+                sizes="(max-width: 767px) 50vw, 640px"
+                loading="lazy"
+                className="object-cover"
+              />
             </div>
           ))}
         </div>
@@ -56,7 +71,10 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
           onTouchEnd={(e) => {
             if (touchStartX.current === null) return
             const diff = touchStartX.current - e.changedTouches[0].clientX
-            if (Math.abs(diff) > 50) diff > 0 ? next() : prev()
+            if (Math.abs(diff) > 50) {
+              if (diff > 0) next()
+              else prev()
+            }
             touchStartX.current = null
           }}
           onMouseDown={(e) => { mouseStartX.current = e.clientX; wasDragging.current = false }}
@@ -67,7 +85,10 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
           onMouseUp={(e) => {
             if (mouseStartX.current === null) return
             const diff = mouseStartX.current - e.clientX
-            if (Math.abs(diff) > 50) diff > 0 ? next() : prev()
+            if (Math.abs(diff) > 50) {
+              if (diff > 0) next()
+              else prev()
+            }
             mouseStartX.current = null
           }}
         >
@@ -75,6 +96,7 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
             <img
               src={images[lightboxIndex]}
               alt={`${title} – fotografie ${lightboxIndex + 1}`}
+              decoding="async"
               className="w-full max-h-[80vh] object-contain pointer-events-none"
             />
             <div className="flex items-center gap-6 mt-4">

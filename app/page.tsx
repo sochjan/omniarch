@@ -1,4 +1,4 @@
-import { projects } from '@/lib/projects'
+import { activeProjects } from '@/lib/projects'
 import ProjectGrid from '@/components/ProjectGrid'
 import HeroSection from '@/components/HeroSection'
 import HeroCarousel from '@/components/HeroCarousel'
@@ -17,7 +17,7 @@ export default function HomePage() {
 
       <section className="max-w-7xl mx-auto px-6 md:px-12 pb-24">
         <h2 className="text-3xl md:text-4xl font-extralight tracking-tight text-[#111111] mb-10">Projekty</h2>
-        <ProjectGrid projects={projects} />
+        <ProjectGrid projects={activeProjects} />
       </section>
     </div>
   )
