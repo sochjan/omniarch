@@ -2,27 +2,29 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '/omniarch'
+const heroImage = (number: number) => `${BASE}/hero-carousel/hero${number}.webp`
 
 const SLIDES = [
   {
-    image: `${BASE}/projects/rekonstrukce-rd-v-holenicich/holenice_001.jpg`,
+    image: heroImage(1),
     slug: 'rekonstrukce-rd-v-holenicich',
     alt: 'Rekonstruovaný rodinný dům v Holenicích se zahradou a kamennými terasami',
   },
   {
-    image: `${BASE}/projects/rodinny-dum-skalany/skalany_001.jpg`,
+    image: heroImage(2),
     slug: 'rodinny-dum-skalany',
     alt: 'Moderní rodinný dům ve Skalanech s dřevěnou fasádou a výhledem do krajiny',
   },
   {
-    image: `${BASE}/projects/rodinny-dum-podoli/podoli_001.jpg`,
+    image: heroImage(3),
     slug: 'rodinny-dum-podoli',
     alt: 'Rodinný dům v Podolí u Uherského Hradiště s terasou a solárními kolektory',
   },
   {
-    image: `${BASE}/projects/rodinny-dum-radcice/radcice_001.jpg`,
+    image: heroImage(4),
     slug: 'rodinny-dum-radcice',
     alt: 'Vizualizace rodinného domu v Radčicích s moderní fasádou a zastřešenou terasou',
   },
@@ -34,6 +36,7 @@ export default function HeroCarousel() {
   const touchStartX = useRef<number | null>(null)
   const mouseStartX = useRef<number | null>(null)
   const wasDragging = useRef(false)
+  const slide = SLIDES[current]
 
   const prev = () => setCurrent((i) => (i - 1 + SLIDES.length) % SLIDES.length)
   const next = () => setCurrent((i) => (i + 1) % SLIDES.length)
@@ -69,29 +72,26 @@ export default function HeroCarousel() {
         mouseStartX.current = null
       }}
     >
-      {SLIDES.map((slide, i) => (
-        <Link
-          key={i}
-          href={`/${slide.slug}`}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            i === current ? 'opacity-100' : 'opacity-0'
-          }`}
-          tabIndex={i === current ? 0 : -1}
-          onClick={(e) => {
-            if (wasDragging.current) {
-              e.preventDefault()
-              wasDragging.current = false
-            }
-          }}
-        >
-          <img
-            src={slide.image}
-            alt={slide.alt}
-            className="w-full h-full object-cover"
-            draggable={false}
-          />
-        </Link>
-      ))}
+      <Link
+        key={slide.image}
+        href={`/${slide.slug}`}
+        className="absolute inset-0"
+        onClick={(e) => {
+          if (wasDragging.current) {
+            e.preventDefault()
+            wasDragging.current = false
+          }
+        }}
+      >
+        <Image
+          src={slide.image}
+          alt={slide.alt}
+          fill
+          sizes="100vw"
+          className="object-cover"
+          draggable={false}
+        />
+      </Link>
 
       {/* Arrows — desktop only */}
       <button

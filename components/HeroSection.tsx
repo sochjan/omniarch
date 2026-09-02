@@ -1,18 +1,23 @@
 'use client'
 
+import Image from 'next/image'
+
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '/omniarch'
-const HERO_IMAGE = `${BASE}/projects/rodinny-dum-skalany/skalany_001.jpg`
+const HERO_IMAGE = `${BASE}/hero.webp`
 
 export default function HeroSection() {
   return (
     <section className="relative">
       {/* Mobile (< md): photo on top, text below */}
       <div className="md:hidden">
-        <div className="aspect-[4/3] w-full overflow-hidden">
-          <img
+        <div className="relative aspect-[4/3] w-full overflow-hidden">
+          <Image
             src={HERO_IMAGE}
             alt="Moderní rodinný dům ve Skalanech s dřevěnou fasádou zasazený do zelené krajiny"
-            className="w-full h-full object-cover"
+            fill
+            sizes="100vw"
+            preload
+            className="object-cover"
           />
         </div>
         <div className="px-6 py-14 space-y-12">
@@ -102,11 +107,16 @@ export default function HeroSection() {
 
         {/* Right — sticky photo, edge to edge */}
         <div className="sticky top-0 h-screen overflow-hidden">
-          <img
-            src={HERO_IMAGE}
-            alt="Moderní rodinný dům ve Skalanech s dřevěnou fasádou zasazený do zelené krajiny"
-            className="w-full h-full object-cover"
-          />
+          <div className="relative h-full w-full">
+            <Image
+              src={HERO_IMAGE}
+              alt="Moderní rodinný dům ve Skalanech s dřevěnou fasádou zasazený do zelené krajiny"
+              fill
+              sizes="50vw"
+              preload
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>
