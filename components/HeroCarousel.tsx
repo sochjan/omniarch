@@ -36,7 +36,6 @@ export default function HeroCarousel() {
   const touchStartX = useRef<number | null>(null)
   const mouseStartX = useRef<number | null>(null)
   const wasDragging = useRef(false)
-  const slide = SLIDES[current]
 
   const prev = () => setCurrent((i) => (i - 1 + SLIDES.length) % SLIDES.length)
   const next = () => setCurrent((i) => (i + 1) % SLIDES.length)
@@ -72,26 +71,32 @@ export default function HeroCarousel() {
         mouseStartX.current = null
       }}
     >
-      <Link
-        key={slide.image}
-        href={`/${slide.slug}`}
-        className="absolute inset-0"
-        onClick={(e) => {
-          if (wasDragging.current) {
-            e.preventDefault()
-            wasDragging.current = false
-          }
-        }}
-      >
-        <Image
-          src={slide.image}
-          alt={slide.alt}
-          fill
-          sizes="100vw"
-          className="object-cover"
-          draggable={false}
-        />
-      </Link>
+      {SLIDES.map((slide, i) => (
+        <Link
+          key={slide.image}
+          href={`/${slide.slug}`}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            i === current ? 'opacity-100' : 'pointer-events-none opacity-0'
+          }`}
+          tabIndex={i === current ? 0 : -1}
+          aria-hidden={i !== current}
+          onClick={(e) => {
+            if (wasDragging.current) {
+              e.preventDefault()
+              wasDragging.current = false
+            }
+          }}
+        >
+          <Image
+            src={slide.image}
+            alt={slide.alt}
+            fill
+            sizes="100vw"
+            className="object-cover"
+            draggable={false}
+          />
+        </Link>
+      ))}
 
       {/* Arrows — desktop only */}
       <button
