@@ -5,7 +5,7 @@ import { getDisplayYear } from '@/lib/projects'
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '/omniarch'
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({ project, eager = false }: { project: Project; eager?: boolean }) {
   const year = getDisplayYear(project)
   const hasProjectImage = Boolean(project.image ?? project.images?.[0])
   const src = hasProjectImage
@@ -20,6 +20,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           alt={project.title}
           fill
           sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
+          loading={eager ? 'eager' : 'lazy'}
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

@@ -40,8 +40,8 @@ export default function ProjectGrid({ projects }: { projects: Project[] }) {
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
-        {filtered.map((project) => (
-          <ProjectCard key={project.slug} project={project} />
+        {filtered.map((project, index) => (
+          <ProjectCard key={project.slug} project={project} eager={index === 0} />
         ))}
       </div>
     </div>
