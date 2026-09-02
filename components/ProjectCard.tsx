@@ -6,7 +6,7 @@ const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '/omniarch'
 
 export default function ProjectCard({ project }: { project: Project }) {
   const year = getDisplayYear(project)
-  const src = `${BASE}${project.image ?? '/placeholder.png'}`
+  const src = `${BASE}${project.image ?? project.images?.[0] ?? '/placeholder.png'}`
 
   return (
     <Link href={`/${project.slug}`} className="group block">
@@ -27,12 +27,12 @@ export default function ProjectCard({ project }: { project: Project }) {
         {project.title}
       </h2>
       {project.tagline && (
-        <p className="text-xs text-[#737373] mt-1 leading-relaxed">
+        <p className="text-sm text-[#737373] mt-1 leading-relaxed">
           {project.tagline}
         </p>
       )}
       {(project.metadata.location || year) && (
-        <p className="text-xs text-[#a89880] mt-1">
+        <p className="text-sm text-[#a89880] mt-1">
           {[project.metadata.location, year].filter(Boolean).join(' · ')}
         </p>
       )}

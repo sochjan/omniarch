@@ -18,10 +18,6 @@ export default function Nav() {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    setOpen(false)
-  }, [pathname])
-
-  useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
   }, [open])
@@ -32,6 +28,7 @@ export default function Nav() {
         <nav className="max-w-7xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
           <Link
             href="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="flex items-center hover:opacity-70 transition-opacity"
           >
             <img src={`${BASE}/logo.svg`} alt="OMNIARCH" className="w-36 h-auto" />

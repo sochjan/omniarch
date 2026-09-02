@@ -59,8 +59,7 @@ export default async function ProjectPage({
   const designProject = !archProject ? getDesignProject(slug) : undefined
   if (!archProject && !designProject) notFound()
 
-  // Placeholder images — replace with real per-project images later
-  const images = Array(5).fill(`${BASE}${archProject?.image ?? '/placeholder.png'}`)
+  const placeholderImages = Array(5).fill(`${BASE}/placeholder.png`)
 
   // ── Design project ────────────────────────────────────────────────────────
   if (designProject) {
@@ -83,7 +82,7 @@ export default async function ProjectPage({
             {designProject.tagline}
           </p>
         )}
-        <p className="text-sm font-light text-[#737373] leading-relaxed">
+        <p className="text-base font-light text-[#737373] leading-relaxed">
           {designProject.description}
         </p>
       </div>
@@ -94,7 +93,7 @@ export default async function ProjectPage({
         {/* Mobile */}
         <div className="md:hidden">
           <div className="aspect-[4/3] relative overflow-hidden">
-            <ProjectCarousel images={images} title={designProject.title} />
+            <ProjectCarousel images={placeholderImages} title={designProject.title} />
           </div>
           <div className="px-6 py-12 space-y-10">
             {backLink}
@@ -109,7 +108,7 @@ export default async function ProjectPage({
             <div className="mt-14">{textContent}</div>
           </div>
           <div className="sticky top-0 h-screen overflow-hidden">
-            <ProjectCarousel images={images} title={designProject.title} />
+            <ProjectCarousel images={placeholderImages} title={designProject.title} />
           </div>
         </div>
 
@@ -118,7 +117,7 @@ export default async function ProjectPage({
           <h2 className="text-2xl md:text-3xl font-extralight tracking-tight text-[#111111] mb-10">
             Galerie
           </h2>
-          <PhotoGallery images={images} title={designProject.title} />
+          <PhotoGallery images={placeholderImages} title={designProject.title} />
         </section>
       </div>
     )
@@ -126,6 +125,9 @@ export default async function ProjectPage({
 
   // ── Architecture project ──────────────────────────────────────────────────
   const project = archProject!
+  const images = (project.images ?? [project.image ?? '/placeholder.png']).map(
+    (image) => `${BASE}${image}`
+  )
   const year = getDisplayYear(project)
   const metaEntries = Object.entries(project.metadata).filter(
     ([key, val]) => val && key !== 'organization'
@@ -160,7 +162,7 @@ export default async function ProjectPage({
           {project.tagline}
         </p>
       )}
-      <p className="text-sm font-light text-[#737373] leading-relaxed">
+      <p className="text-base font-light text-[#737373] leading-relaxed">
         {project.description}
       </p>
 

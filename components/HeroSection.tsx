@@ -1,6 +1,7 @@
 'use client'
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '/omniarch'
+const HERO_IMAGE = `${BASE}/projects/rodinny-dum-skalany/skalany_001.jpg`
 
 export default function HeroSection() {
   return (
@@ -9,8 +10,8 @@ export default function HeroSection() {
       <div className="md:hidden">
         <div className="aspect-[4/3] w-full overflow-hidden">
           <img
-            src={`${BASE}/placeholder.png`}
-            alt="OMNIARCH studio"
+            src={HERO_IMAGE}
+            alt="Moderní rodinný dům ve Skalanech s dřevěnou fasádou zasazený do zelené krajiny"
             className="w-full h-full object-cover"
           />
         </div>
@@ -27,7 +28,7 @@ export default function HeroSection() {
             <h2 className="text-4xl xl:text-5xl font-extralight tracking-tight text-[#111111] leading-tight mb-10">
               Architektura pro každodenní život
             </h2>
-            <div className="space-y-5 text-sm font-light leading-relaxed text-[#111111] max-w-md">
+            <div className="space-y-5 text-base font-light leading-relaxed text-[#111111] max-w-md">
               <p>
                 OMNIARCH je volné seskupení architektů a stavebních projektantů působících
                 v Liberci a okolí. Vzniklo z přesvědčení, že dobrá architektura nemusí být
@@ -48,8 +49,8 @@ export default function HeroSection() {
           </div>
 
           <div>
-            <p className="text-[10px] uppercase tracking-widest text-[#a89880] mb-6">Procesy</p>
-            <div className="space-y-5 text-sm font-light leading-relaxed text-[#111111] max-w-md">
+            <p className="text-sm uppercase tracking-widest font-normal text-[#111111] mb-6">Procesy</p>
+            <div className="space-y-5 text-base font-light leading-relaxed text-[#111111] max-w-md">
               <p>
                 Náš pracovní postup začíná důkladným rozhovorem. Chceme rozumět tomu, jak
                 žijete, co potřebujete a co si přejete. Na základě toho zpracujeme
@@ -67,8 +68,8 @@ export default function HeroSection() {
           </div>
 
           <div>
-            <p className="text-[10px] uppercase tracking-widest text-[#a89880] mb-6">Tým</p>
-            <div className="space-y-6 text-sm font-light leading-relaxed text-[#111111] max-w-md">
+            <p className="text-sm uppercase tracking-widest font-normal text-[#111111] mb-6">Tým</p>
+            <div className="space-y-6 text-base font-light leading-relaxed text-[#111111] max-w-md">
               <div>
                 <p className="font-normal mb-1">Ing. arch. Pavel Novák</p>
                 <p className="text-[#737373] text-xs mb-2">Zakladatel, hlavní architekt</p>
@@ -102,8 +103,8 @@ export default function HeroSection() {
         {/* Right — sticky photo, edge to edge */}
         <div className="sticky top-0 h-screen overflow-hidden">
           <img
-            src={`${BASE}/placeholder.png`}
-            alt="OMNIARCH studio"
+            src={HERO_IMAGE}
+            alt="Moderní rodinný dům ve Skalanech s dřevěnou fasádou zasazený do zelené krajiny"
             className="w-full h-full object-cover"
           />
         </div>
@@ -119,7 +120,7 @@ function MobileText() {
         <h2 className="text-3xl font-extralight tracking-tight text-[#111111] leading-tight mb-6">
           Architektura pro každodenní život
         </h2>
-        <div className="space-y-4 text-sm font-light leading-relaxed text-[#111111]">
+        <div className="space-y-4 text-base font-light leading-relaxed text-[#111111]">
           <p>
             OMNIARCH je volné seskupení architektů a stavebních projektantů působících
             v Liberci a okolí. Vzniklo z přesvědčení, že dobrá architektura nemusí být
@@ -134,8 +135,8 @@ function MobileText() {
       </div>
 
       <div>
-        <p className="text-[10px] uppercase tracking-widest text-[#a89880] mb-4">Procesy</p>
-        <div className="space-y-4 text-sm font-light leading-relaxed text-[#111111]">
+        <p className="text-sm uppercase tracking-widest font-normal text-[#111111] mb-4">Procesy</p>
+        <div className="space-y-4 text-base font-light leading-relaxed text-[#111111]">
           <p>
             Náš pracovní postup začíná důkladným rozhovorem. Na základě toho zpracujeme
             architektonickou studii, která hledá nejlepší řešení pro vaši situaci.
@@ -148,7 +149,7 @@ function MobileText() {
       </div>
 
       <div>
-        <p className="text-[10px] uppercase tracking-widest text-[#a89880] mb-4">Tým</p>
+        <p className="text-sm uppercase tracking-widest font-normal text-[#111111] mb-4">Tým</p>
         <div className="space-y-4 text-sm font-light leading-relaxed text-[#111111]">
           <p className="font-normal">Ing. arch. Pavel Novák</p>
           <p className="text-[#737373] text-xs">Zakladatel, hlavní architekt</p>

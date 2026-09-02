@@ -7,6 +7,7 @@ export type Project = {
   description: string
   category: ProjectCategory
   image?: string
+  images?: string[]
   metadata: {
     location?: string
     year?: string
@@ -25,6 +26,13 @@ export type Project = {
     building_solutions?: string
     competition_result?: string
   }
+}
+
+function projectImages(folder: string, prefix: string, count: number) {
+  return Array.from(
+    { length: count },
+    (_, index) => `/projects/${folder}/${prefix}_${String(index + 1).padStart(3, '0')}.jpg`
+  )
 }
 
 export const CATEGORY_LABELS: Record<ProjectCategory | 'all', string> = {
@@ -49,6 +57,7 @@ export const projects: Project[] = [
     tagline: 'Moderní vila s důrazem na jednoduchost formy a energetickou efektivitu.',
     description: 'Moderní rodinná vila s důrazem na jednoduchost formy a energetickou efektivitu.',
     category: 'residential',
+    images: projectImages('rodinny-dum-v-hradku-nad-nisou', 'hradek', 6),
     metadata: { location: 'Hrádek nad Nisou', year: '2019', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
   },
   {
@@ -65,6 +74,7 @@ export const projects: Project[] = [
     tagline: 'Komplexní přeměna staršího objektu na moderní rodinné bydlení s novým interiérem.',
     description: 'Komplexní přeměna staršího objektu na moderní rodinné bydlení s novým interiérem.',
     category: 'residential',
+    images: projectImages('rekonstrukce-rd-v-holenicich', 'holenice', 15),
     metadata: { location: 'Holenice, Turnov', year_design: '2016', year_completion: '2018', type: 'Rekonstrukce rodinného domu', architect: 'Ing. arch. Pavel Novák', interior_design: 'Kateřina Brožková', organization: 'OMNIARCH' },
   },
   {
@@ -105,6 +115,7 @@ export const projects: Project[] = [
     tagline: 'Jeden z prvních projektů studia se silným architektonickým výrazem.',
     description: 'Jeden z prvních projektů studia se silným architektonickým výrazem.',
     category: 'residential',
+    images: projectImages('rodinny-dum-podoli', 'podoli', 18),
     metadata: { location: 'Podolí, Uherské Hradiště', year_design: '2006', year_completion: '2008', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
   },
   {
@@ -113,6 +124,7 @@ export const projects: Project[] = [
     tagline: 'Rodinný dům v oblasti Českého ráje s autorským interiérem a fotografií.',
     description: 'Rodinný dům v oblasti Českého ráje s autorským interiérem a fotografií.',
     category: 'residential',
+    images: projectImages('rodinny-dum-skalany', 'skalany', 26),
     metadata: { location: 'Skalany, Český ráj', year_design: '2014', year_completion: '2018', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', structural_engineer: 'Ing. arch. Miloš Hůla', interior_design: 'Jiří Zeman', photography: 'Zdeněk Groessl', organization: 'OMNIARCH' },
   },
   {
@@ -225,6 +237,7 @@ export const projects: Project[] = [
     tagline: 'Příčný dům s hlubokou terasou a výhledem do přírody.',
     description: 'Projekt rodinného domu v Radčicích u Liberce z roku 2019. Příčný dům s hlubokou terasou a výhledem do přírody.',
     category: 'residential',
+    images: projectImages('rodinny-dum-radcice', 'radcice', 7),
     metadata: { location: 'Radčice, Liberec', year: '2019', type: 'Rodinný dům', architect: 'Ing. arch. Pavel Novák', organization: 'OMNIARCH' },
   },
   {

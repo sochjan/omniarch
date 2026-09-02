@@ -32,7 +32,7 @@ export default function AboutPage() {
           <h1 className="text-3xl md:text-4xl font-extralight text-[#111111] leading-tight mb-8">
             Volné seskupení architektů z Liberce
           </h1>
-          <div className="space-y-5 text-sm text-[#111111] font-light leading-relaxed">
+          <div className="space-y-5 text-base text-[#111111] font-light leading-relaxed">
             <p>
               OMNIARCH představuje volné seskupení architektů a stavebních projektantů z Liberce,
               kteří sdílejí podobný pohled na současnou architekturu a design.
@@ -86,7 +86,7 @@ export default function AboutPage() {
 
           <div className="mt-16 border-t border-[#e5e5e5] pt-8">
             <p className="text-xs text-[#737373] uppercase tracking-widest mb-4">Filosofie</p>
-            <blockquote className="text-sm text-[#111111] font-light leading-relaxed italic">
+            <blockquote className="text-base text-[#111111] font-light leading-relaxed italic">
               „Moderní a svěží vzhled, jednoduchost stavby, úspory energií — s individuálním
               přístupem ke každému projektu."
             </blockquote>

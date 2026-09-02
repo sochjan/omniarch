@@ -6,11 +6,26 @@ import Link from 'next/link'
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '/omniarch'
 
 const SLIDES = [
-  { image: `${BASE}/placeholder.png`, slug: 'rodinny-dum-v-hradku-nad-nisou' },
-  { image: `${BASE}/placeholder.png`, slug: 'rodinny-dum-v-hradku-nad-nisou' },
-  { image: `${BASE}/placeholder.png`, slug: 'rodinny-dum-v-hradku-nad-nisou' },
-  { image: `${BASE}/placeholder.png`, slug: 'rodinny-dum-v-hradku-nad-nisou' },
-  { image: `${BASE}/placeholder.png`, slug: 'rodinny-dum-v-hradku-nad-nisou' },
+  {
+    image: `${BASE}/projects/rekonstrukce-rd-v-holenicich/holenice_001.jpg`,
+    slug: 'rekonstrukce-rd-v-holenicich',
+    alt: 'Rekonstruovaný rodinný dům v Holenicích se zahradou a kamennými terasami',
+  },
+  {
+    image: `${BASE}/projects/rodinny-dum-skalany/skalany_001.jpg`,
+    slug: 'rodinny-dum-skalany',
+    alt: 'Moderní rodinný dům ve Skalanech s dřevěnou fasádou a výhledem do krajiny',
+  },
+  {
+    image: `${BASE}/projects/rodinny-dum-podoli/podoli_001.jpg`,
+    slug: 'rodinny-dum-podoli',
+    alt: 'Rodinný dům v Podolí u Uherského Hradiště s terasou a solárními kolektory',
+  },
+  {
+    image: `${BASE}/projects/rodinny-dum-radcice/radcice_001.jpg`,
+    slug: 'rodinny-dum-radcice',
+    alt: 'Vizualizace rodinného domu v Radčicích s moderní fasádou a zastřešenou terasou',
+  },
 ]
 
 export default function HeroCarousel() {
@@ -71,7 +86,7 @@ export default function HeroCarousel() {
         >
           <img
             src={slide.image}
-            alt={`Projekt ${i + 1}`}
+            alt={slide.alt}
             className="w-full h-full object-cover"
             draggable={false}
           />

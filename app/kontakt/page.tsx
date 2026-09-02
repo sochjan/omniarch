@@ -14,7 +14,7 @@ export default function ContactPage() {
           <h1 className="text-3xl md:text-4xl font-extralight text-[#111111] leading-tight mb-8">
             Začněme váš projekt
           </h1>
-          <p className="text-sm text-[#111111] font-light leading-relaxed max-w-sm">
+          <p className="text-base text-[#111111] font-light leading-relaxed max-w-sm">
             Rádi si vyslechneme váš záměr a navrhneme optimální řešení. Neváhejte nás kontaktovat
             pro nezávaznou konzultaci.
           </p>
@@ -48,7 +48,7 @@ export default function ContactPage() {
 
           <div className="border-t border-[#e5e5e5] pt-8">
             <p className="text-xs text-[#a89880] uppercase tracking-widest mb-3">Co nabízíme</p>
-            <ul className="space-y-2 text-sm text-[#737373] font-light">
+            <ul className="space-y-2 text-base text-[#737373] font-light">
               <li>Architektonická studie</li>
               <li>Dokumentace pro územní řízení</li>
               <li>Dokumentace pro stavební povolení</li>
