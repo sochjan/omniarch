@@ -1,0 +1,17 @@
+{
+  "slug": "rodinny-dum-hejnice",
+  "order": 31,
+  "title": "Rodinný dům v Hejnicích",
+  "tagline": "Projekt rodinného bydlení v podhůří Jizerských hor.",
+  "description": "Projekt rodinného domu v Hejnicích z roku 2017. Stavebně-technické řešení: František Ovečka.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Hejnice",
+    "year": "2017",
+    "type": "Rodinný dům",
+    "architect": "Ing. arch. Pavel Novák",
+    "construction_solution": "František Ovečka",
+    "organization": "OMNIARCH"
+  }
+}

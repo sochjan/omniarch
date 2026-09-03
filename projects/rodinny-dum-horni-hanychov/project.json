@@ -1,0 +1,16 @@
+{
+  "slug": "rodinny-dum-horni-hanychov",
+  "order": 4,
+  "title": "Rodinný dům Horní Hanychov",
+  "tagline": "Rodinná vila v klidné lokalitě s výhledy do okolní krajiny.",
+  "description": "Rodinná vila v klidné lokalitě s výhledy do okolní krajiny.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Horní Hanychov, Liberec",
+    "year": "2021",
+    "type": "Rodinný dům",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}

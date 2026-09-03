@@ -1,0 +1,18 @@
+{
+  "slug": "rodinny-dum-simonovice",
+  "order": 29,
+  "title": "Rodinný dům Šimonovice, Liberec",
+  "tagline": "Čistý moderní dům v klidném příměstském prostředí Liberce.",
+  "description": "Rodinný dům v Šimonovicích u Liberce. Návrh 2012, realizace 2013. Projekt pod vedením Ing. Ivana Kallmünzera.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Šimonovice, Liberec",
+    "year_design": "2012",
+    "year_completion": "2013",
+    "type": "Rodinný dům",
+    "architect": "Ing. arch. Pavel Novák",
+    "project_manager": "Ing. Ivan Kallmünzer",
+    "organization": "OMNIARCH"
+  }
+}

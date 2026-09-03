@@ -1,0 +1,17 @@
+{
+  "slug": "rodinny-dum-radlo",
+  "order": 33,
+  "title": "Rodinný dům v Rádle",
+  "tagline": "Otevřený dům s přirozeným propojením přízemí se zahradou.",
+  "description": "Rodinný dům v Rádle u Jablonce nad Nisou. Návrh 2011, realizace 2014. Otevřený dům s přirozeným propojením parter domu se zahradou.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Rádlo, Jablonec nad Nisou",
+    "year_design": "2011",
+    "year_completion": "2014",
+    "type": "Rodinný dům",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "rodinny-dum-harcov",
+  "order": 30,
+  "title": "Rodinný dům Harcov, Liberec",
+  "tagline": "Rodinný dům v oblíbené vilové čtvrti Liberce.",
+  "description": "Rodinný dům v Harcově v Liberci, dokončený v roce 2009. Stavebně-technické řešení: Ing. Jakub Moc a Ing. Veronika Madecká.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Harcov, Liberec",
+    "year": "2009",
+    "type": "Rodinný dům",
+    "architect": "Ing. arch. Pavel Novák",
+    "building_solutions": "Ing. Jakub Moc, Ing. Veronika Madecká",
+    "organization": "OMNIARCH"
+  }
+}

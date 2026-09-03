@@ -1,0 +1,17 @@
+{
+  "slug": "sidlo-firmy-vesec",
+  "order": 6,
+  "title": "Sídlo firmy ve Vesci, Liberec",
+  "tagline": "Administrativně-provozní objekt kombinující funkčnost s reprezentativním výrazem.",
+  "description": "Administrativně-provozní objekt kombinující funkčnost s reprezentativním výrazem.",
+  "category": "commercial",
+  "active": true,
+  "metadata": {
+    "location": "Vesec, Liberec",
+    "year_design": "2016",
+    "year_completion": "2018",
+    "type": "Sídlo firmy",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}

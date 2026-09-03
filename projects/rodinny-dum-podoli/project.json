@@ -1,0 +1,17 @@
+{
+  "slug": "rodinny-dum-podoli",
+  "order": 8,
+  "title": "Rodinný dům v Podolí, Uherské Hradiště",
+  "tagline": "Jeden z prvních projektů studia se silným architektonickým výrazem.",
+  "description": "Jeden z prvních projektů studia se silným architektonickým výrazem.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Podolí, Uherské Hradiště",
+    "year_design": "2006",
+    "year_completion": "2008",
+    "type": "Rodinný dům",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}

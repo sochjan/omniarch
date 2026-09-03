@@ -1,0 +1,16 @@
+{
+  "slug": "rodinny-dum-radlo-2",
+  "order": 17,
+  "title": "Rodinný dům v Rádle (varianta 2)",
+  "tagline": "Alternativní hmotová varianta pro stejnou lokalitu u Jablonce nad Nisou.",
+  "description": "Druhý projekt rodinného domu v Rádle u Jablonce nad Nisou z roku 2021. Alternativní hmotová varianta pro stejnou lokalitu.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Rádlo",
+    "year": "2021",
+    "type": "Rodinný dům",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}

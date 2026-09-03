@@ -1,0 +1,17 @@
+{
+  "slug": "hospodarska-budova-zoo-liberec",
+  "order": 37,
+  "title": "Hospodářská budova ZOO Liberec",
+  "tagline": "Provozní zázemí liberecké zoo s čistým moderním architektonickým výrazem.",
+  "description": "Projekt hospodářské budovy Zoologické zahrady Liberec. Návrh 2010, realizace 2014. Architekti: Ing. arch. Pavel Novák a Ing. arch. Radim Kousal.",
+  "category": "public",
+  "active": true,
+  "metadata": {
+    "location": "ZOO Liberec",
+    "year_design": "2010",
+    "year_completion": "2014",
+    "type": "Hospodářská budova",
+    "architects": "Ing. arch. Pavel Novák, Ing. arch. Radim Kousal",
+    "organization": "SIADESIGN Liberec s.r.o."
+  }
+}

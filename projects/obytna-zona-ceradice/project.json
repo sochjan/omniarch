@@ -1,0 +1,16 @@
+{
+  "slug": "obytna-zona-ceradice",
+  "order": 11,
+  "title": "Obytná zóna Čeradice",
+  "tagline": "Urbanistická studie zahrnující zástavbu parcel a řešení veřejných prostranství.",
+  "description": "Urbanistická studie zahrnující zástavbu parcel a řešení veřejných prostranství.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Čeradice",
+    "year": "2017",
+    "type": "Obytná zóna",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}

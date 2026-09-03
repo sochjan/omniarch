@@ -1,0 +1,16 @@
+{
+  "slug": "rodinny-dum-ve-vestci-u-stare-boleslavi",
+  "order": 2,
+  "title": "Rodinný dům ve Vestci u Staré Boleslavi",
+  "tagline": "Svěží architektonický výraz s důrazem na úspory energií.",
+  "description": "Moderní rodinný dům s důrazem na úspory energií a svěží architektonický výraz.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Vestec u Staré Boleslavi",
+    "year": "2018",
+    "type": "Rodinný dům",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}

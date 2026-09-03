@@ -1,0 +1,17 @@
+{
+  "slug": "chalupa-rudolfov",
+  "order": 46,
+  "title": "Chalupa v Rudolfově, Liberec",
+  "tagline": "Citlivá obnova venkovského stavení s moderními prvky.",
+  "description": "Rekonstrukce chalupy v Rudolfově u Liberce. Návrh 2012, realizace 2015. Citlivá obnova venkovského stavení s moderními prvky.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Rudolfov, Liberec",
+    "year_design": "2012",
+    "year_completion": "2015",
+    "type": "Chalupa",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}

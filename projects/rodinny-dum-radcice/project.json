@@ -1,0 +1,16 @@
+{
+  "slug": "rodinny-dum-radcice",
+  "order": 23,
+  "title": "Rodinný dům v Liberci – Radčicích",
+  "tagline": "Příčný dům s hlubokou terasou a výhledem do přírody.",
+  "description": "Projekt rodinného domu v Radčicích u Liberce z roku 2019. Příčný dům s hlubokou terasou a výhledem do přírody.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Radčice, Liberec",
+    "year": "2019",
+    "type": "Rodinný dům",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "slug": "rodinny-dum-ve-fojtce-kopie",
+  "order": 18,
+  "title": "Rodinný dům v Hlásné Třebáni",
+  "tagline": "Adaptace oblíbeného dispozičního řešení na specifické podmínky pražského zázemí.",
+  "description": "Projekt rodinného domu v Hlásné Třebáni navržený v roce 2017. Adaptace oblíbeného dispozičního řešení na specifické podmínky pražského zázemí.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Hlásná Třebáň",
+    "year": "2017",
+    "type": "Rodinný dům",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "slug": "rodinny-dum-v-dlouhem-mostu",
+  "order": 19,
+  "title": "Rodinný dům v Dlouhém Mostu",
+  "tagline": "Kompaktní dům s přirozeným propojením interiéru a zahrady.",
+  "description": "Projekt rodinného domu v Dlouhém Mostu z roku 2021. Kompaktní dům s přirozeným propojením interiéru a zahrady.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Dlouhý Most",
+    "year": "2021",
+    "type": "Rodinný dům",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "slug": "rodinny-dum-jizerska",
+  "order": 22,
+  "title": "Rodinný dům Jizerská, Liberec",
+  "tagline": "Urbánní vila s čistým výrazem v zástavbě rodinných domů.",
+  "description": "Rodinný dům na ulici Jizerská v Liberci, dokončený v roce 2022. Urbánní vila s čistým výrazem v zástavbě rodinných domů.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Jizerská, Liberec",
+    "year": "2022",
+    "type": "Rodinný dům",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "rodinny-dum-chrastava",
+  "order": 47,
+  "title": "Rodinný dům v Chrastavě",
+  "tagline": "Rodinný dům s čistým geometrickým výrazem a kvalitním zpracováním detailů.",
+  "description": "Projekt rodinného domu v Chrastavě. Návrh 2008, realizace 2010. Architekti: Ing. arch. Pavel Novák a Marek Prchlík.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Chrastava",
+    "year_design": "2008",
+    "year_completion": "2010",
+    "type": "Rodinný dům",
+    "architects": "Ing. arch. Pavel Novák, Marek Prchlík",
+    "organization": "OMNIARCH"
+  }
+}

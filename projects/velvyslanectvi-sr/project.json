@@ -1,0 +1,16 @@
+{
+  "slug": "velvyslanectvi-sr",
+  "order": 50,
+  "title": "Velvyslanectví Slovenské republiky, Praha",
+  "tagline": "Soutěžní návrh reprezentativní budovy pro Slovenskou republiku v Praze.",
+  "description": "Soutěžní návrh budovy Velvyslanectví Slovenské republiky v Praze z roku 2004. Architekti: Ing. arch. Pavel Novák, Ing. arch. Radim Kousal, Ing. arch. Richard Černý, Ing. arch. Diana Hocková, Ing. arch. Václav Králíček.",
+  "category": "public",
+  "active": true,
+  "metadata": {
+    "location": "Praha",
+    "year": "2004",
+    "type": "Velvyslanectví",
+    "architects": "Ing. arch. Pavel Novák, Ing. arch. Radim Kousal, Ing. arch. Richard Černý, Ing. arch. Diana Hocková, Ing. arch. Václav Králíček",
+    "organization": "SIADESIGN s.r.o."
+  }
+}
