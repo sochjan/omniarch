@@ -32,20 +32,26 @@ const SLIDES = [
 
 export default function HeroCarousel() {
   const [current, setCurrent] = useState(0)
+  const [firstImageLoaded, setFirstImageLoaded] = useState(false)
   const paused = useRef(false)
   const touchStartX = useRef<number | null>(null)
   const mouseStartX = useRef<number | null>(null)
   const wasDragging = useRef(false)
 
-  const prev = () => setCurrent((i) => (i - 1 + SLIDES.length) % SLIDES.length)
-  const next = () => setCurrent((i) => (i + 1) % SLIDES.length)
+  const prev = () => {
+    if (firstImageLoaded) setCurrent((i) => (i - 1 + SLIDES.length) % SLIDES.length)
+  }
+  const next = () => {
+    if (firstImageLoaded) setCurrent((i) => (i + 1) % SLIDES.length)
+  }
 
   useEffect(() => {
+    if (!firstImageLoaded) return
     const interval = setInterval(() => {
       if (!paused.current) setCurrent((i) => (i + 1) % SLIDES.length)
     }, 5000)
     return () => clearInterval(interval)
-  }, [])
+  }, [firstImageLoaded])
 
   return (
     <div
@@ -99,6 +105,9 @@ export default function HeroCarousel() {
             fill
             sizes="100vw"
             loading={i === 0 ? 'eager' : 'lazy'}
+            onLoad={() => {
+              if (i === 0) setFirstImageLoaded(true)
+            }}
             className="object-cover"
             draggable={false}
           />
@@ -126,7 +135,10 @@ export default function HeroCarousel() {
         {SLIDES.map((_, i) => (
           <button
             key={i}
-            onClick={(e) => { e.preventDefault(); setCurrent(i) }}
+            onClick={(e) => {
+              e.preventDefault()
+              if (firstImageLoaded) setCurrent(i)
+            }}
             className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
               i === current ? 'bg-white scale-125' : 'bg-white/40'
             }`}
