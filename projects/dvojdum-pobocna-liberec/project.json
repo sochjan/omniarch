@@ -1,0 +1,12 @@
+{
+  "slug": "dvojdum-pobocna-liberec",
+  "title": "Dvojdům Pobočná, Liberec",
+  "tagline": "Dvojdům v ulici Pobočná v Liberci.",
+  "description": "Projekt dvojdomu v ulici Pobočná v Liberci.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Pobočná, Liberec",
+    "type": "Dvojdům"
+  }
+}
