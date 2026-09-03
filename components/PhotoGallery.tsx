@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import Image from 'next/image'
+import { getBlurImage } from '@/lib/image'
 
 export default function PhotoGallery({ images, title }: { images: string[]; title: string }) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
@@ -38,6 +39,8 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
           fill
           sizes="(max-width: 1279px) 100vw, 1280px"
           loading="lazy"
+          placeholder="blur"
+          blurDataURL={getBlurImage(main)}
           className="object-cover"
         />
       </div>
@@ -56,6 +59,8 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
                 fill
                 sizes="(max-width: 767px) 50vw, 640px"
                 loading="lazy"
+                placeholder="blur"
+                blurDataURL={getBlurImage(src)}
                 className="object-cover"
               />
             </div>

@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react'
 import Image from 'next/image'
+import { getBlurImage } from '@/lib/image'
 
 export default function ProjectCarousel({ images, title }: { images: string[]; title: string }) {
   const [current, setCurrent] = useState(0)
@@ -61,6 +62,8 @@ export default function ProjectCarousel({ images, title }: { images: string[]; t
           fill
           sizes="(max-width: 767px) 100vw, 50vw"
           preload={i === 0}
+          placeholder="blur"
+          blurDataURL={getBlurImage(src)}
           onLoad={() => {
             ready.current.add(i)
             if (i === current) mount((i + 1) % images.length)

@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { getBlurImage } from '@/lib/image'
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '/omniarch'
 const HERO_IMAGE = `${BASE}/hero.webp`
@@ -17,6 +18,8 @@ export default function HeroSection() {
             fill
             sizes="100vw"
             preload
+            placeholder="blur"
+            blurDataURL={getBlurImage(HERO_IMAGE)}
             className="object-cover"
           />
         </div>
@@ -114,6 +117,8 @@ export default function HeroSection() {
               fill
               sizes="50vw"
               preload
+              placeholder="blur"
+              blurDataURL={getBlurImage(HERO_IMAGE)}
               className="object-cover"
             />
           </div>

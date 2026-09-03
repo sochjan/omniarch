@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { getBlurImage } from '@/lib/image'
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '/omniarch'
 const heroImage = (number: number) => `${BASE}/hero-carousel/hero${number}.webp`
@@ -99,6 +100,8 @@ export default function HeroCarousel() {
             fill
             sizes="100vw"
             loading={i === 0 ? 'eager' : 'lazy'}
+            placeholder="blur"
+            blurDataURL={getBlurImage(slide.image)}
             className="object-cover"
             draggable={false}
           />
