@@ -104,14 +104,14 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
             mouseStartX.current = null
           }}
         >
-          <div className="flex flex-col items-center w-full max-w-screen-lg">
+          <div className="flex flex-col items-center w-full h-full px-4 pt-12 pb-16 md:px-8 md:pt-8 md:pb-20">
             <img
               src={images[lightboxIndex]}
               alt={`${title} – fotografie ${lightboxIndex + 1}`}
               decoding="async"
-              className="w-full max-h-[80vh] object-contain pointer-events-none"
+              className="w-full flex-1 min-h-0 object-contain pointer-events-none"
             />
-            <div className="flex items-center gap-6 mt-4">
+            <div className="absolute bottom-4 md:bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-6">
               <button
                 onClick={(e) => { e.stopPropagation(); prev() }}
                 className="hidden md:block text-white/70 hover:text-white text-2xl px-3 py-2 transition-colors cursor-pointer"

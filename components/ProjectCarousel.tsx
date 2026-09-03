@@ -89,6 +89,7 @@ export default function ProjectCarousel({ images, title }: { images: string[]; t
             alt={`${title} – ${i + 1}`}
             sizes="(max-width: 767px) 100vw, 50vw"
             preload={i === 0}
+            loading={i === 0 ? undefined : 'eager'}
             onLoad={() => {
               ready.current.add(i)
               if (i === current) mount((i + 1) % images.length)
