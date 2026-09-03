@@ -1,0 +1,18 @@
+{
+  "slug": "rekonstrukce-rd-v-holenicich",
+  "order": 3,
+  "title": "Rekonstrukce RD Holenice",
+  "tagline": "Komplexní přeměna staršího objektu na moderní rodinné bydlení s novým interiérem.",
+  "description": "Komplexní přeměna staršího objektu na moderní rodinné bydlení s novým interiérem.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Holenice, Turnov",
+    "year_design": "2016",
+    "year_completion": "2018",
+    "type": "Rekonstrukce rodinného domu",
+    "architect": "Ing. arch. Pavel Novák",
+    "interior_design": "Kateřina Brožková",
+    "organization": "OMNIARCH"
+  }
+}

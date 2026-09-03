@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "generate:projects": "node scripts/generate-projects.mjs",
+    "predev": "npm run generate:projects",
     "dev": "next dev",
+    "prebuild": "npm run generate:projects",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

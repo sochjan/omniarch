@@ -1,0 +1,17 @@
+{
+  "slug": "rodinny-dum-ohrazenice",
+  "order": 7,
+  "title": "Rodinný dům Ohrazenice",
+  "tagline": "Kompaktní hmota s plochou střechou a velkými prosklenými plochami.",
+  "description": "Kompaktní hmota s plochou střechou a velkými prosklenými plochami.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Ohrazenice, Turnov",
+    "year_design": "2008",
+    "year_completion": "2010",
+    "type": "Rodinný dům",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}

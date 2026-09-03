@@ -1,0 +1,16 @@
+{
+  "slug": "rodinny-dum-zibridice",
+  "order": 5,
+  "title": "Rodinný dům v Žibřidicích",
+  "tagline": "Čistá architektura s moderními prvky zasazená do venkovského prostředí.",
+  "description": "Čistá architektura s moderními prvky zasazená do venkovského prostředí.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Žibřidice",
+    "year": "2020",
+    "type": "Rodinný dům",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}

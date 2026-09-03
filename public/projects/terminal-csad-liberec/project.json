@@ -1,0 +1,16 @@
+{
+  "slug": "terminal-csad-liberec",
+  "order": 36,
+  "title": "Terminál ČSAD Liberec",
+  "tagline": "Dopravní uzel se zastřešeným nástupištěm a zázemím pro cestující.",
+  "description": "Projekt autobusového terminálu ČSAD v Liberci z roku 2008. Dopravní uzel se zastřešeným nástupištěm a zázemím pro cestující.",
+  "category": "public",
+  "active": true,
+  "metadata": {
+    "location": "Liberec",
+    "year": "2008",
+    "type": "Dopravní terminál",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "SIADESIGN Liberec s.r.o."
+  }
+}

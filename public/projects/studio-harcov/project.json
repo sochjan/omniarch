@@ -1,0 +1,16 @@
+{
+  "slug": "studio-harcov",
+  "order": 28,
+  "title": "Dům pro dva v Harcově, Liberec",
+  "tagline": "Kompaktní bydlení pro dvě osoby s velkoryse pojatým obývacím prostorem.",
+  "description": "Projekt „Domu pro dva\" v Harcově v Liberci z roku 2016. Kompaktní rodinné bydlení optimalizované pro dvě osoby s velkoryse pojatým obývacím prostorem.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Harcov, Liberec",
+    "year": "2016",
+    "type": "Dům pro dva",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}

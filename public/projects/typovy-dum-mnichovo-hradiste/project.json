@@ -1,0 +1,16 @@
+{
+  "slug": "typovy-dum-mnichovo-hradiste",
+  "order": 48,
+  "title": "Typový dům Mnichovo Hradiště",
+  "tagline": "Typové řešení rodinného domu přizpůsobené lokálním podmínkám.",
+  "description": "Projekt typového rodinného domu pro Mnichovo Hradiště z roku 2010. Architekti: Ing. arch. Pavel Novák a Ing. arch. Richard Černý.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Mnichovo Hradiště",
+    "year": "2010",
+    "type": "Typový rodinný dům",
+    "architects": "Ing. arch. Pavel Novák, Ing. arch. Richard Černý",
+    "organization": "SIADESIGN Liberec s.r.o."
+  }
+}

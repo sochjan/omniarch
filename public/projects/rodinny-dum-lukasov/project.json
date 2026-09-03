@@ -1,0 +1,17 @@
+{
+  "slug": "rodinny-dum-lukasov",
+  "order": 45,
+  "title": "Rodinný dům Lukášov, Liberec",
+  "tagline": "Jeden z prvních projektů studia — výchozí bod architektonického jazyka OMNIARCH.",
+  "description": "Rodinný dům v Lukášově u Liberce — jeden z prvních projektů studia. Návrh 2004, realizace 2006.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Lukášov, Liberec",
+    "year_design": "2004",
+    "year_completion": "2006",
+    "type": "Rodinný dům",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}

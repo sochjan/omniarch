@@ -1,0 +1,16 @@
+{
+  "slug": "rodinny-dum-v-hradku-nad-nisou",
+  "order": 1,
+  "title": "Rodinný dům v Hrádku nad Nisou",
+  "tagline": "Moderní vila s důrazem na jednoduchost formy a energetickou efektivitu.",
+  "description": "Moderní rodinná vila s důrazem na jednoduchost formy a energetickou efektivitu.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Hrádek nad Nisou",
+    "year": "2019",
+    "type": "Rodinný dům",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}

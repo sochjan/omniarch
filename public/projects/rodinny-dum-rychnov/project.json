@@ -1,0 +1,16 @@
+{
+  "slug": "rodinny-dum-rychnov",
+  "order": 25,
+  "title": "Rodinný dům Rychnov u Jablonce nad Nisou",
+  "tagline": "Nejnovější projekt studia s důrazem na pasivní energetické standardy.",
+  "description": "Projekt rodinného domu v Rychnově u Jablonce nad Nisou z roku 2023. Nejnovější projekt studia s důrazem na pasivní energetické standardy.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Rychnov u Jablonce nad Nisou",
+    "year": "2023",
+    "type": "Rodinný dům",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}

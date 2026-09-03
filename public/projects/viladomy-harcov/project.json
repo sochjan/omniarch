@@ -1,0 +1,16 @@
+{
+  "slug": "viladomy-harcov",
+  "order": 49,
+  "title": "Viladomy v Harcově, Liberec",
+  "tagline": "Komplex nadstandardního bydlení v klidné vilové čtvrti Liberce.",
+  "description": "Projekt viladomů v Harcově v Liberci z roku 2007. Komplex nadstandardního bydlení v klidné vilové čtvrti.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Harcov, Liberec",
+    "year": "2007",
+    "type": "Viladomy",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "SIADESIGN Liberec s.r.o."
+  }
+}

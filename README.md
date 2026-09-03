@@ -16,6 +16,55 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Adding an architecture project
+
+Create a folder whose name is the project's URL slug:
+
+```text
+public/projects/my-new-project/
+├── project.json
+├── optimized/
+│   ├── project_001.webp
+│   ├── project_002.webp
+│   ├── project_003.webp
+│   ├── hero.webp
+│   └── blur/
+└── card/
+    ├── card.webp
+    └── blur.webp
+```
+
+Use this structure for `project.json`:
+
+```json
+{
+  "slug": "my-new-project",
+  "order": 51,
+  "title": "Project title",
+  "tagline": "Short summary",
+  "description": "Full project description.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Liberec",
+    "year": "2026",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}
+```
+
+Valid categories are `residential`, `commercial`, and `public`. Set `active` to
+`false` to hide a project and its generated page. Gallery images are read from the
+project's `optimized` folder and ordered by filename, so use zero-padded numbers
+such as `_001`, `_002`, and `_003`. `hero.webp` is reserved for the project-page
+hero and is not included as a separate gallery item.
+
+`npm run dev` and `npm run build` automatically validate all metadata, generate
+`lib/projects.generated.ts`. Invalid metadata, duplicate slugs/orders, missing hero
+or card assets, or malformed JSON stop the build with a clear error. Do not edit the
+generated TypeScript manually.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

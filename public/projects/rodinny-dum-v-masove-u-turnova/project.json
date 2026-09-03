@@ -1,0 +1,16 @@
+{
+  "slug": "rodinny-dum-v-masove-u-turnova",
+  "order": 21,
+  "title": "Rodinný dům v Mašově u Turnova",
+  "tagline": "Moderní architektura v malebné krajině Českého ráje.",
+  "description": "Projekt rodinného domu v Mašově u Turnova z roku 2022. Moderní architektura v krajině Českého ráje.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Mašov u Turnova",
+    "year": "2022",
+    "type": "Rodinný dům",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}

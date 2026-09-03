@@ -1,0 +1,16 @@
+{
+  "slug": "cerpaci-stanice-machnin",
+  "order": 35,
+  "title": "Čerpací stanice Machnín, Liberec",
+  "tagline": "Komerční stavba s důrazem na funkčnost a orientaci v prostoru.",
+  "description": "Projekt čerpací stanice pohonných hmot v Machníně u Liberce z roku 2007. Komerční stavba s důrazem na funkčnost a orientaci v prostoru.",
+  "category": "commercial",
+  "active": true,
+  "metadata": {
+    "location": "Machnín, Liberec",
+    "year": "2007",
+    "type": "Čerpací stanice",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "SIADESIGN Liberec s.r.o."
+  }
+}

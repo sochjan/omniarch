@@ -1,0 +1,16 @@
+{
+  "slug": "rodinny-dum-ve-fojtce",
+  "order": 15,
+  "title": "Rodinný dům Fojtka",
+  "tagline": "Čistá geometrie a kvalitní materiály v klidném příměstském prostředí.",
+  "description": "Rodinný dům ve Fojtce u Mníšku u Liberce, dokončený v roce 2017. Čistá geometrie a kvalitní materiály v klidném příměstském prostředí.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Fojtka, Mníšek u Liberce",
+    "year": "2017",
+    "type": "Rodinný dům",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "rodinny-dum-nova-ves",
+  "order": 10,
+  "title": "Rodinný dům Nová Ves",
+  "tagline": "Moderní bydlení v klidné přírodní lokalitě u Jablonce nad Nisou.",
+  "description": "Moderní bydlení v klidné přírodní lokalitě u Jablonce nad Nisou.",
+  "category": "residential",
+  "active": true,
+  "metadata": {
+    "location": "Nová Ves, Jablonec nad Nisou",
+    "year_design": "2007",
+    "year_completion": "2009",
+    "type": "Rodinný dům",
+    "architect": "Ing. arch. Pavel Novák",
+    "organization": "OMNIARCH"
+  }
+}
