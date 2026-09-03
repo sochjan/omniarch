@@ -74,6 +74,9 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
 
       {lightboxIndex !== null && (
         <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Galerie: ${title}`}
           className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center cursor-grab active:cursor-grabbing select-none touch-none overscroll-contain"
           onClick={() => { if (!wasDragging.current) close(); wasDragging.current = false }}
           onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX }}

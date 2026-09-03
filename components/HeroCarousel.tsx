@@ -53,6 +53,29 @@ export default function HeroCarousel() {
     return () => clearInterval(interval)
   }, [firstImageLoaded])
 
+  useEffect(() => {
+    if (!firstImageLoaded) return
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (!window.matchMedia('(min-width: 768px)').matches) return
+      if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return
+
+      const target = event.target as HTMLElement | null
+      if (target?.isContentEditable || target?.matches('input, textarea, select')) return
+
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault()
+        setCurrent((i) => (i - 1 + SLIDES.length) % SLIDES.length)
+      } else if (event.key === 'ArrowRight') {
+        event.preventDefault()
+        setCurrent((i) => (i + 1) % SLIDES.length)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [firstImageLoaded])
+
   return (
     <div
       className="relative w-full h-[75vh] overflow-hidden select-none cursor-grab active:cursor-grabbing"

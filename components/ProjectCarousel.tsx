@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useCallback, useEffect, useState, useRef } from 'react'
 import ProgressiveImage from '@/components/ProgressiveImage'
 
 export default function ProjectCarousel({ images, title }: { images: string[]; title: string }) {
@@ -11,11 +11,11 @@ export default function ProjectCarousel({ images, title }: { images: string[]; t
   const touchStartX = useRef<number | null>(null)
   const mouseStartX = useRef<number | null>(null)
 
-  const mount = (index: number) => {
+  const mount = useCallback((index: number) => {
     setMounted((indices) => indices.includes(index) ? indices : [...indices, index])
-  }
+  }, [])
 
-  const show = (index: number) => {
+  const show = useCallback((index: number) => {
     if (ready.current.has(index)) {
       setCurrent(index)
       mount((index + 1) % images.length)
@@ -23,10 +23,34 @@ export default function ProjectCarousel({ images, title }: { images: string[]; t
       pending.current = index
       mount(index)
     }
-  }
+  }, [images.length, mount])
 
-  const prev = () => show((current - 1 + images.length) % images.length)
-  const next = () => show((current + 1) % images.length)
+  const prev = useCallback(() => show((current - 1 + images.length) % images.length), [current, images.length, show])
+  const next = useCallback(() => show((current + 1) % images.length), [current, images.length, show])
+
+  useEffect(() => {
+    if (images.length <= 1) return
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (!window.matchMedia('(min-width: 768px)').matches) return
+      if (document.querySelector('[role="dialog"]')) return
+      if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return
+
+      const target = event.target as HTMLElement | null
+      if (target?.isContentEditable || target?.matches('input, textarea, select')) return
+
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault()
+        prev()
+      } else if (event.key === 'ArrowRight') {
+        event.preventDefault()
+        next()
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [images.length, next, prev])
 
   return (
     <div
