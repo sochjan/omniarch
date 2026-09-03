@@ -1,6 +1,6 @@
 export function getBlurImage(src: string): string {
-  if (src.endsWith('/placeholder.png')) {
-    return src.replace('/placeholder.png', '/placeholder-blur.webp')
+  if (src.endsWith('/placeholder.webp')) {
+    return src.replace('/placeholder.webp', '/placeholder-blur.webp')
   }
 
   if (src.includes('/hero-carousel/')) {

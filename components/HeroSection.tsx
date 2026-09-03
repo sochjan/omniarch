@@ -1,7 +1,6 @@
 'use client'
 
-import Image from 'next/image'
-import { getBlurImage } from '@/lib/image'
+import ProgressiveImage from '@/components/ProgressiveImage'
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '/omniarch'
 const HERO_IMAGE = `${BASE}/hero.webp`
@@ -12,14 +11,12 @@ export default function HeroSection() {
       {/* Mobile (< md): photo on top, text below */}
       <div className="md:hidden">
         <div className="relative aspect-[4/3] w-full overflow-hidden">
-          <Image
+          <ProgressiveImage
             src={HERO_IMAGE}
             alt="Moderní rodinný dům ve Skalanech s dřevěnou fasádou zasazený do zelené krajiny"
             fill
             sizes="100vw"
             preload
-            placeholder="blur"
-            blurDataURL={getBlurImage(HERO_IMAGE)}
             className="object-cover"
           />
         </div>
@@ -111,14 +108,12 @@ export default function HeroSection() {
         {/* Right — sticky photo, edge to edge */}
         <div className="sticky top-0 h-screen overflow-hidden">
           <div className="relative h-full w-full">
-            <Image
+            <ProgressiveImage
               src={HERO_IMAGE}
               alt="Moderní rodinný dům ve Skalanech s dřevěnou fasádou zasazený do zelené krajiny"
               fill
               sizes="50vw"
               preload
-              placeholder="blur"
-              blurDataURL={getBlurImage(HERO_IMAGE)}
               className="object-cover"
             />
           </div>

@@ -1,8 +1,7 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import type { Project } from '@/lib/projects'
 import { getDisplayYear } from '@/lib/projects'
-import { getBlurImage } from '@/lib/image'
+import ProgressiveImage from '@/components/ProgressiveImage'
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '/omniarch'
 
@@ -11,19 +10,17 @@ export default function ProjectCard({ project, eager = false }: { project: Proje
   const hasProjectImage = Boolean(project.image ?? project.images?.[0])
   const src = hasProjectImage
     ? `${BASE}/projects/${project.slug}/card/card.webp`
-    : `${BASE}/placeholder.png`
+    : `${BASE}/placeholder.webp`
 
   return (
     <Link href={`/${project.slug}`} className="group block">
       <div className="aspect-[4/3] relative overflow-hidden mb-3">
-        <Image
+        <ProgressiveImage
           src={src}
           alt={project.title}
           fill
           sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
           loading={eager ? 'eager' : 'lazy'}
-          placeholder="blur"
-          blurDataURL={getBlurImage(src)}
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

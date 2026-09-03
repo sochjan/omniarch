@@ -59,7 +59,7 @@ export default async function ProjectPage({
   const designProject = !archProject ? getDesignProject(slug) : undefined
   if (!archProject && !designProject) notFound()
 
-  const placeholderImages = Array(5).fill(`${BASE}/placeholder.png`)
+  const placeholderImages = Array(5).fill(`${BASE}/placeholder.webp`)
 
   // ── Design project ────────────────────────────────────────────────────────
   if (designProject) {
@@ -125,7 +125,7 @@ export default async function ProjectPage({
 
   // ── Architecture project ──────────────────────────────────────────────────
   const project = archProject!
-  const images = (project.images ?? [project.image ?? '/placeholder.png']).map(
+  const images = (project.images ?? [project.image ?? '/placeholder.webp']).map(
     (image) => `${BASE}${image}`
   )
   const carouselImages = [...images]

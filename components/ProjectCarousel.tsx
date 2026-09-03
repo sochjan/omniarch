@@ -1,8 +1,7 @@
 'use client'
 
 import { useState, useRef } from 'react'
-import Image from 'next/image'
-import { getBlurImage } from '@/lib/image'
+import ProgressiveImage from '@/components/ProgressiveImage'
 
 export default function ProjectCarousel({ images, title }: { images: string[]; title: string }) {
   const [current, setCurrent] = useState(0)
@@ -55,29 +54,30 @@ export default function ProjectCarousel({ images, title }: { images: string[]; t
       onMouseLeave={() => { mouseStartX.current = null }}
     >
       {images.map((src, i) => mounted.includes(i) && (
-        <Image
+        <div
           key={i}
-          src={src}
-          alt={`${title} – ${i + 1}`}
-          fill
-          sizes="(max-width: 767px) 100vw, 50vw"
-          preload={i === 0}
-          placeholder="blur"
-          blurDataURL={getBlurImage(src)}
-          onLoad={() => {
-            ready.current.add(i)
-            if (i === current) mount((i + 1) % images.length)
-            if (pending.current === i) {
-              pending.current = null
-              setCurrent(i)
-              mount((i + 1) % images.length)
-            }
-          }}
-          className={`object-cover transition-opacity duration-700 select-none cursor-grab active:cursor-grabbing ${
+          className={`absolute inset-0 transition-opacity duration-700 ${
             i === current ? 'opacity-100' : 'pointer-events-none opacity-0'
           }`}
-          draggable={false}
-        />
+        >
+          <ProgressiveImage
+            src={src}
+            alt={`${title} – ${i + 1}`}
+            sizes="(max-width: 767px) 100vw, 50vw"
+            preload={i === 0}
+            onLoad={() => {
+              ready.current.add(i)
+              if (i === current) mount((i + 1) % images.length)
+              if (pending.current === i) {
+                pending.current = null
+                setCurrent(i)
+                mount((i + 1) % images.length)
+              }
+            }}
+            className="object-cover select-none cursor-grab active:cursor-grabbing"
+            draggable={false}
+          />
+        </div>
       ))}
 
       {images.length > 1 && (

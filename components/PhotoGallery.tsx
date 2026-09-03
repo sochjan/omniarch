@@ -1,8 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
-import Image from 'next/image'
-import { getBlurImage } from '@/lib/image'
+import ProgressiveImage from '@/components/ProgressiveImage'
 
 export default function PhotoGallery({ images, title }: { images: string[]; title: string }) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
@@ -33,14 +32,12 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
         className="aspect-[4/3] relative overflow-hidden mb-3 cursor-zoom-in"
         onClick={() => setLightboxIndex(0)}
       >
-        <Image
+        <ProgressiveImage
           src={main}
           alt={title}
           fill
           sizes="(max-width: 1279px) 100vw, 1280px"
           loading="lazy"
-          placeholder="blur"
-          blurDataURL={getBlurImage(main)}
           className="object-cover"
         />
       </div>
@@ -53,14 +50,12 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
               className="aspect-[4/3] relative overflow-hidden cursor-zoom-in"
               onClick={() => setLightboxIndex(i + 1)}
             >
-              <Image
+              <ProgressiveImage
                 src={src}
                 alt={`${title} – fotografie ${i + 2}`}
                 fill
                 sizes="(max-width: 767px) 50vw, 640px"
                 loading="lazy"
-                placeholder="blur"
-                blurDataURL={getBlurImage(src)}
                 className="object-cover"
               />
             </div>

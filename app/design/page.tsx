@@ -28,7 +28,7 @@ export default function DesignPage() {
           <Link key={item.slug} href={`/${item.slug}`} className="group block">
             <div className="aspect-[4/3] relative overflow-hidden mb-3">
               <img
-                src={`${BASE}/placeholder.png`}
+                src={`${BASE}/placeholder.webp`}
                 alt={item.title}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
