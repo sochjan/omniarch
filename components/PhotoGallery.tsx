@@ -104,7 +104,7 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
             mouseStartX.current = null
           }}
         >
-          <div className="flex flex-col items-center w-full h-full px-4 pt-12 pb-16 md:px-8 md:pt-8 md:pb-20">
+          <div className="flex flex-col items-center w-full h-full px-0 pt-12 pb-16 md:px-8 md:pt-8 md:pb-20">
             <img
               src={images[lightboxIndex]}
               alt={`${title} – fotografie ${lightboxIndex + 1}`}
