@@ -24,6 +24,15 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
     return () => window.removeEventListener('keydown', handler)
   }, [lightboxIndex, close, prev, next])
 
+  useEffect(() => {
+    if (lightboxIndex === null) return
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = previousOverflow
+    }
+  }, [lightboxIndex])
+
   const [main, ...rest] = images
 
   return (
@@ -65,7 +74,7 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
 
       {lightboxIndex !== null && (
         <div
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center cursor-grab active:cursor-grabbing select-none"
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center cursor-grab active:cursor-grabbing select-none touch-none overscroll-contain"
           onClick={() => { if (!wasDragging.current) close(); wasDragging.current = false }}
           onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX }}
           onTouchEnd={(e) => {
