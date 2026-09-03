@@ -6,8 +6,10 @@ import ProgressiveImage from '@/components/ProgressiveImage'
 export default function ProjectCarousel({ images, title }: { images: string[]; title: string }) {
   const [current, setCurrent] = useState(0)
   const [mounted, setMounted] = useState<number[]>([0])
+  const [firstImageLoaded, setFirstImageLoaded] = useState(false)
   const ready = useRef(new Set<number>())
   const pending = useRef<number | null>(null)
+  const paused = useRef(false)
   const touchStartX = useRef<number | null>(null)
   const mouseStartX = useRef<number | null>(null)
 
@@ -27,6 +29,16 @@ export default function ProjectCarousel({ images, title }: { images: string[]; t
 
   const prev = useCallback(() => show((current - 1 + images.length) % images.length), [current, images.length, show])
   const next = useCallback(() => show((current + 1) % images.length), [current, images.length, show])
+
+  useEffect(() => {
+    if (!firstImageLoaded || images.length <= 1) return
+
+    const interval = setInterval(() => {
+      if (!paused.current) next()
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [firstImageLoaded, images.length, next])
 
   useEffect(() => {
     if (images.length <= 1) return
@@ -55,6 +67,7 @@ export default function ProjectCarousel({ images, title }: { images: string[]; t
   return (
     <div
       className="relative w-full h-full"
+      onMouseEnter={() => { paused.current = true }}
       onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX }}
       onTouchEnd={(e) => {
         if (touchStartX.current === null) return
@@ -75,7 +88,7 @@ export default function ProjectCarousel({ images, title }: { images: string[]; t
         }
         mouseStartX.current = null
       }}
-      onMouseLeave={() => { mouseStartX.current = null }}
+      onMouseLeave={() => { paused.current = false; mouseStartX.current = null }}
     >
       {images.map((src, i) => mounted.includes(i) && (
         <div
@@ -92,6 +105,7 @@ export default function ProjectCarousel({ images, title }: { images: string[]; t
             loading={i === 0 ? undefined : 'eager'}
             onLoad={() => {
               ready.current.add(i)
+              if (i === 0) setFirstImageLoaded(true)
               if (i === current) mount((i + 1) % images.length)
               if (pending.current === i) {
                 pending.current = null
