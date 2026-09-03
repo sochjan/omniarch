@@ -3,6 +3,28 @@ import type { Project } from './projects'
 
 export const projects: Project[] = [
   {
+    "slug": "dvojdum-pobocna-liberec",
+    "title": "Dvojdům Pobočná, Liberec",
+    "tagline": "Dvojdům v ulici Pobočná v Liberci.",
+    "description": "Projekt dvojdomu v ulici Pobočná v Liberci.",
+    "category": "residential",
+    "active": true,
+    "metadata": {
+      "location": "Pobočná, Liberec",
+      "type": "Dvojdům"
+    },
+    "images": [
+      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_001.webp",
+      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_002.webp",
+      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_003.webp",
+      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_004.webp",
+      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_005.webp",
+      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_006.webp",
+      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_007.webp",
+      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_008.webp"
+    ]
+  },
+  {
     "slug": "rodinny-dum-v-hradku-nad-nisou",
     "title": "Rodinný dům v Hrádku nad Nisou",
     "tagline": "Moderní vila s důrazem na jednoduchost formy a energetickou efektivitu.",

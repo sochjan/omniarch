@@ -39,7 +39,6 @@ Use this structure for `project.json`:
 ```json
 {
   "slug": "my-new-project",
-  "order": 51,
   "title": "Project title",
   "tagline": "Short summary",
   "description": "Full project description.",
@@ -60,8 +59,12 @@ project's `optimized` folder and ordered by filename, so use zero-padded numbers
 such as `_001`, `_002`, and `_003`. `hero.webp` is reserved for the project-page
 hero and is not included as a separate gallery item.
 
+The project order is controlled centrally by `public/projects/order.json`. Move
+the slug lines in that file to rearrange the portfolio. A new project whose slug
+is not listed there is added automatically at the end.
+
 `npm run dev` and `npm run build` automatically validate all metadata, generate
-`lib/projects.generated.ts`. Invalid metadata, duplicate slugs/orders, missing hero
+`lib/projects.generated.ts`. Invalid metadata, duplicate or unknown ordered slugs, missing hero
 or card assets, or malformed JSON stop the build with a clear error. Do not edit the
 generated TypeScript manually.
 
