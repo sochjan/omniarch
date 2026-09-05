@@ -86,7 +86,7 @@ export default function HeroCarousel() {
 
   return (
     <div
-      className="relative w-full h-[75vh] overflow-hidden select-none cursor-grab active:cursor-grabbing"
+      className="relative w-full h-[82vh] overflow-hidden select-none cursor-grab active:cursor-grabbing"
       onMouseEnter={() => { paused.current = true }}
       onMouseLeave={() => { paused.current = false; mouseStartX.current = null }}
       onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX; wasDragging.current = false }}
