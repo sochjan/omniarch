@@ -5,6 +5,14 @@
   "description": "Projekt dvojdomu v ulici Pobočná v Liberci.",
   "category": "residential",
   "active": true,
+  "image_captions": [
+    "Večerní pohled z ulice na dvojici propojených domů a zahradní terasu.",
+    "Celkový pohled na dvojdům zasazený do svažité a bohatě osázené zahrady.",
+    "Zahradní fasády propojují bílé štítové objemy s tmavými vloženými částmi.",
+    "Dvojice obytných částí se velkými okny otevírá do společné zahrady.",
+    "Vstupní průčelí s centrálním schodištěm a garážemi zapuštěnými do svahu.",
+    "Večerní pohled na vstupní stranu dvojdomu a kryté venkovní terasy."
+  ],
   "metadata": {
     "location": "Pobočná, Liberec",
     "type": "Dvojdům"
