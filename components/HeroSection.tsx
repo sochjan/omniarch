@@ -26,7 +26,7 @@ export default function HeroSection() {
       </div>
 
       {/* Desktop (md+): sticky split */}
-      <div className="hidden md:grid grid-cols-2 items-start">
+      <div className="hidden md:grid grid-cols-[minmax(0,1fr)_minmax(0,2fr)] items-start">
         {/* Left — scrollable content */}
         <div className="px-12 xl:px-20 py-24 space-y-16">
           <div>
@@ -112,7 +112,7 @@ export default function HeroSection() {
               src={HERO_IMAGE}
               alt="Moderní rodinný dům ve Skalanech s dřevěnou fasádou zasazený do zelené krajiny"
               fill
-              sizes="50vw"
+              sizes="67vw"
               preload
               className="object-cover"
             />

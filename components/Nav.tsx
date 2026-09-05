@@ -25,13 +25,13 @@ export default function Nav() {
   return (
     <>
       <header className="sticky top-0 z-50 bg-[#fafaf8]/90 backdrop-blur-sm border-b border-[#e5e5e5]">
-        <nav className="max-w-7xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
+        <nav className="w-full px-6 md:px-12 xl:px-20 h-16 flex items-center justify-between">
           <Link
             href="/"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="flex items-center hover:opacity-70 transition-opacity"
           >
-            <img src={`${BASE}/logo.svg`} alt="OMNIARCH" className="w-36 h-auto" />
+            <img src={`${BASE}/logo.svg`} alt="OMNIARCH" className="w-44 md:w-48 h-auto" />
           </Link>
 
           {/* Desktop links */}

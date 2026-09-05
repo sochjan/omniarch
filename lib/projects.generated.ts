@@ -19,9 +19,7 @@ export const projects: Project[] = [
       "/projects/dvojdum-pobocna-liberec/optimized/pobocna_003.webp",
       "/projects/dvojdum-pobocna-liberec/optimized/pobocna_004.webp",
       "/projects/dvojdum-pobocna-liberec/optimized/pobocna_005.webp",
-      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_006.webp",
-      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_007.webp",
-      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_008.webp"
+      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_006.webp"
     ]
   },
   {

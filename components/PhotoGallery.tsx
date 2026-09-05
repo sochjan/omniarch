@@ -46,7 +46,7 @@ export default function PhotoGallery({ images, title }: { images: string[]; titl
           alt={title}
           fill
           sizes="(max-width: 1279px) 100vw, 1280px"
-          loading="lazy"
+          loading="eager"
           className="object-cover"
         />
       </div>

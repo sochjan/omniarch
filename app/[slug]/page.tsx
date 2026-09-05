@@ -102,7 +102,7 @@ export default async function ProjectPage({
         </div>
 
         {/* Desktop */}
-        <div className="hidden md:grid grid-cols-2 items-start">
+        <div className="hidden md:grid grid-cols-[minmax(0,1fr)_minmax(0,2fr)] items-start">
           <div className="px-12 xl:px-20 py-16">
             {backLink}
             <div className="mt-14">{textContent}</div>
@@ -207,7 +207,7 @@ export default async function ProjectPage({
       </div>
 
       {/* Desktop */}
-      <div className="hidden md:grid grid-cols-2 items-start">
+      <div className="hidden md:grid grid-cols-[minmax(0,1fr)_minmax(0,2fr)] items-start">
         <div className="px-12 xl:px-20 py-16">
           {backLink}
           <div className="mt-14">{textContent}</div>

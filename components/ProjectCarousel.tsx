@@ -100,7 +100,7 @@ export default function ProjectCarousel({ images, title }: { images: string[]; t
           <ProgressiveImage
             src={src}
             alt={`${title} – ${i + 1}`}
-            sizes="(max-width: 767px) 100vw, 50vw"
+            sizes="(max-width: 767px) 100vw, 67vw"
             preload={i === 0}
             loading={i === 0 ? undefined : 'eager'}
             onLoad={() => {
