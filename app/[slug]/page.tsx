@@ -222,7 +222,7 @@ export default async function ProjectPage({
         <h2 className="text-2xl md:text-3xl font-extralight tracking-tight text-[#111111] mb-10">
           Galerie
         </h2>
-        <PhotoGallery images={images} title={project.title} />
+        <PhotoGallery images={images} captions={project.image_captions} title={project.title} />
       </section>
     </div>
   )

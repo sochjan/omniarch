@@ -5,6 +5,15 @@
   "description": "Projekt rodinného domu v Radčicích u Liberce z roku 2019. Příčný dům s hlubokou terasou a výhledem do přírody.",
   "category": "residential",
   "active": true,
+  "image_captions": [
+    "Vizualizace zahradní strany domu s krytou terasou.",
+    "Obytné místnosti se přes pergolu otevírají do zahrady.",
+    "Dlouhou kompozici domu člení průsvitný spojovací prostor.",
+    "Vstupní průčelí s dřevěným štítem a nenápadně vloženou bránou.",
+    "Krytý vstup a parkování propojuje velkorysá dřevěná konstrukce.",
+    "Celkový pohled na dům zasazený do otevřené krajiny.",
+    "Přírodní jezírko a pobytová zahrada dotvářejí širší okolí domu."
+  ],
   "metadata": {
     "location": "Radčice, Liberec",
     "year": "2019",

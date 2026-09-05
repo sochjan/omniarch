@@ -14,6 +14,7 @@ const TOP_LEVEL_FIELDS = new Set([
   'description',
   'category',
   'active',
+  'image_captions',
   'metadata',
 ])
 const METADATA_FIELDS = new Set([
@@ -66,6 +67,16 @@ function validateProject(file, folder, project) {
     fail(file, '"category" must be residential, commercial, or public')
   }
   if (typeof project.active !== 'boolean') fail(file, '"active" must be true or false')
+  if (project.image_captions !== undefined) {
+    if (!Array.isArray(project.image_captions)) {
+      fail(file, '"image_captions" must be an array')
+    }
+    for (const [index, caption] of project.image_captions.entries()) {
+      if (caption !== null && typeof caption !== 'string') {
+        fail(file, `"image_captions[${index}]" must be a string or null`)
+      }
+    }
+  }
   if (!project.metadata || typeof project.metadata !== 'object' || Array.isArray(project.metadata)) {
     fail(file, '"metadata" must be an object')
   }

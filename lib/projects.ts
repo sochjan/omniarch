@@ -11,6 +11,7 @@ export type Project = {
   category: ProjectCategory
   image?: string
   images?: string[]
+  image_captions?: Array<string | null>
   metadata: {
     location?: string
     year?: string

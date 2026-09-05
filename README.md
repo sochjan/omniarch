@@ -44,6 +44,11 @@ Use this structure for `project.json`:
   "description": "Full project description.",
   "category": "residential",
   "active": true,
+  "image_captions": [
+    "Caption for project_001.webp.",
+    "",
+    "Caption for project_003.webp."
+  ],
   "metadata": {
     "location": "Liberec",
     "year": "2026",
@@ -58,6 +63,11 @@ Valid categories are `residential`, `commercial`, and `public`. Set `active` to
 project's `optimized` folder and ordered by filename, so use zero-padded numbers
 such as `_001`, `_002`, and `_003`. `hero.webp` is reserved for the project-page
 hero and is not included as a separate gallery item.
+
+The optional `image_captions` array follows the same filename order as the gallery.
+Use an empty string or `null` when a particular image should have no caption. The
+array may contain fewer or more entries than the gallery: missing captions are
+hidden and surplus entries are ignored.
 
 The project order is controlled centrally by `public/projects/order.json`. Move
 the slug lines in that file to rearrange the portfolio. A new project whose slug
