@@ -125,18 +125,22 @@ export default function PhotoGallery({ images, captions = [], title }: PhotoGall
             mouseStartX.current = null
           }}
         >
-          <div className={`flex flex-col items-center w-full h-full px-0 pt-12 md:px-8 md:pt-8 ${currentCaption ? 'pb-28 md:pb-28' : 'pb-16 md:pb-20'}`}>
-            <img
-              src={images[lightboxIndex]}
-              alt={currentCaption ?? `${title} – fotografie ${lightboxIndex + 1}`}
-              decoding="async"
-              className="w-full flex-1 min-h-0 object-contain pointer-events-none"
-            />
-            {currentCaption && (
-              <p className="absolute bottom-12 md:bottom-14 left-4 right-4 mx-auto max-w-3xl text-center text-xs md:text-sm font-light leading-relaxed text-white/80">
-                {currentCaption}
-              </p>
-            )}
+          <div className="flex flex-col items-center w-full h-full px-0 pt-12 pb-16 md:px-8 md:pt-8 md:pb-20">
+            <div className="flex flex-1 min-h-0 w-full items-center justify-center">
+              <div className="relative inline-flex max-w-full max-h-full">
+                <img
+                  src={images[lightboxIndex]}
+                  alt={currentCaption ?? `${title} – fotografie ${lightboxIndex + 1}`}
+                  decoding="async"
+                  className="block w-auto h-auto max-w-full max-h-full object-contain pointer-events-none"
+                />
+                {currentCaption && (
+                  <p className="absolute inset-x-0 bottom-0 px-4 md:px-6 pt-10 md:pt-12 pb-4 md:pb-5 text-center text-xs md:text-sm font-light leading-relaxed text-white bg-gradient-to-t from-black/65 via-black/30 to-transparent">
+                    {currentCaption}
+                  </p>
+                )}
+              </div>
+            </div>
             <div className="absolute bottom-4 md:bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-6">
               <button
                 onClick={(e) => { e.stopPropagation(); prev() }}
