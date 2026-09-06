@@ -106,7 +106,7 @@ export default function HeroSection() {
         </div>
 
         {/* Right — sticky photo, edge to edge */}
-        <div className="sticky top-0 h-screen overflow-hidden">
+        <div className="sticky top-16 h-[calc(100vh-4rem)] overflow-hidden">
           <div className="relative h-full w-full">
             <ProgressiveImage
               src={HERO_IMAGE}

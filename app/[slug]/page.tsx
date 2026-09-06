@@ -107,7 +107,7 @@ export default async function ProjectPage({
             {backLink}
             <div className="mt-14">{textContent}</div>
           </div>
-          <div className="sticky top-0 h-screen overflow-hidden">
+          <div className="sticky top-16 h-[calc(100vh-4rem)] overflow-hidden">
             <ProjectCarousel images={placeholderImages} title={designProject.title} />
           </div>
         </div>
@@ -212,7 +212,7 @@ export default async function ProjectPage({
           {backLink}
           <div className="mt-14">{textContent}</div>
         </div>
-        <div className="sticky top-0 h-screen overflow-hidden">
+        <div className="sticky top-16 h-[calc(100vh-4rem)] overflow-hidden">
           <ProjectCarousel images={carouselImages} title={project.title} />
         </div>
       </div>
