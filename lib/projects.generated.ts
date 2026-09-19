@@ -897,6 +897,18 @@ export const projects: Project[] = [
     "description": "Rekonstrukce chalupy v Rudolfově u Liberce. Návrh 2012, realizace 2015. Citlivá obnova venkovského stavení s moderními prvky.",
     "category": "residential",
     "active": true,
+    "image_captions": [
+      "Pohled od příjezdu na obnovenou chalupu a samostatnou garáž se solárními panely.",
+      "Chalupa zasazená do svažité zahrady s přírodním potůčkem.",
+      "Zahradní průčelí s terasou a výhledem do okolní krajiny.",
+      "Tradiční štít chalupy doplňuje světlá omítka a tmavý dřevěný obklad.",
+      "Detail roubeného průčelí s bílým orámováním oken.",
+      "Krytá terasa vytváří chráněné místo pro posezení u domu.",
+      "Kvetoucí výsadba přirozeně lemuje obytnou terasu.",
+      "Detail vstupu a tradičního roubeného pláště chalupy.",
+      "Vstupní brána s domovním číslem a chalupou v pozadí.",
+      "Celkový pohled na chalupu v horské krajině Rudolfova."
+    ],
     "metadata": {
       "location": "Rudolfov, Liberec",
       "year_design": "2012",
@@ -904,7 +916,19 @@ export const projects: Project[] = [
       "type": "Chalupa",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/chalupa-rudolfov/optimized/rudolfov_001.webp",
+      "/projects/chalupa-rudolfov/optimized/rudolfov_002.webp",
+      "/projects/chalupa-rudolfov/optimized/rudolfov_003.webp",
+      "/projects/chalupa-rudolfov/optimized/rudolfov_004.webp",
+      "/projects/chalupa-rudolfov/optimized/rudolfov_005.webp",
+      "/projects/chalupa-rudolfov/optimized/rudolfov_006.webp",
+      "/projects/chalupa-rudolfov/optimized/rudolfov_007.webp",
+      "/projects/chalupa-rudolfov/optimized/rudolfov_008.webp",
+      "/projects/chalupa-rudolfov/optimized/rudolfov_009.webp",
+      "/projects/chalupa-rudolfov/optimized/rudolfov_010.webp"
+    ]
   },
   {
     "slug": "rodinny-dum-chrastava",
