@@ -1,9 +1,23 @@
 'use client'
 
 import { useCallback, useEffect, useState, useRef } from 'react'
+import Link from 'next/link'
 import ProgressiveImage from '@/components/ProgressiveImage'
 
-export default function ProjectCarousel({ images, title }: { images: string[]; title: string }) {
+export type ProjectCarouselLink = {
+  href: string
+  title: string
+  details: string
+  alt?: string
+}
+
+type ProjectCarouselProps = {
+  images: string[]
+  title: string
+  links?: ProjectCarouselLink[]
+}
+
+export default function ProjectCarousel({ images, title, links }: ProjectCarouselProps) {
   const [current, setCurrent] = useState(0)
   const [mounted, setMounted] = useState<number[]>([0])
   const [firstImageLoaded, setFirstImageLoaded] = useState(false)
@@ -12,6 +26,7 @@ export default function ProjectCarousel({ images, title }: { images: string[]; t
   const paused = useRef(false)
   const touchStartX = useRef<number | null>(null)
   const mouseStartX = useRef<number | null>(null)
+  const wasDragging = useRef(false)
 
   const mount = useCallback((index: number) => {
     setMounted((indices) => indices.includes(index) ? indices : [...indices, index])
@@ -68,20 +83,22 @@ export default function ProjectCarousel({ images, title }: { images: string[]; t
     <div
       className="relative w-full h-full"
       onMouseEnter={() => { paused.current = true }}
-      onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX }}
+      onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX; wasDragging.current = false }}
       onTouchEnd={(e) => {
         if (touchStartX.current === null) return
         const diff = touchStartX.current - e.changedTouches[0].clientX
+        if (Math.abs(diff) > 10) wasDragging.current = true
         if (Math.abs(diff) > 50) {
           if (diff > 0) next()
           else prev()
         }
         touchStartX.current = null
       }}
-      onMouseDown={(e) => { mouseStartX.current = e.clientX }}
+      onMouseDown={(e) => { mouseStartX.current = e.clientX; wasDragging.current = false }}
       onMouseUp={(e) => {
         if (mouseStartX.current === null) return
         const diff = mouseStartX.current - e.clientX
+        if (Math.abs(diff) > 10) wasDragging.current = true
         if (Math.abs(diff) > 50) {
           if (diff > 0) next()
           else prev()
@@ -99,7 +116,7 @@ export default function ProjectCarousel({ images, title }: { images: string[]; t
         >
           <ProgressiveImage
             src={src}
-            alt={`${title} – ${i + 1}`}
+            alt={links?.[i]?.alt ?? `${title} – ${i + 1}`}
             sizes="(max-width: 767px) 100vw, 67vw"
             preload={i === 0}
             loading={i === 0 ? undefined : 'eager'}
@@ -116,6 +133,28 @@ export default function ProjectCarousel({ images, title }: { images: string[]; t
             className="object-cover select-none cursor-grab active:cursor-grabbing"
             draggable={false}
           />
+          {links?.[i] && (
+            <>
+              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/60 via-black/15 to-transparent pointer-events-none" />
+              <Link
+                href={links[i].href}
+                className="group absolute left-6 bottom-12 md:left-10 md:bottom-9 z-10 text-white drop-shadow-sm"
+                tabIndex={i === current ? 0 : -1}
+                onClick={(event) => {
+                  if (wasDragging.current) event.preventDefault()
+                  wasDragging.current = false
+                }}
+              >
+                <h2 className="text-lg md:text-2xl font-light tracking-tight">
+                  {links[i].title}
+                </h2>
+                <p className="hidden md:block mt-1 text-xs font-light tracking-wide text-white/80 group-hover:text-white transition-colors">
+                  {links[i].details}
+                </p>
+                <span className="block mt-2 h-px w-0 bg-white/80 transition-all duration-300 group-hover:w-full" />
+              </Link>
+            </>
+          )}
         </div>
       ))}
 

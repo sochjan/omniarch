@@ -113,7 +113,7 @@ export default async function ProjectPage({
         </div>
 
         {/* Gallery */}
-        <section className="max-w-7xl mx-auto px-6 md:px-12 py-16 border-t border-[#e5e5e5]">
+          <section className="max-w-7xl mx-auto px-6 md:px-12 py-16">
           <h2 className="text-2xl md:text-3xl font-extralight tracking-tight text-[#111111] mb-10">
             Galerie
           </h2>
@@ -218,7 +218,7 @@ export default async function ProjectPage({
       </div>
 
       {/* Gallery */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 py-16 border-t border-[#e5e5e5]">
+        <section className="max-w-7xl mx-auto px-6 md:px-12 py-16">
         <h2 className="text-2xl md:text-3xl font-extralight tracking-tight text-[#111111] mb-10">
           Galerie
         </h2>

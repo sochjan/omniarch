@@ -1,24 +1,29 @@
 'use client'
 
 import ProgressiveImage from '@/components/ProgressiveImage'
+import HomepageProjectCarousel from '@/components/HomepageProjectCarousel'
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '/omniarch'
 const HERO_IMAGE = `${BASE}/hero.webp`
 
-export default function HeroSection() {
+export default function HeroSection({ useProjectCarousel = false }: { useProjectCarousel?: boolean }) {
   return (
     <section className="relative">
       {/* Mobile (< md): photo on top, text below */}
       <div className="md:hidden">
         <div className="relative aspect-[4/3] w-full overflow-hidden">
-          <ProgressiveImage
-            src={HERO_IMAGE}
-            alt="Moderní rodinný dům ve Skalanech s dřevěnou fasádou zasazený do zelené krajiny"
-            fill
-            sizes="100vw"
-            preload
-            className="object-cover"
-          />
+          {useProjectCarousel ? (
+            <HomepageProjectCarousel />
+          ) : (
+            <ProgressiveImage
+              src={HERO_IMAGE}
+              alt="Moderní rodinný dům ve Skalanech s dřevěnou fasádou zasazený do zelené krajiny"
+              fill
+              sizes="100vw"
+              preload
+              className="object-cover"
+            />
+          )}
         </div>
         <div className="px-6 py-14 space-y-12">
           <MobileText />
@@ -108,14 +113,18 @@ export default function HeroSection() {
         {/* Right — sticky photo, edge to edge */}
         <div className="sticky top-16 h-[calc(100vh-4rem)] overflow-hidden">
           <div className="relative h-full w-full">
-            <ProgressiveImage
-              src={HERO_IMAGE}
-              alt="Moderní rodinný dům ve Skalanech s dřevěnou fasádou zasazený do zelené krajiny"
-              fill
-              sizes="67vw"
-              preload
-              className="object-cover"
-            />
+            {useProjectCarousel ? (
+              <HomepageProjectCarousel />
+            ) : (
+              <ProgressiveImage
+                src={HERO_IMAGE}
+                alt="Moderní rodinný dům ve Skalanech s dřevěnou fasádou zasazený do zelené krajiny"
+                fill
+                sizes="67vw"
+                preload
+                className="object-cover"
+              />
+            )}
           </div>
         </div>
       </div>
