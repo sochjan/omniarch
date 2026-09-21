@@ -33,6 +33,20 @@ const slides: Array<ProjectCarouselLink & { image: string }> = [
     details: 'Rudolfov, Liberec · 2015',
     alt: 'Obnovená chalupa v Rudolfově se zahradní terasou a přírodním jezírkem',
   },
+  {
+    image: `${BASE}/projects/rodinny-dum-ohrazenice/optimized/rodinny-dum-ohrazenice_001.webp`,
+    href: '/rodinny-dum-ohrazenice',
+    title: 'Rodinný dům Ohrazenice',
+    details: 'Ohrazenice, Turnov · 2010',
+    alt: 'Rodinný dům v Ohrazenicích s cihlovou fasádou a krytými venkovními prostory',
+  },
+  {
+    image: `${BASE}/projects/rodinny-dum-nova-ves/optimized/rodinny-dum-nova-ves_003.webp`,
+    href: '/rodinny-dum-nova-ves',
+    title: 'Rodinný dům Nová Ves',
+    details: 'Nová Ves, Jablonec nad Nisou · 2009',
+    alt: 'Štítové průčelí rodinného domu v Nové Vsi se světlým obkladem a dřevěnými detaily',
+  },
 ]
 
 export default function HomepageProjectCarousel() {
@@ -40,7 +54,7 @@ export default function HomepageProjectCarousel() {
     <ProjectCarousel
       images={slides.map((slide) => slide.image)}
       links={slides}
-      title="Vybrané realizace OMNIARCH"
+      title="Vybrané projekty OMNIARCH"
     />
   )
 }
