@@ -187,10 +187,20 @@ export const projects: Project[] = [
   {
     "slug": "rodinny-dum-ohrazenice",
     "title": "Rodinný dům Ohrazenice",
-    "tagline": "Kompaktní hmota s plochou střechou a velkými prosklenými plochami.",
-    "description": "Kompaktní hmota s plochou střechou a velkými prosklenými plochami.",
+    "tagline": "Nízký dům s výraznými přesahy střechy, cihlovými plochami a krytými venkovními prostory.",
+    "description": "Rodinný dům v Ohrazenicích je rozvinutý do šířky pozemku. Červené cihlové plochy se střídají s tmavým obkladem a světlými kovovými detaily; výrazné přesahy střechy vytvářejí kryté venkovní prostory. Interiér doplňují teplé tóny dřeva.",
     "category": "residential",
     "active": true,
+    "image_captions": [
+      "Celkový pohled přes zahradu na horizontálně členěný dům.",
+      "Kryté venkovní stání a zahradní část domu v jednom nízkém objemu.",
+      "Dlažba mezi červenou cihlovou fasádou a tmavě obloženým křídlem.",
+      "Vstupní dvůr s kontrastem červené a tmavé fasády.",
+      "Uliční pohled na dlouhé přístřešení a cihlovou část domu.",
+      "Boční pohled ukazuje vyšší obytný objem a nízké navazující křídlo.",
+      "Obývací pokoj s červenou sedací soupravou a dřevěnými prvky.",
+      "Kuchyň propojená s obytným prostorem, s výrazným dřevěným ostrůvkem."
+    ],
     "metadata": {
       "location": "Ohrazenice, Turnov",
       "year_design": "2008",
@@ -198,7 +208,17 @@ export const projects: Project[] = [
       "type": "Rodinný dům",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/rodinny-dum-ohrazenice/optimized/rodinny-dum-ohrazenice_001.webp",
+      "/projects/rodinny-dum-ohrazenice/optimized/rodinny-dum-ohrazenice_002.webp",
+      "/projects/rodinny-dum-ohrazenice/optimized/rodinny-dum-ohrazenice_003.webp",
+      "/projects/rodinny-dum-ohrazenice/optimized/rodinny-dum-ohrazenice_004.webp",
+      "/projects/rodinny-dum-ohrazenice/optimized/rodinny-dum-ohrazenice_005.webp",
+      "/projects/rodinny-dum-ohrazenice/optimized/rodinny-dum-ohrazenice_006.webp",
+      "/projects/rodinny-dum-ohrazenice/optimized/rodinny-dum-ohrazenice_007.webp",
+      "/projects/rodinny-dum-ohrazenice/optimized/rodinny-dum-ohrazenice_008.webp"
+    ]
   },
   {
     "slug": "chalupa-rudolfov",
@@ -243,10 +263,19 @@ export const projects: Project[] = [
   {
     "slug": "rodinny-dum-nova-ves",
     "title": "Rodinný dům Nová Ves",
-    "tagline": "Moderní bydlení v klidné přírodní lokalitě u Jablonce nad Nisou.",
-    "description": "Moderní bydlení v klidné přírodní lokalitě u Jablonce nad Nisou.",
+    "tagline": "Jednoduchý štítový dům se světlým obkladem a teplými dřevěnými akcenty.",
+    "description": "Rodinný dům v Nové Vsi spojuje kompaktní štítový objem se světlým deskovým obkladem a dřevěnými prvky. Směrem do zahrady se otevírá proskleným přízemím s venkovním posezením, zatímco uliční průčelí si zachovává střídmý výraz.",
     "category": "residential",
     "active": true,
+    "image_captions": [
+      "Pohled z ulice na štítové průčelí domu za dřevěným plotem.",
+      "Dům mezi vzrostlými stromy; světlý obklad doplňuje dřevěná část fasády.",
+      "Čelní pohled zvýrazňuje štítovou siluetu a vodorovné okno v patře.",
+      "Kamenná pěšina vede přes zahradu k jednoduchému průčelí domu.",
+      "Zahradní strana domu s proskleným přízemím a venkovním posezením.",
+      "Detail vstupu v dřevěném obkladu vedle šedých fasádních desek.",
+      "Úzké okno osazené do pravidelného rastru světlého fasádního obkladu."
+    ],
     "metadata": {
       "location": "Nová Ves, Jablonec nad Nisou",
       "year_design": "2007",
@@ -254,7 +283,16 @@ export const projects: Project[] = [
       "type": "Rodinný dům",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/rodinny-dum-nova-ves/optimized/rodinny-dum-nova-ves_001.webp",
+      "/projects/rodinny-dum-nova-ves/optimized/rodinny-dum-nova-ves_002.webp",
+      "/projects/rodinny-dum-nova-ves/optimized/rodinny-dum-nova-ves_003.webp",
+      "/projects/rodinny-dum-nova-ves/optimized/rodinny-dum-nova-ves_004.webp",
+      "/projects/rodinny-dum-nova-ves/optimized/rodinny-dum-nova-ves_005.webp",
+      "/projects/rodinny-dum-nova-ves/optimized/rodinny-dum-nova-ves_006.webp",
+      "/projects/rodinny-dum-nova-ves/optimized/rodinny-dum-nova-ves_007.webp"
+    ]
   },
   {
     "slug": "rodinny-dum-v-hradku-nad-nisou",
@@ -318,32 +356,76 @@ export const projects: Project[] = [
   {
     "slug": "rodinny-dum-ve-vestci-u-stare-boleslavi",
     "title": "Rodinný dům ve Vestci u Staré Boleslavi",
-    "tagline": "Svěží architektonický výraz s důrazem na úspory energií.",
-    "description": "Moderní rodinný dům s důrazem na úspory energií a svěží architektonický výraz.",
+    "tagline": "Světlé přízemí a dřevem obložené patro s krytým parkováním.",
+    "description": "Návrh rodinného domu ve Vestci u Staré Boleslavi staví na kontrastu světlého přízemí a výrazného horního podlaží s dřevěným obkladem. Vysunuté patro vytváří kryté místo pro auto, zatímco zahradní strana nabízí stíněné venkovní posezení.",
     "category": "residential",
     "active": true,
+    "image_captions": [
+      "Zahradní vizualizace domu se světlým přízemím a dřevem obloženým patrem.",
+      "Pohled z ulice na kompaktní dům s krytým parkovacím místem.",
+      "Uliční pohled ukazuje vstupní stranu domu za plotem.",
+      "Pohled ze zahrady na světlé přízemí a stíněné venkovní posezení.",
+      "Dům v zahradě s výrazným přesahem horního podlaží.",
+      "Pohled přes terasu k ustoupenému hornímu podlaží a zeleni.",
+      "Ptačí perspektiva návrhu ukazuje tvar střechy a uspořádání pozemku.",
+      "Nadhledová vizualizace z uliční strany se zelenou terasou.",
+      "Pohled od oplocení na dřevěné patro a bílé přízemí.",
+      "Detail krytého parkování pod vyloženým horním podlažím."
+    ],
     "metadata": {
       "location": "Vestec u Staré Boleslavi",
       "year": "2018",
       "type": "Rodinný dům",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/rodinny-dum-ve-vestci-u-stare-boleslavi/optimized/rodinny-dum-ve-vestci-u-stare-boleslavi_001.webp",
+      "/projects/rodinny-dum-ve-vestci-u-stare-boleslavi/optimized/rodinny-dum-ve-vestci-u-stare-boleslavi_002.webp",
+      "/projects/rodinny-dum-ve-vestci-u-stare-boleslavi/optimized/rodinny-dum-ve-vestci-u-stare-boleslavi_003.webp",
+      "/projects/rodinny-dum-ve-vestci-u-stare-boleslavi/optimized/rodinny-dum-ve-vestci-u-stare-boleslavi_004.webp",
+      "/projects/rodinny-dum-ve-vestci-u-stare-boleslavi/optimized/rodinny-dum-ve-vestci-u-stare-boleslavi_005.webp",
+      "/projects/rodinny-dum-ve-vestci-u-stare-boleslavi/optimized/rodinny-dum-ve-vestci-u-stare-boleslavi_006.webp",
+      "/projects/rodinny-dum-ve-vestci-u-stare-boleslavi/optimized/rodinny-dum-ve-vestci-u-stare-boleslavi_007.webp",
+      "/projects/rodinny-dum-ve-vestci-u-stare-boleslavi/optimized/rodinny-dum-ve-vestci-u-stare-boleslavi_008.webp",
+      "/projects/rodinny-dum-ve-vestci-u-stare-boleslavi/optimized/rodinny-dum-ve-vestci-u-stare-boleslavi_009.webp",
+      "/projects/rodinny-dum-ve-vestci-u-stare-boleslavi/optimized/rodinny-dum-ve-vestci-u-stare-boleslavi_010.webp"
+    ]
   },
   {
     "slug": "rodinny-dum-horni-hanychov",
     "title": "Rodinný dům Horní Hanychov",
-    "tagline": "Rodinná vila v klidné lokalitě s výhledy do okolní krajiny.",
-    "description": "Rodinná vila v klidné lokalitě s výhledy do okolní krajiny.",
+    "tagline": "Stupňovitý dům s tmavou fasádou a výhledem ze svahu nad Libercem.",
+    "description": "Návrh rodinného domu v Horním Hanychově využívá svažitý pozemek a výhledy do okolní krajiny. Stupňovitá hmota střídá světlé a tmavé plochy, které protínají dlouhá vodorovná okna. Vizualizace ukazují podobu domu z ulice i ze zahradního svahu.",
     "category": "residential",
     "active": true,
+    "image_captions": [
+      "Uliční pohled na stupňovitý dům s tmavou fasádou a světlým přízemím.",
+      "Vizualizace domu v návaznosti na svažitou ulici a okolní zástavbu.",
+      "Čelní pohled zvýrazňuje geometrické vrstvení objemů a velké vodorovné okno.",
+      "Dům se vstupní branou v pohledu z ulice.",
+      "Zadní strana domu se otevírá výhledu přes svah do krajiny.",
+      "Nadhledová vizualizace ukazuje osazení domu na svažitém pozemku.",
+      "Ptačí perspektiva uliční strany domu a příjezdové cesty.",
+      "Detailní pohled na tmavý fasádní plášť a vodorovné prosklení."
+    ],
     "metadata": {
       "location": "Horní Hanychov, Liberec",
       "year": "2021",
       "type": "Rodinný dům",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/rodinny-dum-horni-hanychov/optimized/rodinny-dum-horni-hanychov_001.webp",
+      "/projects/rodinny-dum-horni-hanychov/optimized/rodinny-dum-horni-hanychov_002.webp",
+      "/projects/rodinny-dum-horni-hanychov/optimized/rodinny-dum-horni-hanychov_003.webp",
+      "/projects/rodinny-dum-horni-hanychov/optimized/rodinny-dum-horni-hanychov_004.webp",
+      "/projects/rodinny-dum-horni-hanychov/optimized/rodinny-dum-horni-hanychov_005.webp",
+      "/projects/rodinny-dum-horni-hanychov/optimized/rodinny-dum-horni-hanychov_006.webp",
+      "/projects/rodinny-dum-horni-hanychov/optimized/rodinny-dum-horni-hanychov_007.webp",
+      "/projects/rodinny-dum-horni-hanychov/optimized/rodinny-dum-horni-hanychov_008.webp"
+    ]
   },
   {
     "slug": "sidlo-firmy-vesec",
@@ -409,17 +491,47 @@ export const projects: Project[] = [
   {
     "slug": "rodinny-dum-stare-pavlovice",
     "title": "Rodinný dům Staré Pavlovice",
-    "tagline": "Nejnovější realizace studia s důrazem na udržitelné materiály.",
-    "description": "Projekt rodinného domu ve Starých Pavlovicích v libereckém regionu z roku 2023. Nejnovější realizace studia s důrazem na udržitelné materiály.",
+    "tagline": "Tmavé horní podlaží nad světlým přízemím a kamenem obloženým soklem.",
+    "description": "Návrh rodinného domu ve Starých Pavlovicích pracuje s výrazným vrstvením objemů na svažitém pozemku. Tmavé patro kontrastuje se světlým přízemím a kamenem obloženou spodní částí s garáží. Na zahradu navazuje prostorná krytá terasa.",
     "category": "residential",
     "active": true,
+    "image_captions": [
+      "Vizualizace vstupní strany domu s tmavým patrem a krytým stáním.",
+      "Uliční pohled na dům zasazený za plotem a zahradní zelení.",
+      "Dům na svahu s kamenem obloženým spodním podlažím a dvojgaráží.",
+      "Pohled z ulice na dům a jeho okolní zástavbu.",
+      "Nadhledová vizualizace ukazuje členění domu a umístění na pozemku.",
+      "Ptačí perspektiva střešní krajiny a vazby na příjezdovou cestu.",
+      "Čelní pohled od vstupní brány na garáž a obytné podlaží.",
+      "Pohled ze svahu na terasu nad kamenem obloženým soklem.",
+      "Detail příjezdu a krytého parkování pod dřevěným obkladem.",
+      "Boční pohled propojuje bílé přízemí, tmavé patro a zahradní terasu.",
+      "Zahradní průčelí s terasou nad kamenem obloženou garáží.",
+      "Dřevěný obklad krytého stání v kontrastu s bílou a tmavou fasádou.",
+      "Krytá terasa s výhledem do zahrady a velkým prosklením."
+    ],
     "metadata": {
       "location": "Staré Pavlovice, Liberec",
       "year": "2023",
       "type": "Rodinný dům",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/rodinny-dum-stare-pavlovice/optimized/rodinny-dum-stare-pavlovice_001.webp",
+      "/projects/rodinny-dum-stare-pavlovice/optimized/rodinny-dum-stare-pavlovice_002.webp",
+      "/projects/rodinny-dum-stare-pavlovice/optimized/rodinny-dum-stare-pavlovice_003.webp",
+      "/projects/rodinny-dum-stare-pavlovice/optimized/rodinny-dum-stare-pavlovice_004.webp",
+      "/projects/rodinny-dum-stare-pavlovice/optimized/rodinny-dum-stare-pavlovice_005.webp",
+      "/projects/rodinny-dum-stare-pavlovice/optimized/rodinny-dum-stare-pavlovice_006.webp",
+      "/projects/rodinny-dum-stare-pavlovice/optimized/rodinny-dum-stare-pavlovice_007.webp",
+      "/projects/rodinny-dum-stare-pavlovice/optimized/rodinny-dum-stare-pavlovice_008.webp",
+      "/projects/rodinny-dum-stare-pavlovice/optimized/rodinny-dum-stare-pavlovice_009.webp",
+      "/projects/rodinny-dum-stare-pavlovice/optimized/rodinny-dum-stare-pavlovice_010.webp",
+      "/projects/rodinny-dum-stare-pavlovice/optimized/rodinny-dum-stare-pavlovice_011.webp",
+      "/projects/rodinny-dum-stare-pavlovice/optimized/rodinny-dum-stare-pavlovice_012.webp",
+      "/projects/rodinny-dum-stare-pavlovice/optimized/rodinny-dum-stare-pavlovice_013.webp"
+    ]
   },
   {
     "slug": "rodinny-dum-modrisice",

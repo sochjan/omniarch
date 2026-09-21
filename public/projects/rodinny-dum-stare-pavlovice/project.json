@@ -1,10 +1,25 @@
 {
   "slug": "rodinny-dum-stare-pavlovice",
   "title": "Rodinný dům Staré Pavlovice",
-  "tagline": "Nejnovější realizace studia s důrazem na udržitelné materiály.",
-  "description": "Projekt rodinného domu ve Starých Pavlovicích v libereckém regionu z roku 2023. Nejnovější realizace studia s důrazem na udržitelné materiály.",
+  "tagline": "Tmavé horní podlaží nad světlým přízemím a kamenem obloženým soklem.",
+  "description": "Návrh rodinného domu ve Starých Pavlovicích pracuje s výrazným vrstvením objemů na svažitém pozemku. Tmavé patro kontrastuje se světlým přízemím a kamenem obloženou spodní částí s garáží. Na zahradu navazuje prostorná krytá terasa.",
   "category": "residential",
   "active": true,
+  "image_captions": [
+    "Vizualizace vstupní strany domu s tmavým patrem a krytým stáním.",
+    "Uliční pohled na dům zasazený za plotem a zahradní zelení.",
+    "Dům na svahu s kamenem obloženým spodním podlažím a dvojgaráží.",
+    "Pohled z ulice na dům a jeho okolní zástavbu.",
+    "Nadhledová vizualizace ukazuje členění domu a umístění na pozemku.",
+    "Ptačí perspektiva střešní krajiny a vazby na příjezdovou cestu.",
+    "Čelní pohled od vstupní brány na garáž a obytné podlaží.",
+    "Pohled ze svahu na terasu nad kamenem obloženým soklem.",
+    "Detail příjezdu a krytého parkování pod dřevěným obkladem.",
+    "Boční pohled propojuje bílé přízemí, tmavé patro a zahradní terasu.",
+    "Zahradní průčelí s terasou nad kamenem obloženou garáží.",
+    "Dřevěný obklad krytého stání v kontrastu s bílou a tmavou fasádou.",
+    "Krytá terasa s výhledem do zahrady a velkým prosklením."
+  ],
   "metadata": {
     "location": "Staré Pavlovice, Liberec",
     "year": "2023",

@@ -1,10 +1,20 @@
 {
   "slug": "rodinny-dum-horni-hanychov",
   "title": "Rodinný dům Horní Hanychov",
-  "tagline": "Rodinná vila v klidné lokalitě s výhledy do okolní krajiny.",
-  "description": "Rodinná vila v klidné lokalitě s výhledy do okolní krajiny.",
+  "tagline": "Stupňovitý dům s tmavou fasádou a výhledem ze svahu nad Libercem.",
+  "description": "Návrh rodinného domu v Horním Hanychově využívá svažitý pozemek a výhledy do okolní krajiny. Stupňovitá hmota střídá světlé a tmavé plochy, které protínají dlouhá vodorovná okna. Vizualizace ukazují podobu domu z ulice i ze zahradního svahu.",
   "category": "residential",
   "active": true,
+  "image_captions": [
+    "Uliční pohled na stupňovitý dům s tmavou fasádou a světlým přízemím.",
+    "Vizualizace domu v návaznosti na svažitou ulici a okolní zástavbu.",
+    "Čelní pohled zvýrazňuje geometrické vrstvení objemů a velké vodorovné okno.",
+    "Dům se vstupní branou v pohledu z ulice.",
+    "Zadní strana domu se otevírá výhledu přes svah do krajiny.",
+    "Nadhledová vizualizace ukazuje osazení domu na svažitém pozemku.",
+    "Ptačí perspektiva uliční strany domu a příjezdové cesty.",
+    "Detailní pohled na tmavý fasádní plášť a vodorovné prosklení."
+  ],
   "metadata": {
     "location": "Horní Hanychov, Liberec",
     "year": "2021",
