@@ -3,80 +3,6 @@ import type { Project } from './projects'
 
 export const projects: Project[] = [
   {
-    "slug": "dvojdum-pobocna-liberec",
-    "title": "Dvojdům Pobočná, Liberec",
-    "tagline": "Dvojdům v ulici Pobočná v Liberci.",
-    "description": "Projekt dvojdomu v ulici Pobočná v Liberci.",
-    "category": "residential",
-    "active": true,
-    "image_captions": [
-      "Večerní pohled z ulice na dvojici propojených domů a zahradní terasu.",
-      "Celkový pohled na dvojdům zasazený do svažité a bohatě osázené zahrady.",
-      "Zahradní fasády propojují bílé štítové objemy s tmavými vloženými částmi.",
-      "Dvojice obytných částí se velkými okny otevírá do společné zahrady.",
-      "Vstupní průčelí s centrálním schodištěm a garážemi zapuštěnými do svahu.",
-      "Večerní pohled na vstupní stranu dvojdomu a kryté venkovní terasy."
-    ],
-    "metadata": {
-      "location": "Pobočná, Liberec",
-      "type": "Dvojdům"
-    },
-    "images": [
-      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_001.webp",
-      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_002.webp",
-      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_003.webp",
-      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_004.webp",
-      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_005.webp",
-      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_006.webp"
-    ]
-  },
-  {
-    "slug": "rodinny-dum-v-hradku-nad-nisou",
-    "title": "Rodinný dům v Hrádku nad Nisou",
-    "tagline": "Moderní vila s důrazem na jednoduchost formy a energetickou efektivitu.",
-    "description": "Moderní rodinná vila s důrazem na jednoduchost formy a energetickou efektivitu.",
-    "category": "residential",
-    "active": true,
-    "image_captions": [
-      "Vizualizace zahradního průčelí s velkými okny a dvojicí krytých teras.",
-      "Dům je zasazený mezi městskou ulici a klidnou soukromou zahradu.",
-      "Uliční pohled ukazuje členění kompaktního objemu a střešní terasu.",
-      "Vstupní stranu doplňuje garáž a ustoupené nejvyšší podlaží.",
-      "Pohled ze zahrady zdůrazňuje kontrast novostavby a okolní historické zástavby.",
-      "Obytné místnosti se přes vysoká okna otevírají do zahrady."
-    ],
-    "metadata": {
-      "location": "Hrádek nad Nisou",
-      "year": "2019",
-      "type": "Rodinný dům",
-      "architect": "Ing. arch. Pavel Novák",
-      "organization": "OMNIARCH"
-    },
-    "images": [
-      "/projects/rodinny-dum-v-hradku-nad-nisou/optimized/hradek_001.webp",
-      "/projects/rodinny-dum-v-hradku-nad-nisou/optimized/hradek_002.webp",
-      "/projects/rodinny-dum-v-hradku-nad-nisou/optimized/hradek_003.webp",
-      "/projects/rodinny-dum-v-hradku-nad-nisou/optimized/hradek_004.webp",
-      "/projects/rodinny-dum-v-hradku-nad-nisou/optimized/hradek_005.webp",
-      "/projects/rodinny-dum-v-hradku-nad-nisou/optimized/hradek_006.webp"
-    ]
-  },
-  {
-    "slug": "rodinny-dum-ve-vestci-u-stare-boleslavi",
-    "title": "Rodinný dům ve Vestci u Staré Boleslavi",
-    "tagline": "Svěží architektonický výraz s důrazem na úspory energií.",
-    "description": "Moderní rodinný dům s důrazem na úspory energií a svěží architektonický výraz.",
-    "category": "residential",
-    "active": true,
-    "metadata": {
-      "location": "Vestec u Staré Boleslavi",
-      "year": "2018",
-      "type": "Rodinný dům",
-      "architect": "Ing. arch. Pavel Novák",
-      "organization": "OMNIARCH"
-    }
-  },
-  {
     "slug": "rekonstrukce-rd-v-holenicich",
     "title": "Rekonstrukce RD Holenice",
     "tagline": "Komplexní přeměna staršího objektu na moderní rodinné bydlení s novým interiérem.",
@@ -125,124 +51,6 @@ export const projects: Project[] = [
       "/projects/rekonstrukce-rd-v-holenicich/optimized/holenice_013.webp",
       "/projects/rekonstrukce-rd-v-holenicich/optimized/holenice_014.webp",
       "/projects/rekonstrukce-rd-v-holenicich/optimized/holenice_015.webp"
-    ]
-  },
-  {
-    "slug": "rodinny-dum-horni-hanychov",
-    "title": "Rodinný dům Horní Hanychov",
-    "tagline": "Rodinná vila v klidné lokalitě s výhledy do okolní krajiny.",
-    "description": "Rodinná vila v klidné lokalitě s výhledy do okolní krajiny.",
-    "category": "residential",
-    "active": true,
-    "metadata": {
-      "location": "Horní Hanychov, Liberec",
-      "year": "2021",
-      "type": "Rodinný dům",
-      "architect": "Ing. arch. Pavel Novák",
-      "organization": "OMNIARCH"
-    }
-  },
-  {
-    "slug": "rodinny-dum-zibridice",
-    "title": "Rodinný dům v Žibřidicích",
-    "tagline": "Čistá architektura s moderními prvky zasazená do venkovského prostředí.",
-    "description": "Čistá architektura s moderními prvky zasazená do venkovského prostředí.",
-    "category": "residential",
-    "active": true,
-    "metadata": {
-      "location": "Žibřidice",
-      "year": "2020",
-      "type": "Rodinný dům",
-      "architect": "Ing. arch. Pavel Novák",
-      "organization": "OMNIARCH"
-    }
-  },
-  {
-    "slug": "sidlo-firmy-vesec",
-    "title": "Sídlo firmy ve Vesci, Liberec",
-    "tagline": "Administrativně-provozní objekt kombinující funkčnost s reprezentativním výrazem.",
-    "description": "Administrativně-provozní objekt kombinující funkčnost s reprezentativním výrazem.",
-    "category": "commercial",
-    "active": true,
-    "metadata": {
-      "location": "Vesec, Liberec",
-      "year_design": "2016",
-      "year_completion": "2018",
-      "type": "Sídlo firmy",
-      "architect": "Ing. arch. Pavel Novák",
-      "organization": "OMNIARCH"
-    }
-  },
-  {
-    "slug": "rodinny-dum-ohrazenice",
-    "title": "Rodinný dům Ohrazenice",
-    "tagline": "Kompaktní hmota s plochou střechou a velkými prosklenými plochami.",
-    "description": "Kompaktní hmota s plochou střechou a velkými prosklenými plochami.",
-    "category": "residential",
-    "active": true,
-    "metadata": {
-      "location": "Ohrazenice, Turnov",
-      "year_design": "2008",
-      "year_completion": "2010",
-      "type": "Rodinný dům",
-      "architect": "Ing. arch. Pavel Novák",
-      "organization": "OMNIARCH"
-    }
-  },
-  {
-    "slug": "rodinny-dum-podoli",
-    "title": "Rodinný dům v Podolí, Uherské Hradiště",
-    "tagline": "Jeden z prvních projektů studia se silným architektonickým výrazem.",
-    "description": "Jeden z prvních projektů studia se silným architektonickým výrazem.",
-    "category": "residential",
-    "active": true,
-    "image_captions": [
-      "Celkový pohled ze zahrady na členitou kompozici domu a dřevěnou terasu.",
-      "Přístupová lávka propojuje horní úroveň pozemku se vstupem do domu.",
-      "Boční pohled ukazuje skládání světlých a tmavých obytných objemů.",
-      "Obývací pokoj s krbem se otevírá rohovým prosklením do krajiny.",
-      "Společný obytný prostor propojuje kuchyň, jídelnu a obývací pokoj.",
-      "Jídelna se schodištěm a horním osvětlením v centru dispozice.",
-      "Kuchyňský ostrov tvoří přirozené pracovní i společenské centrum interiéru.",
-      "Široký pohled přes jídelnu k obývacímu pokoji a krbu.",
-      "Jídelní kout doplňuje osobní galerie fotografií.",
-      "Klidná obytná zóna u velkého rohového okna.",
-      "Otevřené schodiště přivádí do středu domu denní světlo.",
-      "Prosklená střecha prosvětluje schodišťový prostor napříč podlažími.",
-      "Horní chodba využívá světlo přicházející střešním prosklením.",
-      "Koupelna v odstínech modré s jednoduchým vestavěným vybavením.",
-      "Druhá koupelna pracuje se sytě zeleným keramickým obkladem.",
-      "Noční pohled na osvětlenou vstupní lávku.",
-      "Dům po setmění vystupuje ze svahu jako soustava svítících objemů.",
-      "Kryté parkovací stání je začleněné do spodní části svažitého pozemku."
-    ],
-    "metadata": {
-      "location": "Podolí, Uherské Hradiště",
-      "year_design": "2006",
-      "year_completion": "2008",
-      "type": "Rodinný dům",
-      "architect": "Ing. arch. Pavel Novák",
-      "organization": "OMNIARCH"
-    },
-    "images": [
-      "/projects/rodinny-dum-podoli/optimized/podoli_001.webp",
-      "/projects/rodinny-dum-podoli/optimized/podoli_002.webp",
-      "/projects/rodinny-dum-podoli/optimized/podoli_003.webp",
-      "/projects/rodinny-dum-podoli/optimized/podoli_004.webp",
-      "/projects/rodinny-dum-podoli/optimized/podoli_005.webp",
-      "/projects/rodinny-dum-podoli/optimized/podoli_006.webp",
-      "/projects/rodinny-dum-podoli/optimized/podoli_007.webp",
-      "/projects/rodinny-dum-podoli/optimized/podoli_008.webp",
-      "/projects/rodinny-dum-podoli/optimized/podoli_009.webp",
-      "/projects/rodinny-dum-podoli/optimized/podoli_010.webp",
-      "/projects/rodinny-dum-podoli/optimized/podoli_011.webp",
-      "/projects/rodinny-dum-podoli/optimized/podoli_012.webp",
-      "/projects/rodinny-dum-podoli/optimized/podoli_013.webp",
-      "/projects/rodinny-dum-podoli/optimized/podoli_014.webp",
-      "/projects/rodinny-dum-podoli/optimized/podoli_015.webp",
-      "/projects/rodinny-dum-podoli/optimized/podoli_016.webp",
-      "/projects/rodinny-dum-podoli/optimized/podoli_017.webp",
-      "/projects/rodinny-dum-podoli/optimized/podoli_018.webp"
     ]
   },
   {
@@ -321,6 +129,118 @@ export const projects: Project[] = [
     ]
   },
   {
+    "slug": "rodinny-dum-podoli",
+    "title": "Rodinný dům v Podolí, Uherské Hradiště",
+    "tagline": "Jeden z prvních projektů studia se silným architektonickým výrazem.",
+    "description": "Jeden z prvních projektů studia se silným architektonickým výrazem.",
+    "category": "residential",
+    "active": true,
+    "image_captions": [
+      "Celkový pohled ze zahrady na členitou kompozici domu a dřevěnou terasu.",
+      "Přístupová lávka propojuje horní úroveň pozemku se vstupem do domu.",
+      "Boční pohled ukazuje skládání světlých a tmavých obytných objemů.",
+      "Obývací pokoj s krbem se otevírá rohovým prosklením do krajiny.",
+      "Společný obytný prostor propojuje kuchyň, jídelnu a obývací pokoj.",
+      "Jídelna se schodištěm a horním osvětlením v centru dispozice.",
+      "Kuchyňský ostrov tvoří přirozené pracovní i společenské centrum interiéru.",
+      "Široký pohled přes jídelnu k obývacímu pokoji a krbu.",
+      "Jídelní kout doplňuje osobní galerie fotografií.",
+      "Klidná obytná zóna u velkého rohového okna.",
+      "Otevřené schodiště přivádí do středu domu denní světlo.",
+      "Prosklená střecha prosvětluje schodišťový prostor napříč podlažími.",
+      "Horní chodba využívá světlo přicházející střešním prosklením.",
+      "Koupelna v odstínech modré s jednoduchým vestavěným vybavením.",
+      "Druhá koupelna pracuje se sytě zeleným keramickým obkladem.",
+      "Noční pohled na osvětlenou vstupní lávku.",
+      "Dům po setmění vystupuje ze svahu jako soustava svítících objemů.",
+      "Kryté parkovací stání je začleněné do spodní části svažitého pozemku."
+    ],
+    "metadata": {
+      "location": "Podolí, Uherské Hradiště",
+      "year_design": "2006",
+      "year_completion": "2008",
+      "type": "Rodinný dům",
+      "architect": "Ing. arch. Pavel Novák",
+      "organization": "OMNIARCH"
+    },
+    "images": [
+      "/projects/rodinny-dum-podoli/optimized/podoli_001.webp",
+      "/projects/rodinny-dum-podoli/optimized/podoli_002.webp",
+      "/projects/rodinny-dum-podoli/optimized/podoli_003.webp",
+      "/projects/rodinny-dum-podoli/optimized/podoli_004.webp",
+      "/projects/rodinny-dum-podoli/optimized/podoli_005.webp",
+      "/projects/rodinny-dum-podoli/optimized/podoli_006.webp",
+      "/projects/rodinny-dum-podoli/optimized/podoli_007.webp",
+      "/projects/rodinny-dum-podoli/optimized/podoli_008.webp",
+      "/projects/rodinny-dum-podoli/optimized/podoli_009.webp",
+      "/projects/rodinny-dum-podoli/optimized/podoli_010.webp",
+      "/projects/rodinny-dum-podoli/optimized/podoli_011.webp",
+      "/projects/rodinny-dum-podoli/optimized/podoli_012.webp",
+      "/projects/rodinny-dum-podoli/optimized/podoli_013.webp",
+      "/projects/rodinny-dum-podoli/optimized/podoli_014.webp",
+      "/projects/rodinny-dum-podoli/optimized/podoli_015.webp",
+      "/projects/rodinny-dum-podoli/optimized/podoli_016.webp",
+      "/projects/rodinny-dum-podoli/optimized/podoli_017.webp",
+      "/projects/rodinny-dum-podoli/optimized/podoli_018.webp"
+    ]
+  },
+  {
+    "slug": "rodinny-dum-ohrazenice",
+    "title": "Rodinný dům Ohrazenice",
+    "tagline": "Kompaktní hmota s plochou střechou a velkými prosklenými plochami.",
+    "description": "Kompaktní hmota s plochou střechou a velkými prosklenými plochami.",
+    "category": "residential",
+    "active": true,
+    "metadata": {
+      "location": "Ohrazenice, Turnov",
+      "year_design": "2008",
+      "year_completion": "2010",
+      "type": "Rodinný dům",
+      "architect": "Ing. arch. Pavel Novák",
+      "organization": "OMNIARCH"
+    }
+  },
+  {
+    "slug": "chalupa-rudolfov",
+    "title": "Chalupa v Rudolfově, Liberec",
+    "tagline": "Citlivá obnova venkovského stavení s moderními prvky.",
+    "description": "Rekonstrukce chalupy v Rudolfově u Liberce. Návrh 2012, realizace 2015. Citlivá obnova venkovského stavení s moderními prvky.",
+    "category": "residential",
+    "active": true,
+    "image_captions": [
+      "Pohled od příjezdu na obnovenou chalupu a samostatnou garáž se solárními panely.",
+      "Chalupa zasazená do svažité zahrady s přírodním potůčkem.",
+      "Zahradní průčelí s terasou a výhledem do okolní krajiny.",
+      "Tradiční štít chalupy doplňuje světlá omítka a tmavý dřevěný obklad.",
+      "Detail roubeného průčelí s bílým orámováním oken.",
+      "Krytá terasa vytváří chráněné místo pro posezení u domu.",
+      "Kvetoucí výsadba přirozeně lemuje obytnou terasu.",
+      "Detail vstupu a tradičního roubeného pláště chalupy.",
+      "Vstupní brána s domovním číslem a chalupou v pozadí.",
+      "Celkový pohled na chalupu v horské krajině Rudolfova."
+    ],
+    "metadata": {
+      "location": "Rudolfov, Liberec",
+      "year_design": "2012",
+      "year_completion": "2015",
+      "type": "Chalupa",
+      "architect": "Ing. arch. Pavel Novák",
+      "organization": "OMNIARCH"
+    },
+    "images": [
+      "/projects/chalupa-rudolfov/optimized/rudolfov_001.webp",
+      "/projects/chalupa-rudolfov/optimized/rudolfov_002.webp",
+      "/projects/chalupa-rudolfov/optimized/rudolfov_003.webp",
+      "/projects/chalupa-rudolfov/optimized/rudolfov_004.webp",
+      "/projects/chalupa-rudolfov/optimized/rudolfov_005.webp",
+      "/projects/chalupa-rudolfov/optimized/rudolfov_006.webp",
+      "/projects/chalupa-rudolfov/optimized/rudolfov_007.webp",
+      "/projects/chalupa-rudolfov/optimized/rudolfov_008.webp",
+      "/projects/chalupa-rudolfov/optimized/rudolfov_009.webp",
+      "/projects/chalupa-rudolfov/optimized/rudolfov_010.webp"
+    ]
+  },
+  {
     "slug": "rodinny-dum-nova-ves",
     "title": "Rodinný dům Nová Ves",
     "tagline": "Moderní bydlení v klidné přírodní lokalitě u Jablonce nad Nisou.",
@@ -331,6 +251,141 @@ export const projects: Project[] = [
       "location": "Nová Ves, Jablonec nad Nisou",
       "year_design": "2007",
       "year_completion": "2009",
+      "type": "Rodinný dům",
+      "architect": "Ing. arch. Pavel Novák",
+      "organization": "OMNIARCH"
+    }
+  },
+  {
+    "slug": "rodinny-dum-v-hradku-nad-nisou",
+    "title": "Rodinný dům v Hrádku nad Nisou",
+    "tagline": "Moderní vila s důrazem na jednoduchost formy a energetickou efektivitu.",
+    "description": "Moderní rodinná vila s důrazem na jednoduchost formy a energetickou efektivitu.",
+    "category": "residential",
+    "active": true,
+    "image_captions": [
+      "Vizualizace zahradního průčelí s velkými okny a dvojicí krytých teras.",
+      "Dům je zasazený mezi městskou ulici a klidnou soukromou zahradu.",
+      "Uliční pohled ukazuje členění kompaktního objemu a střešní terasu.",
+      "Vstupní stranu doplňuje garáž a ustoupené nejvyšší podlaží.",
+      "Pohled ze zahrady zdůrazňuje kontrast novostavby a okolní historické zástavby.",
+      "Obytné místnosti se přes vysoká okna otevírají do zahrady."
+    ],
+    "metadata": {
+      "location": "Hrádek nad Nisou",
+      "year": "2019",
+      "type": "Rodinný dům",
+      "architect": "Ing. arch. Pavel Novák",
+      "organization": "OMNIARCH"
+    },
+    "images": [
+      "/projects/rodinny-dum-v-hradku-nad-nisou/optimized/hradek_001.webp",
+      "/projects/rodinny-dum-v-hradku-nad-nisou/optimized/hradek_002.webp",
+      "/projects/rodinny-dum-v-hradku-nad-nisou/optimized/hradek_003.webp",
+      "/projects/rodinny-dum-v-hradku-nad-nisou/optimized/hradek_004.webp",
+      "/projects/rodinny-dum-v-hradku-nad-nisou/optimized/hradek_005.webp",
+      "/projects/rodinny-dum-v-hradku-nad-nisou/optimized/hradek_006.webp"
+    ]
+  },
+  {
+    "slug": "dvojdum-pobocna-liberec",
+    "title": "Dvojdům Pobočná, Liberec",
+    "tagline": "Dvojdům v ulici Pobočná v Liberci.",
+    "description": "Projekt dvojdomu v ulici Pobočná v Liberci.",
+    "category": "residential",
+    "active": true,
+    "image_captions": [
+      "Večerní pohled z ulice na dvojici propojených domů a zahradní terasu.",
+      "Celkový pohled na dvojdům zasazený do svažité a bohatě osázené zahrady.",
+      "Zahradní fasády propojují bílé štítové objemy s tmavými vloženými částmi.",
+      "Dvojice obytných částí se velkými okny otevírá do společné zahrady.",
+      "Vstupní průčelí s centrálním schodištěm a garážemi zapuštěnými do svahu.",
+      "Večerní pohled na vstupní stranu dvojdomu a kryté venkovní terasy."
+    ],
+    "metadata": {
+      "location": "Pobočná, Liberec",
+      "type": "Dvojdům"
+    },
+    "images": [
+      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_001.webp",
+      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_002.webp",
+      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_003.webp",
+      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_004.webp",
+      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_005.webp",
+      "/projects/dvojdum-pobocna-liberec/optimized/pobocna_006.webp"
+    ]
+  },
+  {
+    "slug": "rodinny-dum-ve-vestci-u-stare-boleslavi",
+    "title": "Rodinný dům ve Vestci u Staré Boleslavi",
+    "tagline": "Svěží architektonický výraz s důrazem na úspory energií.",
+    "description": "Moderní rodinný dům s důrazem na úspory energií a svěží architektonický výraz.",
+    "category": "residential",
+    "active": true,
+    "metadata": {
+      "location": "Vestec u Staré Boleslavi",
+      "year": "2018",
+      "type": "Rodinný dům",
+      "architect": "Ing. arch. Pavel Novák",
+      "organization": "OMNIARCH"
+    }
+  },
+  {
+    "slug": "rodinny-dum-horni-hanychov",
+    "title": "Rodinný dům Horní Hanychov",
+    "tagline": "Rodinná vila v klidné lokalitě s výhledy do okolní krajiny.",
+    "description": "Rodinná vila v klidné lokalitě s výhledy do okolní krajiny.",
+    "category": "residential",
+    "active": true,
+    "metadata": {
+      "location": "Horní Hanychov, Liberec",
+      "year": "2021",
+      "type": "Rodinný dům",
+      "architect": "Ing. arch. Pavel Novák",
+      "organization": "OMNIARCH"
+    }
+  },
+  {
+    "slug": "sidlo-firmy-vesec",
+    "title": "Sídlo firmy ve Vesci, Liberec",
+    "tagline": "Administrativně-provozní objekt kombinující funkčnost s reprezentativním výrazem.",
+    "description": "Administrativně-provozní objekt kombinující funkčnost s reprezentativním výrazem.",
+    "category": "commercial",
+    "active": true,
+    "metadata": {
+      "location": "Vesec, Liberec",
+      "year_design": "2016",
+      "year_completion": "2018",
+      "type": "Sídlo firmy",
+      "architect": "Ing. arch. Pavel Novák",
+      "organization": "OMNIARCH"
+    }
+  },
+  {
+    "slug": "rodinny-dum-zibridice",
+    "title": "Rodinný dům v Žibřidicích",
+    "tagline": "Čistá architektura s moderními prvky zasazená do venkovského prostředí.",
+    "description": "Čistá architektura s moderními prvky zasazená do venkovského prostředí.",
+    "category": "residential",
+    "active": true,
+    "metadata": {
+      "location": "Žibřidice",
+      "year": "2020",
+      "type": "Rodinný dům",
+      "architect": "Ing. arch. Pavel Novák",
+      "organization": "OMNIARCH"
+    }
+  },
+  {
+    "slug": "rodinny-dum-radlo-2",
+    "title": "Rodinný dům v Rádle (varianta 2)",
+    "tagline": "Alternativní hmotová varianta pro stejnou lokalitu u Jablonce nad Nisou.",
+    "description": "Druhý projekt rodinného domu v Rádle u Jablonce nad Nisou z roku 2021. Alternativní hmotová varianta pro stejnou lokalitu.",
+    "category": "residential",
+    "active": true,
+    "metadata": {
+      "location": "Rádlo",
+      "year": "2021",
       "type": "Rodinný dům",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
@@ -397,6 +452,21 @@ export const projects: Project[] = [
     }
   },
   {
+    "slug": "rodinny-dum-ve-fojtce-kopie",
+    "title": "Rodinný dům v Hlásné Třebáni",
+    "tagline": "Adaptace oblíbeného dispozičního řešení na specifické podmínky pražského zázemí.",
+    "description": "Projekt rodinného domu v Hlásné Třebáni navržený v roce 2017. Adaptace oblíbeného dispozičního řešení na specifické podmínky pražského zázemí.",
+    "category": "residential",
+    "active": true,
+    "metadata": {
+      "location": "Hlásná Třebáň",
+      "year": "2017",
+      "type": "Rodinný dům",
+      "architect": "Ing. arch. Pavel Novák",
+      "organization": "OMNIARCH"
+    }
+  },
+  {
     "slug": "rodinny-dum-ve-fojtce",
     "title": "Rodinný dům Fojtka",
     "tagline": "Čistá geometrie a kvalitní materiály v klidném příměstském prostředí.",
@@ -427,36 +497,6 @@ export const projects: Project[] = [
     }
   },
   {
-    "slug": "rodinny-dum-radlo-2",
-    "title": "Rodinný dům v Rádle (varianta 2)",
-    "tagline": "Alternativní hmotová varianta pro stejnou lokalitu u Jablonce nad Nisou.",
-    "description": "Druhý projekt rodinného domu v Rádle u Jablonce nad Nisou z roku 2021. Alternativní hmotová varianta pro stejnou lokalitu.",
-    "category": "residential",
-    "active": true,
-    "metadata": {
-      "location": "Rádlo",
-      "year": "2021",
-      "type": "Rodinný dům",
-      "architect": "Ing. arch. Pavel Novák",
-      "organization": "OMNIARCH"
-    }
-  },
-  {
-    "slug": "rodinny-dum-ve-fojtce-kopie",
-    "title": "Rodinný dům v Hlásné Třebáni",
-    "tagline": "Adaptace oblíbeného dispozičního řešení na specifické podmínky pražského zázemí.",
-    "description": "Projekt rodinného domu v Hlásné Třebáni navržený v roce 2017. Adaptace oblíbeného dispozičního řešení na specifické podmínky pražského zázemí.",
-    "category": "residential",
-    "active": true,
-    "metadata": {
-      "location": "Hlásná Třebáň",
-      "year": "2017",
-      "type": "Rodinný dům",
-      "architect": "Ing. arch. Pavel Novák",
-      "organization": "OMNIARCH"
-    }
-  },
-  {
     "slug": "rodinny-dum-v-dlouhem-mostu",
     "title": "Rodinný dům v Dlouhém Mostu",
     "tagline": "Kompaktní dům s přirozeným propojením interiéru a zahrady.",
@@ -468,6 +508,22 @@ export const projects: Project[] = [
       "year": "2021",
       "type": "Rodinný dům",
       "architect": "Ing. arch. Pavel Novák",
+      "organization": "OMNIARCH"
+    }
+  },
+  {
+    "slug": "rodinny-dum-harcov",
+    "title": "Rodinný dům Harcov, Liberec",
+    "tagline": "Rodinný dům v oblíbené vilové čtvrti Liberce.",
+    "description": "Rodinný dům v Harcově v Liberci, dokončený v roce 2009. Stavebně-technické řešení: Ing. Jakub Moc a Ing. Veronika Madecká.",
+    "category": "residential",
+    "active": true,
+    "metadata": {
+      "location": "Harcov, Liberec",
+      "year": "2009",
+      "type": "Rodinný dům",
+      "architect": "Ing. arch. Pavel Novák",
+      "building_solutions": "Ing. Jakub Moc, Ing. Veronika Madecká",
       "organization": "OMNIARCH"
     }
   },
@@ -565,21 +621,6 @@ export const projects: Project[] = [
     }
   },
   {
-    "slug": "rodinny-dum-rychnov",
-    "title": "Rodinný dům Rychnov u Jablonce nad Nisou",
-    "tagline": "Nejnovější projekt studia s důrazem na pasivní energetické standardy.",
-    "description": "Projekt rodinného domu v Rychnově u Jablonce nad Nisou z roku 2023. Nejnovější projekt studia s důrazem na pasivní energetické standardy.",
-    "category": "residential",
-    "active": true,
-    "metadata": {
-      "location": "Rychnov u Jablonce nad Nisou",
-      "year": "2023",
-      "type": "Rodinný dům",
-      "architect": "Ing. arch. Pavel Novák",
-      "organization": "OMNIARCH"
-    }
-  },
-  {
     "slug": "rodinny-dum-rudna",
     "title": "Rodinný dům v Rudné u Prahy",
     "tagline": "Projekt s materiálovými variantami fasády připravenými pro výběr investora.",
@@ -591,6 +632,23 @@ export const projects: Project[] = [
       "year": "2013",
       "type": "Rodinný dům",
       "architect": "Ing. arch. Pavel Novák",
+      "organization": "OMNIARCH"
+    }
+  },
+  {
+    "slug": "rodinny-dum-simonovice",
+    "title": "Rodinný dům Šimonovice, Liberec",
+    "tagline": "Čistý moderní dům v klidném příměstském prostředí Liberce.",
+    "description": "Rodinný dům v Šimonovicích u Liberce. Návrh 2012, realizace 2013. Projekt pod vedením Ing. Ivana Kallmünzera.",
+    "category": "residential",
+    "active": true,
+    "metadata": {
+      "location": "Šimonovice, Liberec",
+      "year_design": "2012",
+      "year_completion": "2013",
+      "type": "Rodinný dům",
+      "architect": "Ing. arch. Pavel Novák",
+      "project_manager": "Ing. Ivan Kallmünzer",
       "organization": "OMNIARCH"
     }
   },
@@ -625,35 +683,17 @@ export const projects: Project[] = [
     }
   },
   {
-    "slug": "rodinny-dum-simonovice",
-    "title": "Rodinný dům Šimonovice, Liberec",
-    "tagline": "Čistý moderní dům v klidném příměstském prostředí Liberce.",
-    "description": "Rodinný dům v Šimonovicích u Liberce. Návrh 2012, realizace 2013. Projekt pod vedením Ing. Ivana Kallmünzera.",
+    "slug": "rodinny-dum-rychnov",
+    "title": "Rodinný dům Rychnov u Jablonce nad Nisou",
+    "tagline": "Nejnovější projekt studia s důrazem na pasivní energetické standardy.",
+    "description": "Projekt rodinného domu v Rychnově u Jablonce nad Nisou z roku 2023. Nejnovější projekt studia s důrazem na pasivní energetické standardy.",
     "category": "residential",
     "active": true,
     "metadata": {
-      "location": "Šimonovice, Liberec",
-      "year_design": "2012",
-      "year_completion": "2013",
+      "location": "Rychnov u Jablonce nad Nisou",
+      "year": "2023",
       "type": "Rodinný dům",
       "architect": "Ing. arch. Pavel Novák",
-      "project_manager": "Ing. Ivan Kallmünzer",
-      "organization": "OMNIARCH"
-    }
-  },
-  {
-    "slug": "rodinny-dum-harcov",
-    "title": "Rodinný dům Harcov, Liberec",
-    "tagline": "Rodinný dům v oblíbené vilové čtvrti Liberce.",
-    "description": "Rodinný dům v Harcově v Liberci, dokončený v roce 2009. Stavebně-technické řešení: Ing. Jakub Moc a Ing. Veronika Madecká.",
-    "category": "residential",
-    "active": true,
-    "metadata": {
-      "location": "Harcov, Liberec",
-      "year": "2009",
-      "type": "Rodinný dům",
-      "architect": "Ing. arch. Pavel Novák",
-      "building_solutions": "Ing. Jakub Moc, Ing. Veronika Madecká",
       "organization": "OMNIARCH"
     }
   },
@@ -889,46 +929,6 @@ export const projects: Project[] = [
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
     }
-  },
-  {
-    "slug": "chalupa-rudolfov",
-    "title": "Chalupa v Rudolfově, Liberec",
-    "tagline": "Citlivá obnova venkovského stavení s moderními prvky.",
-    "description": "Rekonstrukce chalupy v Rudolfově u Liberce. Návrh 2012, realizace 2015. Citlivá obnova venkovského stavení s moderními prvky.",
-    "category": "residential",
-    "active": true,
-    "image_captions": [
-      "Pohled od příjezdu na obnovenou chalupu a samostatnou garáž se solárními panely.",
-      "Chalupa zasazená do svažité zahrady s přírodním potůčkem.",
-      "Zahradní průčelí s terasou a výhledem do okolní krajiny.",
-      "Tradiční štít chalupy doplňuje světlá omítka a tmavý dřevěný obklad.",
-      "Detail roubeného průčelí s bílým orámováním oken.",
-      "Krytá terasa vytváří chráněné místo pro posezení u domu.",
-      "Kvetoucí výsadba přirozeně lemuje obytnou terasu.",
-      "Detail vstupu a tradičního roubeného pláště chalupy.",
-      "Vstupní brána s domovním číslem a chalupou v pozadí.",
-      "Celkový pohled na chalupu v horské krajině Rudolfova."
-    ],
-    "metadata": {
-      "location": "Rudolfov, Liberec",
-      "year_design": "2012",
-      "year_completion": "2015",
-      "type": "Chalupa",
-      "architect": "Ing. arch. Pavel Novák",
-      "organization": "OMNIARCH"
-    },
-    "images": [
-      "/projects/chalupa-rudolfov/optimized/rudolfov_001.webp",
-      "/projects/chalupa-rudolfov/optimized/rudolfov_002.webp",
-      "/projects/chalupa-rudolfov/optimized/rudolfov_003.webp",
-      "/projects/chalupa-rudolfov/optimized/rudolfov_004.webp",
-      "/projects/chalupa-rudolfov/optimized/rudolfov_005.webp",
-      "/projects/chalupa-rudolfov/optimized/rudolfov_006.webp",
-      "/projects/chalupa-rudolfov/optimized/rudolfov_007.webp",
-      "/projects/chalupa-rudolfov/optimized/rudolfov_008.webp",
-      "/projects/chalupa-rudolfov/optimized/rudolfov_009.webp",
-      "/projects/chalupa-rudolfov/optimized/rudolfov_010.webp"
-    ]
   },
   {
     "slug": "rodinny-dum-chrastava",
