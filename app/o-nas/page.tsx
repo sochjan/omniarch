@@ -14,11 +14,15 @@ const team = [
     phone: '+420 775 656 227',
   },
   {
-    name: 'František Ovečka',
+    name: 'Ing. Jakub Moc',
     role: 'Stavební projektant',
   },
   {
-    name: 'Ing. Jakub Moc',
+    name: 'Ing. Veronika Mocová Madecká',
+    role: 'Architekt, stavební projektant',
+  },
+  {
+    name: 'František Ovečka',
     role: 'Stavební projektant',
   },
 ]
@@ -88,7 +92,7 @@ export default function AboutPage() {
             <p className="text-xs text-[#737373] uppercase tracking-widest mb-4">Filosofie</p>
             <blockquote className="text-base text-[#111111] font-light leading-relaxed italic">
               „Moderní a svěží vzhled, jednoduchost stavby, úspory energií — s individuálním
-              přístupem ke každému projektu."
+              přístupem ke každému projektu.“
             </blockquote>
           </div>
         </div>
