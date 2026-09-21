@@ -218,11 +218,16 @@ export default async function ProjectPage({
       </div>
 
       {/* Gallery */}
-        <section className="max-w-7xl mx-auto px-6 md:px-12 py-16">
+      <section className="max-w-7xl mx-auto px-6 md:px-12 py-16">
         <h2 className="text-2xl md:text-3xl font-extralight tracking-tight text-[#111111] mb-10">
           Galerie
         </h2>
-        <PhotoGallery images={images} captions={project.image_captions} title={project.title} />
+          <PhotoGallery
+            images={images}
+            aspectRatios={project.image_aspect_ratios}
+            captions={project.image_captions}
+            title={project.title}
+          />
       </section>
     </div>
   )

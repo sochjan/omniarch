@@ -1,15 +1,17 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
+import type { CSSProperties } from 'react'
 import ProgressiveImage from '@/components/ProgressiveImage'
 
 type PhotoGalleryProps = {
   images: string[]
+  aspectRatios?: number[]
   captions?: Array<string | null>
   title: string
 }
 
-export default function PhotoGallery({ images, captions = [], title }: PhotoGalleryProps) {
+export default function PhotoGallery({ images, aspectRatios = [], captions = [], title }: PhotoGalleryProps) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
   const touchStartX = useRef<number | null>(null)
   const mouseStartX = useRef<number | null>(null)
@@ -39,59 +41,53 @@ export default function PhotoGallery({ images, captions = [], title }: PhotoGall
     }
   }, [lightboxIndex])
 
-  const [main, ...rest] = images
   const captionAt = (index: number) => captions[index]?.trim() || null
+  const aspectAt = (index: number) => {
+    const ratio = aspectRatios[index]
+    return Number.isFinite(ratio) && ratio > 0 ? ratio : 4 / 3
+  }
   const currentCaption = lightboxIndex === null ? null : captionAt(lightboxIndex)
 
   return (
     <>
-      <figure className="mb-5 md:mb-7">
-        <div
-          className="aspect-[4/3] relative overflow-hidden cursor-zoom-in"
-          onClick={() => setLightboxIndex(0)}
-        >
-          <ProgressiveImage
-            src={main}
-            alt={captionAt(0) ?? title}
-            fill
-            sizes="(max-width: 1279px) 100vw, 1280px"
-            loading="eager"
-            className="object-cover"
-          />
-        </div>
-        {captionAt(0) && (
-          <figcaption className="mt-2.5 max-w-3xl text-xs md:text-sm font-light leading-relaxed text-[#737373]">
-            {captionAt(0)}
-          </figcaption>
-        )}
-      </figure>
-
-      {rest.length > 0 && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-3 gap-y-6 md:gap-y-8">
-          {rest.map((src, i) => (
-            <figure key={src}>
-              <div
-                className="aspect-[4/3] relative overflow-hidden cursor-zoom-in"
-                onClick={() => setLightboxIndex(i + 1)}
+      <div className="photo-gallery-grid">
+        {images.map((src, i) => {
+          const aspect = aspectAt(i)
+          return (
+            <figure
+              key={`${src}-${i}`}
+              className="photo-gallery-tile"
+              style={{
+                '--photo-ratio': aspect,
+                '--photo-basis-sm': `${Math.round(aspect * 190)}px`,
+                '--photo-basis-lg': `${Math.round(aspect * 250)}px`,
+              } as CSSProperties}
+            >
+              <button
+                type="button"
+                className="relative block w-full overflow-hidden cursor-zoom-in"
+                style={{ aspectRatio: aspect }}
+                onClick={() => setLightboxIndex(i)}
+                aria-label={`Otevřít fotografii ${i + 1} z galerie ${title}`}
               >
                 <ProgressiveImage
                   src={src}
-                  alt={captionAt(i + 1) ?? `${title} – fotografie ${i + 2}`}
+                  alt={captionAt(i) ?? `${title} – fotografie ${i + 1}`}
                   fill
-                  sizes="(max-width: 639px) 100vw, (max-width: 1279px) 50vw, 640px"
-                  loading="lazy"
-                  className="object-cover"
+                  sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                  loading={i === 0 ? 'eager' : 'lazy'}
+                  className="object-contain"
                 />
-              </div>
-              {captionAt(i + 1) && (
+              </button>
+              {captionAt(i) && (
                 <figcaption className="mt-2 text-xs md:text-sm font-light leading-relaxed text-[#737373]">
-                  {captionAt(i + 1)}
+                  {captionAt(i)}
                 </figcaption>
               )}
             </figure>
-          ))}
-        </div>
-      )}
+          )
+        })}
+      </div>
 
       {lightboxIndex !== null && (
         <div

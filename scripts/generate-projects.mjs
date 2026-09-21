@@ -1,4 +1,4 @@
-import { access, readFile, readdir, writeFile } from 'node:fs/promises'
+import { access, open, readFile, readdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -95,6 +95,41 @@ async function exists(file) {
   }
 }
 
+async function imageAspectRatio(file) {
+  const handle = await open(file, 'r')
+  const header = Buffer.alloc(30)
+  try {
+    const { bytesRead } = await handle.read(header, 0, header.length, 0)
+    if (bytesRead < header.length || header.toString('ascii', 0, 4) !== 'RIFF' ||
+        header.toString('ascii', 8, 12) !== 'WEBP') {
+      fail(file, 'must be a valid WebP image')
+    }
+  } finally {
+    await handle.close()
+  }
+
+  const format = header.toString('ascii', 12, 16)
+  let width
+  let height
+  if (format === 'VP8 ') {
+    if (header.toString('hex', 23, 26) !== '9d012a') fail(file, 'invalid VP8 frame header')
+    width = header.readUInt16LE(26) & 0x3fff
+    height = header.readUInt16LE(28) & 0x3fff
+  } else if (format === 'VP8L') {
+    if (header[20] !== 0x2f) fail(file, 'invalid VP8L frame header')
+    const dimensions = header.readUInt32LE(21)
+    width = (dimensions & 0x3fff) + 1
+    height = ((dimensions >>> 14) & 0x3fff) + 1
+  } else if (format === 'VP8X') {
+    width = 1 + header[24] + (header[25] << 8) + (header[26] << 16)
+    height = 1 + header[27] + (header[28] << 8) + (header[29] << 16)
+  } else {
+    fail(file, `unsupported WebP format "${format}"`)
+  }
+  if (!width || !height) fail(file, 'invalid image dimensions')
+  return Number((width / height).toFixed(4))
+}
+
 async function writeIfChanged(file, content) {
   const current = await readFile(file, 'utf8').catch(() => '')
   if (current !== content) await writeFile(file, content)
@@ -141,6 +176,9 @@ async function main() {
       .map((entry) => entry.name)
       .sort(collator.compare)
     const images = imageFiles.map((name) => `/projects/${folder}/optimized/${name}`)
+    const imageAspectRatios = await Promise.all(imageFiles.map((name) =>
+      imageAspectRatio(path.join(optimizedDirectory, name))
+    ))
 
     if (images.length > 0) {
       for (const requiredAsset of [
@@ -150,7 +188,10 @@ async function main() {
         if (!(await exists(requiredAsset))) fail(metadataFile, `missing ${path.relative(directory, requiredAsset)}`)
       }
     }
-    records.push({ ...project, ...(images.length > 0 ? { images } : {}) })
+    records.push({
+      ...project,
+      ...(images.length > 0 ? { images, image_aspect_ratios: imageAspectRatios } : {}),
+    })
   }
 
   const recordsBySlug = new Map()

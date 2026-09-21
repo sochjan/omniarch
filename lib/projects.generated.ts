@@ -51,6 +51,23 @@ export const projects: Project[] = [
       "/projects/rekonstrukce-rd-v-holenicich/optimized/holenice_013.webp",
       "/projects/rekonstrukce-rd-v-holenicich/optimized/holenice_014.webp",
       "/projects/rekonstrukce-rd-v-holenicich/optimized/holenice_015.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.4717,
+      1.6038,
+      0.6633,
+      1.4793,
+      1.5152,
+      1.4826,
+      1.4993,
+      0.6361,
+      1.2845,
+      1.9627,
+      1.5015,
+      1.5004,
+      1.443,
+      1.5094
     ]
   },
   {
@@ -126,6 +143,34 @@ export const projects: Project[] = [
       "/projects/rodinny-dum-skalany/optimized/skalany_024.webp",
       "/projects/rodinny-dum-skalany/optimized/skalany_025.webp",
       "/projects/rodinny-dum-skalany/optimized/skalany_026.webp"
+    ],
+    "image_aspect_ratios": [
+      1.4296,
+      1.3755,
+      1.3175,
+      1.3569,
+      1.442,
+      1.4881,
+      1.4503,
+      0.6388,
+      1.497,
+      0.6796,
+      0.6662,
+      1.4993,
+      1.4706,
+      0.6754,
+      1.2763,
+      1.5256,
+      1.4959,
+      1.4663,
+      1.5129,
+      1.581,
+      0.6667,
+      0.6716,
+      0.6729,
+      1.5408,
+      1.4981,
+      0.6817
     ]
   },
   {
@@ -182,6 +227,26 @@ export const projects: Project[] = [
       "/projects/rodinny-dum-podoli/optimized/podoli_016.webp",
       "/projects/rodinny-dum-podoli/optimized/podoli_017.webp",
       "/projects/rodinny-dum-podoli/optimized/podoli_018.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5326,
+      1.5326,
+      1.5326,
+      1.5326,
+      1.5326,
+      0.6527,
+      1.5326,
+      1.5326,
+      0.6527,
+      0.6527,
+      0.6527,
+      1.5326,
+      0.6527,
+      0.6527,
+      0.6527,
+      1.5004,
+      1.5004,
+      1.336
     ]
   },
   {
@@ -218,6 +283,16 @@ export const projects: Project[] = [
       "/projects/rodinny-dum-ohrazenice/optimized/rodinny-dum-ohrazenice_006.webp",
       "/projects/rodinny-dum-ohrazenice/optimized/rodinny-dum-ohrazenice_007.webp",
       "/projects/rodinny-dum-ohrazenice/optimized/rodinny-dum-ohrazenice_008.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.5004,
+      0.6665,
+      1.5004,
+      1.5004,
+      1.5004,
+      0.6665
     ]
   },
   {
@@ -258,6 +333,18 @@ export const projects: Project[] = [
       "/projects/chalupa-rudolfov/optimized/rudolfov_008.webp",
       "/projects/chalupa-rudolfov/optimized/rudolfov_009.webp",
       "/projects/chalupa-rudolfov/optimized/rudolfov_010.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      0.6664,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.3333,
+      1.3333,
+      0.6667,
+      1.5004
     ]
   },
   {
@@ -292,6 +379,15 @@ export const projects: Project[] = [
       "/projects/rodinny-dum-nova-ves/optimized/rodinny-dum-nova-ves_005.webp",
       "/projects/rodinny-dum-nova-ves/optimized/rodinny-dum-nova-ves_006.webp",
       "/projects/rodinny-dum-nova-ves/optimized/rodinny-dum-nova-ves_007.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.5004,
+      0.6665,
+      1.5004,
+      1.5004,
+      1.5004
     ]
   },
   {
@@ -323,6 +419,14 @@ export const projects: Project[] = [
       "/projects/rodinny-dum-v-hradku-nad-nisou/optimized/hradek_004.webp",
       "/projects/rodinny-dum-v-hradku-nad-nisou/optimized/hradek_005.webp",
       "/projects/rodinny-dum-v-hradku-nad-nisou/optimized/hradek_006.webp"
+    ],
+    "image_aspect_ratios": [
+      1.4144,
+      1.4144,
+      1.4144,
+      1.3396,
+      1.4144,
+      1.4144
     ]
   },
   {
@@ -351,6 +455,14 @@ export const projects: Project[] = [
       "/projects/dvojdum-pobocna-liberec/optimized/pobocna_004.webp",
       "/projects/dvojdum-pobocna-liberec/optimized/pobocna_005.webp",
       "/projects/dvojdum-pobocna-liberec/optimized/pobocna_006.webp"
+    ],
+    "image_aspect_ratios": [
+      1.3333,
+      1.3333,
+      1.3333,
+      1.4154,
+      1.3333,
+      1.3333
     ]
   },
   {
@@ -390,6 +502,18 @@ export const projects: Project[] = [
       "/projects/rodinny-dum-ve-vestci-u-stare-boleslavi/optimized/rodinny-dum-ve-vestci-u-stare-boleslavi_008.webp",
       "/projects/rodinny-dum-ve-vestci-u-stare-boleslavi/optimized/rodinny-dum-ve-vestci-u-stare-boleslavi_009.webp",
       "/projects/rodinny-dum-ve-vestci-u-stare-boleslavi/optimized/rodinny-dum-ve-vestci-u-stare-boleslavi_010.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004
     ]
   },
   {
@@ -425,6 +549,16 @@ export const projects: Project[] = [
       "/projects/rodinny-dum-horni-hanychov/optimized/rodinny-dum-horni-hanychov_006.webp",
       "/projects/rodinny-dum-horni-hanychov/optimized/rodinny-dum-horni-hanychov_007.webp",
       "/projects/rodinny-dum-horni-hanychov/optimized/rodinny-dum-horni-hanychov_008.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004
     ]
   },
   {
@@ -531,6 +665,21 @@ export const projects: Project[] = [
       "/projects/rodinny-dum-stare-pavlovice/optimized/rodinny-dum-stare-pavlovice_011.webp",
       "/projects/rodinny-dum-stare-pavlovice/optimized/rodinny-dum-stare-pavlovice_012.webp",
       "/projects/rodinny-dum-stare-pavlovice/optimized/rodinny-dum-stare-pavlovice_013.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004
     ]
   },
   {
@@ -715,6 +864,15 @@ export const projects: Project[] = [
       "/projects/rodinny-dum-radcice/optimized/radcice_005.webp",
       "/projects/rodinny-dum-radcice/optimized/radcice_006.webp",
       "/projects/rodinny-dum-radcice/optimized/radcice_007.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.4993,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004
     ]
   },
   {

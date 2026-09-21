@@ -29,3 +29,35 @@ body {
 .scrollbar-none::-webkit-scrollbar {
   display: none;
 }
+
+.photo-gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 0.75rem;
+}
+
+.photo-gallery-grid::after {
+  content: "";
+  flex: 10000 1 0;
+}
+
+.photo-gallery-tile {
+  flex: var(--photo-ratio) 1 var(--photo-basis-sm);
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .photo-gallery-tile {
+    flex-basis: var(--photo-basis-lg);
+  }
+}
+
+@media (max-width: 639px) {
+  .photo-gallery-grid::after {
+    display: none;
+  }
+
+  .photo-gallery-tile {
+    flex: 0 0 100%;
+  }
+}
