@@ -1,10 +1,22 @@
 {
   "slug": "rodinny-dum-ve-vestci-u-stare-boleslavi",
   "title": "Rodinný dům ve Vestci u Staré Boleslavi",
-  "tagline": "Svěží architektonický výraz s důrazem na úspory energií.",
-  "description": "Moderní rodinný dům s důrazem na úspory energií a svěží architektonický výraz.",
+  "tagline": "Světlé přízemí a dřevem obložené patro s krytým parkováním.",
+  "description": "Návrh rodinného domu ve Vestci u Staré Boleslavi staví na kontrastu světlého přízemí a výrazného horního podlaží s dřevěným obkladem. Vysunuté patro vytváří kryté místo pro auto, zatímco zahradní strana nabízí stíněné venkovní posezení.",
   "category": "residential",
   "active": true,
+  "image_captions": [
+    "Zahradní vizualizace domu se světlým přízemím a dřevem obloženým patrem.",
+    "Pohled z ulice na kompaktní dům s krytým parkovacím místem.",
+    "Uliční pohled ukazuje vstupní stranu domu za plotem.",
+    "Pohled ze zahrady na světlé přízemí a stíněné venkovní posezení.",
+    "Dům v zahradě s výrazným přesahem horního podlaží.",
+    "Pohled přes terasu k ustoupenému hornímu podlaží a zeleni.",
+    "Ptačí perspektiva návrhu ukazuje tvar střechy a uspořádání pozemku.",
+    "Nadhledová vizualizace z uliční strany se zelenou terasou.",
+    "Pohled od oplocení na dřevěné patro a bílé přízemí.",
+    "Detail krytého parkování pod vyloženým horním podlažím."
+  ],
   "metadata": {
     "location": "Vestec u Staré Boleslavi",
     "year": "2018",

@@ -1,10 +1,19 @@
 {
   "slug": "rodinny-dum-nova-ves",
   "title": "Rodinný dům Nová Ves",
-  "tagline": "Moderní bydlení v klidné přírodní lokalitě u Jablonce nad Nisou.",
-  "description": "Moderní bydlení v klidné přírodní lokalitě u Jablonce nad Nisou.",
+  "tagline": "Jednoduchý štítový dům se světlým obkladem a teplými dřevěnými akcenty.",
+  "description": "Rodinný dům v Nové Vsi spojuje kompaktní štítový objem se světlým deskovým obkladem a dřevěnými prvky. Směrem do zahrady se otevírá proskleným přízemím s venkovním posezením, zatímco uliční průčelí si zachovává střídmý výraz.",
   "category": "residential",
   "active": true,
+  "image_captions": [
+    "Pohled z ulice na štítové průčelí domu za dřevěným plotem.",
+    "Dům mezi vzrostlými stromy; světlý obklad doplňuje dřevěná část fasády.",
+    "Čelní pohled zvýrazňuje štítovou siluetu a vodorovné okno v patře.",
+    "Kamenná pěšina vede přes zahradu k jednoduchému průčelí domu.",
+    "Zahradní strana domu s proskleným přízemím a venkovním posezením.",
+    "Detail vstupu v dřevěném obkladu vedle šedých fasádních desek.",
+    "Úzké okno osazené do pravidelného rastru světlého fasádního obkladu."
+  ],
   "metadata": {
     "location": "Nová Ves, Jablonec nad Nisou",
     "year_design": "2007",

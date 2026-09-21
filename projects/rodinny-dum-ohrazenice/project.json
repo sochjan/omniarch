@@ -1,10 +1,20 @@
 {
   "slug": "rodinny-dum-ohrazenice",
   "title": "Rodinný dům Ohrazenice",
-  "tagline": "Kompaktní hmota s plochou střechou a velkými prosklenými plochami.",
-  "description": "Kompaktní hmota s plochou střechou a velkými prosklenými plochami.",
+  "tagline": "Nízký dům s výraznými přesahy střechy, cihlovými plochami a krytými venkovními prostory.",
+  "description": "Rodinný dům v Ohrazenicích je rozvinutý do šířky pozemku. Červené cihlové plochy se střídají s tmavým obkladem a světlými kovovými detaily; výrazné přesahy střechy vytvářejí kryté venkovní prostory. Interiér doplňují teplé tóny dřeva.",
   "category": "residential",
   "active": true,
+  "image_captions": [
+    "Celkový pohled přes zahradu na horizontálně členěný dům.",
+    "Kryté venkovní stání a zahradní část domu v jednom nízkém objemu.",
+    "Dlažba mezi červenou cihlovou fasádou a tmavě obloženým křídlem.",
+    "Vstupní dvůr s kontrastem červené a tmavé fasády.",
+    "Uliční pohled na dlouhé přístřešení a cihlovou část domu.",
+    "Boční pohled ukazuje vyšší obytný objem a nízké navazující křídlo.",
+    "Obývací pokoj s červenou sedací soupravou a dřevěnými prvky.",
+    "Kuchyň propojená s obytným prostorem, s výrazným dřevěným ostrůvkem."
+  ],
   "metadata": {
     "location": "Ohrazenice, Turnov",
     "year_design": "2008",
