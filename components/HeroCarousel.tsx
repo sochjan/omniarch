@@ -93,8 +93,8 @@ export default function HeroCarousel() {
       onTouchEnd={(e) => {
         if (touchStartX.current === null) return
         const diff = touchStartX.current - e.changedTouches[0].clientX
+        if (Math.abs(diff) > 10) wasDragging.current = true
         if (Math.abs(diff) > 50) {
-          wasDragging.current = true
           if (diff > 0) next()
           else prev()
         }
@@ -138,7 +138,7 @@ export default function HeroCarousel() {
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/60 via-black/15 to-transparent pointer-events-none" />
           <Link
             href={`/${slide.slug}`}
-            className="group absolute left-6 bottom-12 md:left-10 md:bottom-9 z-10 text-white drop-shadow-sm"
+            className="group absolute left-6 bottom-12 md:left-10 md:bottom-9 z-10 w-fit max-w-[calc(100%-3rem)] py-2 pr-4 text-white drop-shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             tabIndex={i === current ? 0 : -1}
             onClick={(event) => {
               if (wasDragging.current) event.preventDefault()
@@ -151,7 +151,9 @@ export default function HeroCarousel() {
             <p className="hidden md:block mt-1 text-xs font-light tracking-wide text-white/80 group-hover:text-white transition-colors">
               {slide.details}
             </p>
-            <span className="block mt-2 h-px w-0 bg-white/80 transition-all duration-300 group-hover:w-full" />
+            <span className="mt-3 inline-flex items-center gap-2 border-b border-white/70 pb-1 text-xs font-medium uppercase tracking-wider transition-colors group-hover:border-white">
+              Zobrazit projekt <span aria-hidden="true">↗</span>
+            </span>
           </Link>
         </div>
       ))}
