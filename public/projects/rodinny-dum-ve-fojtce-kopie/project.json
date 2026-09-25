@@ -5,6 +5,15 @@
   "description": "Projekt rodinného domu v Hlásné Třebáni navržený v roce 2017. Adaptace oblíbeného dispozičního řešení na specifické podmínky pražského zázemí.",
   "category": "residential",
   "active": true,
+  "image_captions": [
+    "Zahradní pohled na dům s krytou terasou a výraznou dřevěnou konstrukcí.",
+    "Bílé štítové průčelí doplňuje tmavé přízemní křídlo a dřevěná pergola.",
+    "Celkový pohled přes zahradu na obytnou část domu a terasu.",
+    "Uliční pohled ukazuje klidné průčelí domu a navazující oplocení.",
+    "Vstupní strana domu se světlou fasádou, šedým obkladem a sedlovou střechou.",
+    "Pohled podél oplocení směrem ke krytému parkovacímu stání.",
+    "Dům v kontextu okolní zástavby a krajiny Hlásné Třebáně."
+  ],
   "metadata": {
     "location": "Hlásná Třebáň",
     "year": "2017",

@@ -568,6 +568,19 @@ export const projects: Project[] = [
     "description": "Administrativně-provozní objekt kombinující funkčnost s reprezentativním výrazem.",
     "category": "commercial",
     "active": true,
+    "image_captions": [
+      "Uliční pohled na kompaktní sídlo firmy s šedým pláštěm a oranžovými akcenty.",
+      "Vstupní část objektu s výrazným žlutým prvkem a parkovacím stáním.",
+      "Boční průčelí doplňuje vystupující barevný objem.",
+      "Pohled z ulice na hlavní fasádu a krytý vstup.",
+      "Nadhledová vizualizace vstupní strany a provozního předprostoru.",
+      "Ptačí perspektiva ukazuje plochou střechu a členění fasády.",
+      "Zadní část objektu s balkonem a navazující zelení.",
+      "Čelní vizualizace s krytým parterem a oranžovými okenicemi.",
+      "Nástup k hlavnímu vstupu pod výrazným černým rámem.",
+      "Příjezdová cesta vede k zadnímu vstupu a barevnému balkonu.",
+      "Dlouhé uliční průčelí sjednocuje vodorovný šedý obklad."
+    ],
     "metadata": {
       "location": "Vesec, Liberec",
       "year_design": "2016",
@@ -575,7 +588,33 @@ export const projects: Project[] = [
       "type": "Sídlo firmy",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/sidlo-firmy-vesec/optimized/sidlo-firmy-vesec_001.webp",
+      "/projects/sidlo-firmy-vesec/optimized/sidlo-firmy-vesec_002.webp",
+      "/projects/sidlo-firmy-vesec/optimized/sidlo-firmy-vesec_003.webp",
+      "/projects/sidlo-firmy-vesec/optimized/sidlo-firmy-vesec_004.webp",
+      "/projects/sidlo-firmy-vesec/optimized/sidlo-firmy-vesec_005.webp",
+      "/projects/sidlo-firmy-vesec/optimized/sidlo-firmy-vesec_006.webp",
+      "/projects/sidlo-firmy-vesec/optimized/sidlo-firmy-vesec_007.webp",
+      "/projects/sidlo-firmy-vesec/optimized/sidlo-firmy-vesec_008.webp",
+      "/projects/sidlo-firmy-vesec/optimized/sidlo-firmy-vesec_009.webp",
+      "/projects/sidlo-firmy-vesec/optimized/sidlo-firmy-vesec_010.webp",
+      "/projects/sidlo-firmy-vesec/optimized/sidlo-firmy-vesec_011.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004
+    ]
   },
   {
     "slug": "rodinny-dum-zibridice",
@@ -584,13 +623,46 @@ export const projects: Project[] = [
     "description": "Čistá architektura s moderními prvky zasazená do venkovského prostředí.",
     "category": "residential",
     "active": true,
+    "image_captions": [
+      "Dům ve svahu kombinuje tradiční štítovou siluetu s moderním členěním fasády.",
+      "Zahradní pohled na bílošedý dům s tmavou střechou a dřevěnými akcenty.",
+      "Velké rohové okno otevírá obytné podlaží směrem do zahrady.",
+      "Vstupní strana s krytým stáním, kamennou zdí a štítovým průčelím.",
+      "Dům stojí na otevřeném travnatém svahu na okraji lesa.",
+      "Šikmý pohled zvýrazňuje tmavé nároží a kontrast fasádních materiálů.",
+      "Zadní strana domu s krytým venkovním prostorem a oplocením.",
+      "Celkový pohled na dům v podzimní krajině Žibřidic.",
+      "Příjezdová cesta a garážová část jsou zapuštěné do svažitého pozemku."
+    ],
     "metadata": {
       "location": "Žibřidice",
       "year": "2020",
       "type": "Rodinný dům",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/rodinny-dum-zibridice/optimized/rodinny-dum-zibridice_001.webp",
+      "/projects/rodinny-dum-zibridice/optimized/rodinny-dum-zibridice_002.webp",
+      "/projects/rodinny-dum-zibridice/optimized/rodinny-dum-zibridice_003.webp",
+      "/projects/rodinny-dum-zibridice/optimized/rodinny-dum-zibridice_004.webp",
+      "/projects/rodinny-dum-zibridice/optimized/rodinny-dum-zibridice_005.webp",
+      "/projects/rodinny-dum-zibridice/optimized/rodinny-dum-zibridice_006.webp",
+      "/projects/rodinny-dum-zibridice/optimized/rodinny-dum-zibridice_007.webp",
+      "/projects/rodinny-dum-zibridice/optimized/rodinny-dum-zibridice_008.webp",
+      "/projects/rodinny-dum-zibridice/optimized/rodinny-dum-zibridice_009.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004
+    ]
   },
   {
     "slug": "rodinny-dum-radlo-2",
@@ -599,13 +671,43 @@ export const projects: Project[] = [
     "description": "Druhý projekt rodinného domu v Rádle u Jablonce nad Nisou z roku 2021. Alternativní hmotová varianta pro stejnou lokalitu.",
     "category": "residential",
     "active": true,
+    "image_captions": [
+      "Zahradní pohled na přízemní dům s krytou terasou a dřevěnými prvky.",
+      "Terasa propojuje obytnou část domu se zahradou a samostatným přístřeškem.",
+      "Vstupní strana pozemku s krytým stáním pro automobily.",
+      "Celkový pohled přes zahradu na hlavní obytné křídlo.",
+      "Boční průčelí kombinuje bílou omítku s dřevěným obkladem.",
+      "Samostatný přístřešek navazuje materiálem na rodinný dům.",
+      "Nadhled ukazuje vztah domu, parkování a zahrady.",
+      "Ptačí perspektiva celého pozemku se dvěma jednoduchými objemy."
+    ],
     "metadata": {
       "location": "Rádlo",
       "year": "2021",
       "type": "Rodinný dům",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/rodinny-dum-radlo-2/optimized/rodinny-dum-radlo-2_001.webp",
+      "/projects/rodinny-dum-radlo-2/optimized/rodinny-dum-radlo-2_002.webp",
+      "/projects/rodinny-dum-radlo-2/optimized/rodinny-dum-radlo-2_003.webp",
+      "/projects/rodinny-dum-radlo-2/optimized/rodinny-dum-radlo-2_004.webp",
+      "/projects/rodinny-dum-radlo-2/optimized/rodinny-dum-radlo-2_005.webp",
+      "/projects/rodinny-dum-radlo-2/optimized/rodinny-dum-radlo-2_006.webp",
+      "/projects/rodinny-dum-radlo-2/optimized/rodinny-dum-radlo-2_007.webp",
+      "/projects/rodinny-dum-radlo-2/optimized/rodinny-dum-radlo-2_008.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004
+    ]
   },
   {
     "slug": "obytna-zona-ceradice",
@@ -614,13 +716,55 @@ export const projects: Project[] = [
     "description": "Urbanistická studie zahrnující zástavbu parcel a řešení veřejných prostranství.",
     "category": "residential",
     "active": true,
+    "image_captions": [
+      "Nadhledová vizualizace obytné zóny s řadovými a samostatně stojícími domy.",
+      "Celkové uspořádání zástavby, komunikací a soukromých zahrad.",
+      "Uliční prostor před řadovými domy s parkovacími místy a zelení.",
+      "Řadové domy vytvářejí souvislou obytnou hranu podél komunikace.",
+      "Samostatný rodinný dům s terasou a krytým parkováním.",
+      "Rodinný dům s garáží a zahradním posezením na okraji souboru.",
+      "Zahradní strana řadových domů s terasami a oranžovými akcenty.",
+      "Parkování a vstupy jsou soustředěné podél hlavní obytné ulice.",
+      "Nadhled ukazuje přechod mezi samostatnými domy a řadovou zástavbou.",
+      "Ptačí perspektiva celého návrhu obytného souboru.",
+      "Původní hospodářské objekty před navrhovanou proměnou území.",
+      "Stávající stav areálu s charakteristickou hmotou původní stodoly."
+    ],
     "metadata": {
       "location": "Čeradice",
       "year": "2017",
       "type": "Obytná zóna",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/obytna-zona-ceradice/optimized/obytna-zona-ceradice_001.webp",
+      "/projects/obytna-zona-ceradice/optimized/obytna-zona-ceradice_002.webp",
+      "/projects/obytna-zona-ceradice/optimized/obytna-zona-ceradice_003.webp",
+      "/projects/obytna-zona-ceradice/optimized/obytna-zona-ceradice_004.webp",
+      "/projects/obytna-zona-ceradice/optimized/obytna-zona-ceradice_005.webp",
+      "/projects/obytna-zona-ceradice/optimized/obytna-zona-ceradice_006.webp",
+      "/projects/obytna-zona-ceradice/optimized/obytna-zona-ceradice_007.webp",
+      "/projects/obytna-zona-ceradice/optimized/obytna-zona-ceradice_008.webp",
+      "/projects/obytna-zona-ceradice/optimized/obytna-zona-ceradice_009.webp",
+      "/projects/obytna-zona-ceradice/optimized/obytna-zona-ceradice_010.webp",
+      "/projects/obytna-zona-ceradice/optimized/obytna-zona-ceradice_011.webp",
+      "/projects/obytna-zona-ceradice/optimized/obytna-zona-ceradice_012.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004
+    ]
   },
   {
     "slug": "rodinny-dum-stare-pavlovice",
@@ -689,13 +833,46 @@ export const projects: Project[] = [
     "description": "Projekt rodinného domu v Modřišicích u Turnova z roku 2011. Subtilní architektura zasazená do mírně svažitého terénu Českého ráje.",
     "category": "residential",
     "active": true,
+    "image_captions": [
+      "Zahradní pohled na členitý dům s kamenným obkladem a velkým prosklením.",
+      "Celková vizualizace domu rozvinutého kolem zahrady s dětským koutem.",
+      "Příchod k hlavní obytné části rámují nízká křídla a zahradní výsadba.",
+      "Terasa s bazénem navazuje přímo na obytné místnosti domu.",
+      "Kamenná fasáda a kryté venkovní posezení v zahradní části.",
+      "Boční pohled na přízemní křídlo s kamenným obkladem.",
+      "Nadhled ukazuje uspořádání domu, garáže a zahrady na pozemku.",
+      "Ptačí perspektiva vstupní části s odděleným krytým stáním.",
+      "Celkové osazení domu a bazénu v zahradě."
+    ],
     "metadata": {
       "location": "Modřišice, Turnov",
       "year": "2011",
       "type": "Rodinný dům",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/rodinny-dum-modrisice/optimized/rodinny-dum-modrisice_001.webp",
+      "/projects/rodinny-dum-modrisice/optimized/rodinny-dum-modrisice_002.webp",
+      "/projects/rodinny-dum-modrisice/optimized/rodinny-dum-modrisice_003.webp",
+      "/projects/rodinny-dum-modrisice/optimized/rodinny-dum-modrisice_004.webp",
+      "/projects/rodinny-dum-modrisice/optimized/rodinny-dum-modrisice_005.webp",
+      "/projects/rodinny-dum-modrisice/optimized/rodinny-dum-modrisice_006.webp",
+      "/projects/rodinny-dum-modrisice/optimized/rodinny-dum-modrisice_007.webp",
+      "/projects/rodinny-dum-modrisice/optimized/rodinny-dum-modrisice_008.webp",
+      "/projects/rodinny-dum-modrisice/optimized/rodinny-dum-modrisice_009.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004
+    ]
   },
   {
     "slug": "vinny-sklipek-palava",
@@ -704,13 +881,40 @@ export const projects: Project[] = [
     "description": "Architektonický projekt vinného sklípku v oblasti Pálava z roku 2020. Citlivá intervence v krajinářsky chráněném území s respektem k místní tradici.",
     "category": "commercial",
     "active": true,
+    "image_captions": [
+      "Čelní pohled na obnovený objekt zasazený do svahu pálavské obce.",
+      "Hlavní průčelí s tradičním členěním a dlážděným předprostorem.",
+      "Boční pohled ukazuje napojení objektu na terén a opěrnou zeď.",
+      "Nadhledová vizualizace zachycuje střechu, dvůr a svažitý pozemek.",
+      "Celková kompozice domu mezi ulicí a vinohradním svahem.",
+      "Vizualizace vstupního průčelí a venkovního posezení.",
+      "Původní stav menšího sklepního objektu ve svahu."
+    ],
     "metadata": {
       "location": "Pálava",
       "year": "2020",
       "type": "Vinný sklípek",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/vinny-sklipek-palava/optimized/vinny-sklipek-palava_001.webp",
+      "/projects/vinny-sklipek-palava/optimized/vinny-sklipek-palava_002.webp",
+      "/projects/vinny-sklipek-palava/optimized/vinny-sklipek-palava_003.webp",
+      "/projects/vinny-sklipek-palava/optimized/vinny-sklipek-palava_004.webp",
+      "/projects/vinny-sklipek-palava/optimized/vinny-sklipek-palava_005.webp",
+      "/projects/vinny-sklipek-palava/optimized/vinny-sklipek-palava_006.webp",
+      "/projects/vinny-sklipek-palava/optimized/vinny-sklipek-palava_007.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004
+    ]
   },
   {
     "slug": "rodinny-dum-ve-fojtce-kopie",
@@ -719,13 +923,40 @@ export const projects: Project[] = [
     "description": "Projekt rodinného domu v Hlásné Třebáni navržený v roce 2017. Adaptace oblíbeného dispozičního řešení na specifické podmínky pražského zázemí.",
     "category": "residential",
     "active": true,
+    "image_captions": [
+      "Zahradní pohled na dům s krytou terasou a výraznou dřevěnou konstrukcí.",
+      "Bílé štítové průčelí doplňuje tmavé přízemní křídlo a dřevěná pergola.",
+      "Celkový pohled přes zahradu na obytnou část domu a terasu.",
+      "Uliční pohled ukazuje klidné průčelí domu a navazující oplocení.",
+      "Vstupní strana domu se světlou fasádou, šedým obkladem a sedlovou střechou.",
+      "Pohled podél oplocení směrem ke krytému parkovacímu stání.",
+      "Dům v kontextu okolní zástavby a krajiny Hlásné Třebáně."
+    ],
     "metadata": {
       "location": "Hlásná Třebáň",
       "year": "2017",
       "type": "Rodinný dům",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/rodinny-dum-ve-fojtce-kopie/optimized/rodinny-dum-ve-fojtce-kopie_001.webp",
+      "/projects/rodinny-dum-ve-fojtce-kopie/optimized/rodinny-dum-ve-fojtce-kopie_002.webp",
+      "/projects/rodinny-dum-ve-fojtce-kopie/optimized/rodinny-dum-ve-fojtce-kopie_003.webp",
+      "/projects/rodinny-dum-ve-fojtce-kopie/optimized/rodinny-dum-ve-fojtce-kopie_004.webp",
+      "/projects/rodinny-dum-ve-fojtce-kopie/optimized/rodinny-dum-ve-fojtce-kopie_005.webp",
+      "/projects/rodinny-dum-ve-fojtce-kopie/optimized/rodinny-dum-ve-fojtce-kopie_006.webp",
+      "/projects/rodinny-dum-ve-fojtce-kopie/optimized/rodinny-dum-ve-fojtce-kopie_007.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004
+    ]
   },
   {
     "slug": "rodinny-dum-ve-fojtce",
@@ -734,13 +965,40 @@ export const projects: Project[] = [
     "description": "Rodinný dům ve Fojtce u Mníšku u Liberce, dokončený v roce 2017. Čistá geometrie a kvalitní materiály v klidném příměstském prostředí.",
     "category": "residential",
     "active": true,
+    "image_captions": [
+      "Zahradní průčelí domu s krytou terasou a výhledem do okolní krajiny.",
+      "Dům je zasazený do svahu nad obcí a otevírá se směrem do údolí.",
+      "Jednoduchý štítový objem doplňuje dřevěný zahradní domek.",
+      "Pohled přes svažitou zahradu na dům a vzrostlé stromy.",
+      "Vstupní strana s příjezdovou cestou, garáží a samostatným zahradním objektem.",
+      "Celkový pohled na dům v kontextu svažitého pozemku.",
+      "Krytá terasa propojuje obytné místnosti se zahradou."
+    ],
     "metadata": {
       "location": "Fojtka, Mníšek u Liberce",
       "year": "2017",
       "type": "Rodinný dům",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/rodinny-dum-ve-fojtce/optimized/rodinny-dum-ve-fojtce_001.webp",
+      "/projects/rodinny-dum-ve-fojtce/optimized/rodinny-dum-ve-fojtce_002.webp",
+      "/projects/rodinny-dum-ve-fojtce/optimized/rodinny-dum-ve-fojtce_003.webp",
+      "/projects/rodinny-dum-ve-fojtce/optimized/rodinny-dum-ve-fojtce_004.webp",
+      "/projects/rodinny-dum-ve-fojtce/optimized/rodinny-dum-ve-fojtce_005.webp",
+      "/projects/rodinny-dum-ve-fojtce/optimized/rodinny-dum-ve-fojtce_006.webp",
+      "/projects/rodinny-dum-ve-fojtce/optimized/rodinny-dum-ve-fojtce_007.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004
+    ]
   },
   {
     "slug": "rodinny-dum-machnin",

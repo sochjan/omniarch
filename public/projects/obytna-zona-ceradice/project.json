@@ -5,6 +5,20 @@
   "description": "Urbanistická studie zahrnující zástavbu parcel a řešení veřejných prostranství.",
   "category": "residential",
   "active": true,
+  "image_captions": [
+    "Nadhledová vizualizace obytné zóny s řadovými a samostatně stojícími domy.",
+    "Celkové uspořádání zástavby, komunikací a soukromých zahrad.",
+    "Uliční prostor před řadovými domy s parkovacími místy a zelení.",
+    "Řadové domy vytvářejí souvislou obytnou hranu podél komunikace.",
+    "Samostatný rodinný dům s terasou a krytým parkováním.",
+    "Rodinný dům s garáží a zahradním posezením na okraji souboru.",
+    "Zahradní strana řadových domů s terasami a oranžovými akcenty.",
+    "Parkování a vstupy jsou soustředěné podél hlavní obytné ulice.",
+    "Nadhled ukazuje přechod mezi samostatnými domy a řadovou zástavbou.",
+    "Ptačí perspektiva celého návrhu obytného souboru.",
+    "Původní hospodářské objekty před navrhovanou proměnou území.",
+    "Stávající stav areálu s charakteristickou hmotou původní stodoly."
+  ],
   "metadata": {
     "location": "Čeradice",
     "year": "2017",
