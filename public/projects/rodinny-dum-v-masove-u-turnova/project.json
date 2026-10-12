@@ -5,6 +5,16 @@
   "description": "Projekt rodinného domu v Mašově u Turnova z roku 2022. Moderní architektura v krajině Českého ráje.",
   "category": "residential",
   "active": true,
+  "image_captions": [
+    "Zahradní průčelí domu s krytou terasou a výhledem do zeleně.",
+    "Dům propojuje tradiční sedlovou střechu se současným výrazem.",
+    "Uliční strana reaguje na svažitý pozemek vloženým spodním podlažím.",
+    "Celkový pohled na dům v místní zástavbě.",
+    "Vizualizace obytné části otevřené do zahrady.",
+    "Krytá terasa vytváří příjemné venkovní zázemí domu.",
+    "Spodní podlaží přirozeně ukrývá garáž a technické prostory.",
+    "Příjezdová strana domu sleduje sklon terénu."
+  ],
   "metadata": {
     "location": "Mašov u Turnova",
     "year": "2022",

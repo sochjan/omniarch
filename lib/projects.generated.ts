@@ -1007,13 +1007,40 @@ export const projects: Project[] = [
     "description": "Projekt rodinného domu v Machníně u Liberce z roku 2021. Horizontální kompozice hmoty s návazností na terén.",
     "category": "residential",
     "active": true,
+    "image_captions": [
+      "Celkový pohled na dům a zahradu v kontextu okolní zástavby.",
+      "Zahradní průčelí s velkými okny a dřevěnými okenicemi.",
+      "Čelní pohled na jednoduchou hmotu domu se sedlovou střechou.",
+      "Vstupní strana domu citlivě navazuje na uliční prostor.",
+      "Boční průčelí s krytým vstupem a integrovaným parkováním.",
+      "Nadhled odhaluje usazení domu na prostorném pozemku.",
+      "Pohled shora na střechu a vazbu domu k zahradě."
+    ],
     "metadata": {
       "location": "Machnín, Liberec",
       "year": "2021",
       "type": "Rodinný dům",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/rodinny-dum-machnin/optimized/machnin_001.webp",
+      "/projects/rodinny-dum-machnin/optimized/machnin_002.webp",
+      "/projects/rodinny-dum-machnin/optimized/machnin_003.webp",
+      "/projects/rodinny-dum-machnin/optimized/machnin_004.webp",
+      "/projects/rodinny-dum-machnin/optimized/machnin_005.webp",
+      "/projects/rodinny-dum-machnin/optimized/machnin_006.webp",
+      "/projects/rodinny-dum-machnin/optimized/machnin_007.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004
+    ]
   },
   {
     "slug": "rodinny-dum-v-dlouhem-mostu",
@@ -1022,13 +1049,34 @@ export const projects: Project[] = [
     "description": "Projekt rodinného domu v Dlouhém Mostu z roku 2021. Kompaktní dům s přirozeným propojením interiéru a zahrady.",
     "category": "residential",
     "active": true,
+    "image_captions": [
+      "Zahradní pohled na dům s výrazným proskleným štítem.",
+      "Široké průčelí propojuje obytnou část, terasu a kryté stání.",
+      "Terasa a bazén navazují přímo na hlavní obytný prostor.",
+      "Vstupní strana domu je chráněná vůči ulici.",
+      "Dům respektuje měřítko a charakter zástavby Dlouhého Mostu."
+    ],
     "metadata": {
       "location": "Dlouhý Most",
       "year": "2021",
       "type": "Rodinný dům",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/rodinny-dum-v-dlouhem-mostu/optimized/dlouhy-most_001.webp",
+      "/projects/rodinny-dum-v-dlouhem-mostu/optimized/dlouhy-most_002.webp",
+      "/projects/rodinny-dum-v-dlouhem-mostu/optimized/dlouhy-most_003.webp",
+      "/projects/rodinny-dum-v-dlouhem-mostu/optimized/dlouhy-most_004.webp",
+      "/projects/rodinny-dum-v-dlouhem-mostu/optimized/dlouhy-most_005.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004
+    ]
   },
   {
     "slug": "rodinny-dum-harcov",
@@ -1037,6 +1085,17 @@ export const projects: Project[] = [
     "description": "Rodinný dům v Harcově v Liberci, dokončený v roce 2009. Stavebně-technické řešení: Ing. Jakub Moc a Ing. Veronika Madecká.",
     "category": "residential",
     "active": true,
+    "image_captions": [
+      "Realizovaný dům vyrůstá ze svažité zahrady v Harcově.",
+      "Návrh skládá obytnou část, garáž a krytý vstup do jednoho celku.",
+      "Nadhled představuje členění hmot a materiálů domu.",
+      "Vstupní průčelí se světlým přízemím a tmavým horním podlažím.",
+      "Kryté parkování přirozeně navazuje na hlavní vstup.",
+      "Zahradní stranu charakterizuje výrazný rám horního podlaží.",
+      "Terasa je chráněná přesahem obytného patra.",
+      "Dům v kontextu klidné harcovské ulice.",
+      "Zahradní průčelí využívá převýšení pozemku."
+    ],
     "metadata": {
       "location": "Harcov, Liberec",
       "year": "2009",
@@ -1044,7 +1103,29 @@ export const projects: Project[] = [
       "architect": "Ing. arch. Pavel Novák",
       "building_solutions": "Ing. Jakub Moc, Ing. Veronika Madecká",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/rodinny-dum-harcov/optimized/harcov_001.webp",
+      "/projects/rodinny-dum-harcov/optimized/harcov_002.webp",
+      "/projects/rodinny-dum-harcov/optimized/harcov_003.webp",
+      "/projects/rodinny-dum-harcov/optimized/harcov_004.webp",
+      "/projects/rodinny-dum-harcov/optimized/harcov_005.webp",
+      "/projects/rodinny-dum-harcov/optimized/harcov_006.webp",
+      "/projects/rodinny-dum-harcov/optimized/harcov_007.webp",
+      "/projects/rodinny-dum-harcov/optimized/harcov_008.webp",
+      "/projects/rodinny-dum-harcov/optimized/harcov_009.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004
+    ]
   },
   {
     "slug": "rodinny-dum-jistebsko",
@@ -1053,13 +1134,55 @@ export const projects: Project[] = [
     "description": "Projekt rodinného domu v Jistebsku dokončený v roce 2020. Jednoduché hmotové řešení s plochou střechou a přesahy.",
     "category": "residential",
     "active": true,
+    "image_captions": [
+      "Hlavní dům a vedlejší objekt společně vymezují klidný dvůr.",
+      "Příjezdová strana propojuje původní charakter místa s novými zásahy.",
+      "Soubor staveb se přirozeně zapojuje do venkovské zástavby.",
+      "Zahradní pohled na prosklenou přístavbu hlavního domu.",
+      "Dům a hospodářský objekt rámují rozlehlou pobytovou zahradu.",
+      "Detail vedlejší stavby s režným zdivem a dřevěnými vraty.",
+      "Vzájemné uspořádání staveb vytváří chráněný venkovní prostor.",
+      "Dlouhé průčelí vedlejšího objektu lemuje okraj zahrady.",
+      "Prosklená přístavba otevírá hlavní dům směrem k jihu.",
+      "Nadhled ukazuje příjezd, hlavní dům i vedlejší stavbu.",
+      "Celková situace projektu a jeho vazba na okolní pozemky.",
+      "Ptačí perspektiva zachycuje kompozici celého areálu."
+    ],
     "metadata": {
       "location": "Jistebsko",
       "year": "2020",
       "type": "Rodinný dům",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/rodinny-dum-jistebsko/optimized/jistebsko_001.webp",
+      "/projects/rodinny-dum-jistebsko/optimized/jistebsko_002.webp",
+      "/projects/rodinny-dum-jistebsko/optimized/jistebsko_003.webp",
+      "/projects/rodinny-dum-jistebsko/optimized/jistebsko_004.webp",
+      "/projects/rodinny-dum-jistebsko/optimized/jistebsko_005.webp",
+      "/projects/rodinny-dum-jistebsko/optimized/jistebsko_006.webp",
+      "/projects/rodinny-dum-jistebsko/optimized/jistebsko_007.webp",
+      "/projects/rodinny-dum-jistebsko/optimized/jistebsko_008.webp",
+      "/projects/rodinny-dum-jistebsko/optimized/jistebsko_009.webp",
+      "/projects/rodinny-dum-jistebsko/optimized/jistebsko_010.webp",
+      "/projects/rodinny-dum-jistebsko/optimized/jistebsko_011.webp",
+      "/projects/rodinny-dum-jistebsko/optimized/jistebsko_012.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004
+    ]
   },
   {
     "slug": "rodinny-dum-v-masove-u-turnova",
@@ -1068,13 +1191,43 @@ export const projects: Project[] = [
     "description": "Projekt rodinného domu v Mašově u Turnova z roku 2022. Moderní architektura v krajině Českého ráje.",
     "category": "residential",
     "active": true,
+    "image_captions": [
+      "Zahradní průčelí domu s krytou terasou a výhledem do zeleně.",
+      "Dům propojuje tradiční sedlovou střechu se současným výrazem.",
+      "Uliční strana reaguje na svažitý pozemek vloženým spodním podlažím.",
+      "Celkový pohled na dům v místní zástavbě.",
+      "Vizualizace obytné části otevřené do zahrady.",
+      "Krytá terasa vytváří příjemné venkovní zázemí domu.",
+      "Spodní podlaží přirozeně ukrývá garáž a technické prostory.",
+      "Příjezdová strana domu sleduje sklon terénu."
+    ],
     "metadata": {
       "location": "Mašov u Turnova",
       "year": "2022",
       "type": "Rodinný dům",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/rodinny-dum-v-masove-u-turnova/optimized/masov_001.webp",
+      "/projects/rodinny-dum-v-masove-u-turnova/optimized/masov_002.webp",
+      "/projects/rodinny-dum-v-masove-u-turnova/optimized/masov_003.webp",
+      "/projects/rodinny-dum-v-masove-u-turnova/optimized/masov_004.webp",
+      "/projects/rodinny-dum-v-masove-u-turnova/optimized/masov_005.webp",
+      "/projects/rodinny-dum-v-masove-u-turnova/optimized/masov_006.webp",
+      "/projects/rodinny-dum-v-masove-u-turnova/optimized/masov_007.webp",
+      "/projects/rodinny-dum-v-masove-u-turnova/optimized/masov_008.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004
+    ]
   },
   {
     "slug": "rodinny-dum-jizerska",
@@ -1083,13 +1236,49 @@ export const projects: Project[] = [
     "description": "Rodinný dům na ulici Jizerská v Liberci, dokončený v roce 2022. Urbánní vila s čistým výrazem v zástavbě rodinných domů.",
     "category": "residential",
     "active": true,
+    "image_captions": [
+      "Dům využívá svažitý pozemek a otevírá obytné místnosti do zahrady.",
+      "Zahradní průčelí kombinuje světlý obklad, kámen a dřevěné akcenty.",
+      "Čelní pohled zdůrazňuje velké prosklení a ustupující horní podlaží.",
+      "Vstupní strana domu je kompaktní a chráněná vůči ulici.",
+      "Dům se svým měřítkem přirozeně začleňuje do okolní zástavby.",
+      "Pohled z ulice ukazuje návaznost domu na svažitý terén.",
+      "Nadhled na zahradní část domu a řešení parkování.",
+      "Vizualizace domu při pohledu ze spodní části pozemku.",
+      "Velké okno obytného prostoru rámuje výhled do zahrady.",
+      "Klidnější boční průčelí doplňují dřevěné okenice."
+    ],
     "metadata": {
       "location": "Jizerská, Liberec",
       "year": "2022",
       "type": "Rodinný dům",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/rodinny-dum-jizerska/optimized/jizerska_001.webp",
+      "/projects/rodinny-dum-jizerska/optimized/jizerska_002.webp",
+      "/projects/rodinny-dum-jizerska/optimized/jizerska_003.webp",
+      "/projects/rodinny-dum-jizerska/optimized/jizerska_004.webp",
+      "/projects/rodinny-dum-jizerska/optimized/jizerska_005.webp",
+      "/projects/rodinny-dum-jizerska/optimized/jizerska_006.webp",
+      "/projects/rodinny-dum-jizerska/optimized/jizerska_007.webp",
+      "/projects/rodinny-dum-jizerska/optimized/jizerska_008.webp",
+      "/projects/rodinny-dum-jizerska/optimized/jizerska_009.webp",
+      "/projects/rodinny-dum-jizerska/optimized/jizerska_010.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004
+    ]
   },
   {
     "slug": "rodinny-dum-radcice",
@@ -1140,13 +1329,49 @@ export const projects: Project[] = [
     "description": "Druhá návrhová varianta rodinného domu v Radčicích u Liberce z roku 2020. Alternativní dispozice na stejném pozemku.",
     "category": "residential",
     "active": true,
+    "image_captions": [
+      "Nadhled na dům zasazený do svažitého pozemku na okraji lesa.",
+      "Celková kompozice domu a příjezdu v otevřené krajině.",
+      "Zahradní průčelí s prosklenou obytnou částí a krytou terasou.",
+      "Dům se otevírá do zahrady a současně si zachovává soukromí.",
+      "Čelní pohled zdůrazňuje kontrast světlé omítky a tmavého obkladu.",
+      "Vstupní partie propojuje hlavní hmotu domu s nízkým křídlem.",
+      "Krytá terasa prodlužuje obytný prostor směrem do zahrady.",
+      "Perspektiva ze zahrady zachycuje dům v podzimní krajině.",
+      "Vzdálený pohled ukazuje měřítko domu vůči okolnímu terénu.",
+      "Uliční průčelí domu je klidné a střídmé."
+    ],
     "metadata": {
       "location": "Radčice, Liberec",
       "year": "2020",
       "type": "Rodinný dům",
       "architect": "Ing. arch. Pavel Novák",
       "organization": "OMNIARCH"
-    }
+    },
+    "images": [
+      "/projects/rodinny-dum-v-liberci-radcicich-verze-2/optimized/radcice-v2_001.webp",
+      "/projects/rodinny-dum-v-liberci-radcicich-verze-2/optimized/radcice-v2_002.webp",
+      "/projects/rodinny-dum-v-liberci-radcicich-verze-2/optimized/radcice-v2_003.webp",
+      "/projects/rodinny-dum-v-liberci-radcicich-verze-2/optimized/radcice-v2_004.webp",
+      "/projects/rodinny-dum-v-liberci-radcicich-verze-2/optimized/radcice-v2_005.webp",
+      "/projects/rodinny-dum-v-liberci-radcicich-verze-2/optimized/radcice-v2_006.webp",
+      "/projects/rodinny-dum-v-liberci-radcicich-verze-2/optimized/radcice-v2_007.webp",
+      "/projects/rodinny-dum-v-liberci-radcicich-verze-2/optimized/radcice-v2_008.webp",
+      "/projects/rodinny-dum-v-liberci-radcicich-verze-2/optimized/radcice-v2_009.webp",
+      "/projects/rodinny-dum-v-liberci-radcicich-verze-2/optimized/radcice-v2_010.webp"
+    ],
+    "image_aspect_ratios": [
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004,
+      1.5004
+    ]
   },
   {
     "slug": "rodinny-dum-rudna",
